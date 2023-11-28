@@ -1,2 +1,2 @@
-# CV_WEB
+# cv
 This website showcases my cv
