@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* font-family: 'Abel', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Saira Extra Condensed', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* font-family: 'Open Sans', sans-serif; */
+
+body {
+    font-family: 'Abel', 'Open Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    line-height: 1.6em;
+    letter-spacing: 0.5px;
+    /* word-spacing: 5px; */
+}
+
+a {
+    color: black;
+    background: transparent;
+    border-radius: 17px;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.5s;
+}
+
+a:hover {
+    color: rgb(255, 180, 40);
+    background: rgba(19, 19, 19, 0.88);
+}
+
+a:active {
+    background-color: rgba(19, 19, 19, 0.939);
+    color: rgb(255, 213, 98);
+}
+
+.profile a{
+    color: rgb(252, 157, 236);
+    }    
+    
+.profile a:hover, a:active{
+    color: rgb(255, 213, 98);
+    background: none;
+}
+
+.name {
+    letter-spacing: 2px;
+    line-height: 2.5em;
+    text-align: right;
+    color: #fcfcff;
+}
+
+.description {
+    text-shadow: -2px -2px 4px rgba(33, 33, 33, 0.3);
+    text-align: left;
+}
+
+h2 {
+    font-weight: 600;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+}
+
+.about {
+    color: white;
+}
+
+.footer {
+    text-shadow: -3px -2px 3px rgba(33, 33, 33, 0.5);
+}
+
+@media  (max-width: 400px) {
+    .name {
+        font-size: 15px;
+    }
+
+    .about{
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .footer{
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 768px) {
+    .name {
+        font-size: 25px;
+    }
+
+
+    .about{
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .footer{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .name {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 25px;
+    }
+
+    .footer{
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .name {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 30px;
+    }
+
+    .footer{
+        font-size: 50px;
+    }
+}
+
+.l_link{
+    color: rgb(84, 84, 84);
+    font-size: 30px;
+}
+
+.l_link:hover, .l_link:active{
+    background: rgb(69, 69, 69);
+}

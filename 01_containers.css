@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.intro {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background: #ffffff;
+
+    background-image: url(images/header_ink.gif);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.name {
+    position: absolute;
+    top: 14%;
+    left: 42%;
+    transform: translate(-50%, 50%);
+}
+
+.description {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+.about {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background: #010409;
+    display: flex;
+}
+
+.about .column_1,
+.column_2 {
+    width: 90%;
+    padding: 3%;
+    padding-bottom: 50px;
+}
+
+.about .column_2 ul{
+    padding-left: 0;
+    list-style: none;
+}
+
+@media (max-width: 1200px) {
+    .about {
+        display: block;
+    }
+
+    .about .column_1 {
+        padding-bottom: 0;
+    }
+
+    .about .column_2 {
+        padding-top: 0;
+    }
+}
+
+.footer {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    min-height: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    text-align: center;
+
+    background-image: url(images/footer_ink.gif);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.contacts ul{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    padding: 0px 3% 3% 3%;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.contacts ul li{
+    padding-right: 30px;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.l_link {
+    position: absolute;
+    bottom: 10px;
+    left: 20%;
+    /* transform: translateX(-50%); */
+    text-align: center;
+  }
+
+@media (max-width: 400px){
+    .footer  .contacts ul li{
+        margin-bottom: 20px;
+    }    
+    .name{
+        top:25%;
+    }
+
+    .description{
+        right: 5%;
+        bottom: 90px;
+    }
+}
