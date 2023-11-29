@@ -94,7 +94,7 @@ a:active {
 }
 
 .image a:hover,
-a:active {
+.image a:active {
     color: inherit;
     background: inherit;
 }

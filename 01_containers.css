@@ -104,7 +104,7 @@ h1 {
     max-width: 100%;
     width: 100%;
     min-height: 700px;
-    margin: 0 auto;
+    margin: -50px auto 0;
     background: #ffffff;
     text-align: center;
 
@@ -125,13 +125,17 @@ h1 {
 
 .contacts ul li {
     padding-right: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     display: inline-block;
 }
 
 @media (max-width: 400px) {
     .footer .contacts ul li {
         margin-bottom: 20px;
+    }
+    .footer .contacts a {
+        padding-right: 5px;
+        padding-left: 5px;
     }
 }
 
