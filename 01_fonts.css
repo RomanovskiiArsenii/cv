@@ -21,26 +21,39 @@ h2 {
 }
 
 a {
-    color: black;
-    background: transparent;
-    border-radius: 17px;
+    /* color: black;
+    /* color: rgb(255, 180, 40); */
+    /* background: transparent; */
+
+    color: whitesmoke;
+    background: rgba(19, 19, 19, 0.88);
+    
+    font-weight: inherit;
+    border-radius: 15px;
     text-decoration: none;
     padding: 5px 20px;
     transition: all 0.5s;
 }
 
-a:hover {
-    color: rgb(255, 180, 40);
-    background: rgba(19, 19, 19, 0.88);
+a:hover { 
+    /* color: rgb(255, 180, 40);
+    background: rgba(19, 19, 19, 0.88); */
+
+    color: rgb(0, 0, 0);
+    background: rgb(239, 180, 255);
 }
 
 a:active {
-    background: rgba(19, 19, 19, 0.939);
-    color: rgb(255, 213, 98);
+    /* color: rgb(255, 210, 85); */
+    /* background: rgba(19, 19, 19, 0.939); */
+    
+    color: rgb(0, 0, 0);
+    background: rgb(222, 115, 255);
 }
 
 .animatedlink {
     color: rgb(255, 188, 244);
+    background: none;
     text-decoration: none;
     position: relative;
     display: inline-block;
@@ -50,6 +63,14 @@ a:active {
 
 .animatedlink:hover, .animatedlink:active {
     background: none;
+}
+
+.animatedlink:hover{
+    color: rgb(255, 180, 40);
+}
+
+.animatedlink:active {
+    color: rgb(255, 213, 98);
 }
 
 .animatedlink::after {
@@ -72,30 +93,23 @@ a:active {
 }
 
 .l_link {
-    color: rgb(166, 166, 166);
-    font-size: 20px;
-}
-
-.l_link:hover,
-.l_link:active {
-    background: rgb(82, 75, 63);
+    color: rgb(72, 72, 72);
+    /* color: rgb(255, 205, 68); */
+    background: transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 0;
+    padding: 0px 10px;
 }
  
-@media (max-width: 400px) {
+/* ОТКЛЮЧЕНИЕ ОБВОДА ССЫЛОК НА ТЕЛЕФОННЫХ ЭКРАНАХ 
+@media (max-width: 768px) {
 
     a:hover,
     a:active {
         background: none;
     }
-}
-
-@media (min-width: 401px) and (max-width: 768px) {
-
-    a:hover,
-    a:active {
-        background: none;
-    }
-}
+} */
 
 .name {
     letter-spacing: 2px;
@@ -113,9 +127,9 @@ a:active {
     color: white;
 }
 
-.footer {
+/* .footer {
     text-shadow: -2px -2px 5px rgba(33, 33, 33, 0.55);
-}
+} */
 
 @media (max-width: 400px) {
     .name {
