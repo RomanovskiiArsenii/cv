@@ -40,14 +40,14 @@ a:active {
     background: rgb(219, 100, 255);
 }
 
-/* @media (max-width:768px) {
+@media (max-width:390px) {
 
     a:hover,
     a:active {
         color: inherit;
         background: inherit;
     }
-} */
+}
 
 @media (max-width: 500px) {
     a {
