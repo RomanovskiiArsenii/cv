@@ -93,9 +93,9 @@ a:active {
 }
 
 .l_link {
-    color: rgb(80, 80, 80);
+    color: rgb(52, 52, 52);
     text-shadow: -2px -2px 5px rgba(33, 33, 33, 0.55);
-    background: rgba(228, 228, 228, 0.372);
+    background: rgba(228, 228, 228, 0.523);
     border-radius: 10px;
     font-size: 20px;
     padding: 0;
