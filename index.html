@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="01_containers.css">
     <link rel="stylesheet" href="01_fonts.css">
+    <link rel="stylesheet" href="01_opacity.css">
 </head>
 
 <body class="index">
@@ -33,33 +34,37 @@
     <div class="about">
         <div class="column_1">
             <div class="profile">
-                <h2>About me</h2>
+                <h2 class="fade-in">About me</h2>
 
-                <p>Hello, my name is Arsenii! This website showcases my CV. <a
+                <p class="fade-in">Hello, my name is Arsenii! This website showcases my CV. <a
                         href="https://drive.google.com/file/d/1wriqmqBb2VK3LikiN9MXP1R72RHJgP2u/view?usp=drive_link"
                         class="animatedlink" target="_blank">
                         You may download my CV in pdf format.</a></p>
-                <p>I'm a developer with <strong>over 1 year of C# programming experience</strong>
+
+                <p class="fade-in">I'm a developer with <strong>over 1 year of C# programming experience</strong>
                     and over 6 years of experience in engineering and managing.</p>
-                <p>I have a strong comprehension of <strong>Object-Oriented Programming</strong> and
+
+                <p class="fade-in">I have a strong comprehension of <strong>Object-Oriented Programming</strong> and
                     <strong>SOLID</strong>
                     principles, <strong>algorithms</strong>, and <strong>data structures</strong>. I am proficient in
                     language features
                     such as <strong>LINQ</strong>, <strong>multithreading</strong>, and <strong>async/await</strong>. My
                     practical experience includes
                     <strong>T-SQL</strong>, <strong>MySQL</strong>, <strong>Git</strong>, <strong>Entity Framework
-                        Core</strong>, <strong>HTML</strong>, <strong>CSS</strong>.
-                </p>
-                <p>I'm skilled at expressing my thoughts clearly, creating technical documentation,
+                        Core</strong>, <strong>HTML</strong>, <strong>CSS</strong>.</p>
+
+                <p class="fade-in">I'm skilled at expressing my thoughts clearly, creating technical documentation,
                     and working both independently and in a team.</p>
-                <p>I am an honest, hardworking, patient, and determined individual and I look
+
+                <p class="fade-in">I am an honest, hardworking, patient, and determined individual and I look
                     forward to being useful and making an effort for my company and my team.
                     I welcome any opportunity to learn and grow as a software developer.</p>
             </div>
 
             <div class="skills">
-                <h2>Key skills</h2>
-                <p>.NET, CLR, C#, OOP, SOLID,
+                <h2 class="fade-in">Key skills</h2>
+
+                <p class="fade-in">.NET, CLR, C#, OOP, SOLID,
                     LINQ, multithreading, async/await, data structures, algorithms, unit testing, MySQL, T-SQL, entity
                     framework core, HTML, CSS, GIT, excellent soft skills.</p>
             </div>
@@ -67,9 +72,10 @@
 
         <div class="column_2">
             <div class="experience">
-                <h2>Experience</h2>
+                <h2 class="fade-in">Experience</h2>
+
                 <ul>
-                    <li>2019 - 2023 <strong>Technical Director</strong>;
+                    <li class="fade-in">2019 - 2023 <strong>Technical Director</strong>;
                         2018 - 2019 <strong>Deputy Technical Director</strong>:
                         Conclusion and maintenance of contracts with resource
                         supplying organizations, contractors and services;
@@ -77,27 +83,32 @@
                         Analysis and processing of reporting data;
                         Implementation of re safety measures;
                         Implementation of safety and health measures in the workplace.</li><br>
-                    <li>2018 - 2022 (Parallel) <strong>Personal creative experimentation workshop</strong>:
+
+                    <li class="fade-in">2018 - 2022 (Parallel) <strong>Personal creative experimentation
+                            workshop</strong>:
                         Custom designs of various products of wood, metal, plastic, epoxy resins;
                         Part-time work as a turner.</li><br>
-                    <li>2017 - 2018 Mandatory military training for citizens. </li><br>
-                    <li>2015 - 2016 <strong>Engineer</strong> in a furniture factory:
+
+                    <li class="fade-in">2017 - 2018 Mandatory military training for citizens. </li><br>
+
+                    <li class="fade-in">2015 - 2016 <strong>Engineer</strong> in a furniture factory:
                         Preparation of drawings and design documents;
                         Project support from the drawing to the assembly;
                         Taking measurements, coordinating with the customer.</li><br>
-                    <li>2014 - 2015 <strong>Sales Manager</strong> in a furniture factory:
+
+                    <li class="fade-in">2014 - 2015 <strong>Sales Manager</strong> in a furniture factory:
                         Development, coordination and approval of individual projects.</li><br>
-                    <li>2012 - 2013 <strong>Joinery Technician</strong> in a design studio:
+
+                    <li class="fade-in">2012 - 2013 <strong>Joinery Technician</strong> in a design studio:
                         Design and manufacture of complex joinery.</li>
                 </ul>
             </div>
         </div>
     </div>
-    </div>
 
     <div class="footer">
         <div class="contacts">
-            <ul>
+            <ul class="fade-in">
                 <li><a href="https://www.linkedin.com/in/arsenii-romanovskii/">LinkedIn</a></li>
                 <li><a href="https://t.me/Arsenii_Romanovskii">Telegram</a></li>
                 <li><a href="https://github.com/RomanovskiiArsenii">GitHub</a></li>
@@ -109,12 +120,16 @@
                 <p><a href="licence.html" class="l_link">External resources</a></p>
             </div>
         </div>
+    </div>
 
-        <script>
-            window.addEventListener('load', function () {
-                document.body.style.visibility = 'visible';
-            });
-        </script>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.body.style.visibility = 'visible';
+        });
+    </script>
+    <script src="01_fade_in.js" defer></script>
+    <!-- <script src="01_restart_gif.js" defer></script> -->
 </body>
 
 </html>

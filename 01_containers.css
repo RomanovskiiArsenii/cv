@@ -33,8 +33,8 @@ h1 {
 .description {
     position: absolute;
     right: 10%;
-}
-
+  }
+  
 @media (max-width: 400px) {
     .name {
         top: 25%;
