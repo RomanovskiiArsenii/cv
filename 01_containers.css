@@ -35,6 +35,35 @@ h1 {
     right: 10%;
 }
 
+@media (max-width: 400px) {
+    .name {
+        top: 25%;
+    }
+
+    .description {
+        right: 5%;
+        bottom: 0;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 768px) {
+    .description {
+        bottom: 3%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .description {
+        bottom: 5%;
+    }
+}
+
+@media (min-width: 1201px) {
+    .description {
+        bottom: 10%;
+    }
+}
+
 .about {
     position: relative;
     max-width: 100%;
@@ -51,7 +80,7 @@ h1 {
     padding-bottom: 50px;
 }
 
-.about .column_2 ul{
+.about .column_2 ul {
     padding-left: 0;
     list-style: none;
 }
@@ -85,7 +114,7 @@ h1 {
     background-repeat: no-repeat;
 }
 
-.contacts ul{
+.contacts ul {
     text-align: center;
     position: absolute;
     width: 100%;
@@ -94,10 +123,16 @@ h1 {
     box-sizing: border-box;
 }
 
-.contacts ul li{
+.contacts ul li {
     padding-right: 30px;
     margin-bottom: 50px;
     display: inline-block;
+}
+
+@media (max-width: 400px) {
+    .footer .contacts ul li {
+        margin-bottom: 20px;
+    }
 }
 
 .l_link {
@@ -105,36 +140,4 @@ h1 {
     bottom: 10px;
     left: 20%;
     text-align: center;
-  }
-
-@media  (max-width: 400px) {
-    .footer  .contacts ul li{
-        margin-bottom: 20px;
-    }    
-    .name{
-        top:25%;
-    }
-    .description{
-        right: 5%;
-        bottom: 0;
-    }
-
-}
-
-@media (min-width: 401px) and (max-width: 768px) {
-    .description{
-        bottom: 3%;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-    .description{
-        bottom: 5%;
-    }
-}
-
-@media (min-width: 1201px) {
-    .description{
-        bottom: 10%;
-    }
 }

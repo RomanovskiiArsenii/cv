@@ -11,14 +11,12 @@ body {
     font-weight: 300;
     color: whitesmoke;
     text-align: left;
-    /* line-height: 1.6em; */
     letter-spacing: 0.5px;
 }
 
 h1 {
     letter-spacing: 3px;
     font-weight: 500;
-
 }
 
 a {
@@ -42,8 +40,10 @@ a:active {
     background: rgb(219, 100, 255);
 }
 
-@media (max-width:768px){
-    a:hover, a:active{
+@media (max-width:768px) {
+
+    a:hover,
+    a:active {
         color: inherit;
         background: inherit;
     }
@@ -54,7 +54,7 @@ a:active {
         font-size: 16px;
     }
 
-    h1{
+    h1 {
         margin-top: 10px;
         font-size: 40px;
     }
@@ -62,9 +62,10 @@ a:active {
 
 @media (min-width: 501px) and (max-width: 768px) {
     a {
-        font-size:20px;
+        font-size: 20px;
     }
-    h1{
+
+    h1 {
         margin-top: 20px;
         font-size: 60px;
     }
@@ -72,9 +73,10 @@ a:active {
 
 @media (min-width: 769px) and (max-width: 1200px) {
     a {
-        font-size:30px;
+        font-size: 30px;
     }
-    h1{
+
+    h1 {
         margin-top: 30px;
         font-size: 70px;
     }
@@ -84,8 +86,15 @@ a:active {
     a {
         font-size: 40px;
     }
-    h1{
+
+    h1 {
         margin-top: 40px;
         font-size: 80px;
     }
+}
+
+.image a:hover,
+a:active {
+    color: inherit;
+    background: inherit;
 }

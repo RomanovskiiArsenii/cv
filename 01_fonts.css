@@ -15,6 +15,12 @@ body {
     /* word-spacing: 5px; */
 }
 
+h2 {
+    font-weight: 600;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+}
+
 a {
     color: black;
     background: transparent;
@@ -34,36 +40,64 @@ a:active {
     color: rgb(255, 213, 98);
 }
 
-.animatedlink{
+.animatedlink {
     color: rgb(255, 188, 244);
     text-decoration: none;
     position: relative;
     display: inline-block;
     padding: 0;
     margin: 0;
-    }    
+}
 
-.animatedlink:hover{
+.animatedlink:hover {
     background: none;
 }
 
-.animatedlink::after{
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: rgb(255, 213, 98); /* Цвет линии */
-  transition: width 0.5s ease; /* Анимация для ширины */
+.animatedlink::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 213, 98);
+    /* Цвет линии */
+    transition: width 0.5s ease;
+    /* Анимация для ширины */
 }
 
 .animatedlink:hover::after {
-  width:98%;
-  }
+    width: 98%;
+}
 
-.animatedlink:active{
+.animatedlink:active {
     color: rgb(255, 213, 98);
+}
+
+.l_link {
+    color: rgb(166, 166, 166);
+    font-size: 20px;
+}
+
+.l_link:hover,
+.l_link:active {
+    background: rgb(82, 75, 63);
+}
+
+@media (max-width: 400px) {
+
+    a:hover,
+    a:active {
+        background: none;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 768px) {
+
+    a:hover,
+    a:active {
+        background: none;
+    }
 }
 
 .name {
@@ -78,11 +112,6 @@ a:active {
     text-align: left;
 }
 
-h2 {
-    font-weight: 600;
-    letter-spacing: 3px;
-    word-spacing: 4px;
-}
 
 .about {
     color: white;
@@ -92,12 +121,12 @@ h2 {
     text-shadow: -3px -2px 3px rgba(33, 33, 33, 0.5);
 }
 
-@media  (max-width: 400px) {
+@media (max-width: 400px) {
     .name {
         font-size: 15px;
     }
 
-    .about{
+    .about {
         font-size: 14px;
     }
 
@@ -105,12 +134,8 @@ h2 {
         font-size: 15px;
     }
 
-    .footer{
+    .footer {
         font-size: 25px;
-    }
-
-    a:hover, a:active{
-        background: none;
     }
 }
 
@@ -119,8 +144,7 @@ h2 {
         font-size: 25px;
     }
 
-
-    .about{
+    .about {
         font-size: 18px;
     }
 
@@ -128,12 +152,8 @@ h2 {
         font-size: 20px;
     }
 
-    .footer{
+    .footer {
         font-size: 30px;
-    }
-
-    a:hover, a:active{
-        background: none;
     }
 }
 
@@ -146,7 +166,7 @@ h2 {
         font-size: 25px;
     }
 
-    .footer{
+    .footer {
         font-size: 40px;
     }
 }
@@ -160,16 +180,7 @@ h2 {
         font-size: 30px;
     }
 
-    .footer{
+    .footer {
         font-size: 50px;
     }
-}
-
-.l_link{
-    color: rgb(166, 166, 166);
-    font-size: 20px;
-}
-
-.l_link:hover, .l_link:active{
-    background: rgb(82, 75, 63);
 }
