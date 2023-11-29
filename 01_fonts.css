@@ -70,7 +70,7 @@ a:active {
 }
 
 .animatedlink:active {
-    color:
+    color: rgb(255, 213, 98);
 }
 
 .animatedlink::after {
