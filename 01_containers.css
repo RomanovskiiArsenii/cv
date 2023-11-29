@@ -32,7 +32,6 @@ h1 {
 
 .description {
     position: absolute;
-    bottom: 10%;
     right: 10%;
 }
 
@@ -109,16 +108,34 @@ h1 {
     text-align: center;
   }
 
-@media (max-width: 400px){
+@media  (max-width: 400px) {
     .footer  .contacts ul li{
         margin-bottom: 20px;
     }    
     .name{
         top:25%;
     }
-
     .description{
         right: 5%;
-        bottom: 90px;
+        bottom: 0;
+    }
+
+}
+
+@media (min-width: 401px) and (max-width: 768px) {
+    .description{
+        bottom: 3%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .description{
+        bottom: 5%;
+    }
+}
+
+@media (min-width: 1201px) {
+    .description{
+        bottom: 10%;
     }
 }
