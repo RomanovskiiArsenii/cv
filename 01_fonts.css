@@ -70,7 +70,7 @@ a:active {
 }
 
 .animatedlink:active {
-    color: rgb(255, 213, 98);
+    color:
 }
 
 .animatedlink::after {
@@ -93,11 +93,11 @@ a:active {
 }
 
 .l_link {
-    color: rgb(72, 72, 72);
-    /* color: rgb(255, 205, 68); */
-    background: transparent;
+    color: rgb(80, 80, 80);
+    text-shadow: -2px -2px 5px rgba(33, 33, 33, 0.55);
+    background: rgba(228, 228, 228, 0.372);
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 20px;
     padding: 0;
     padding: 0px 10px;
 }
@@ -126,10 +126,6 @@ a:active {
 .about {
     color: white;
 }
-
-/* .footer {
-    text-shadow: -2px -2px 5px rgba(33, 33, 33, 0.55);
-} */
 
 @media (max-width: 400px) {
     .name {
