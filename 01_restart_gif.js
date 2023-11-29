@@ -4,10 +4,10 @@ window.addEventListener('load', function() {
   
     function restartGif() {
       intro.style.backgroundImage = 'none';
-      void intro.offsetWidth; // Принудительная перезагрузка стиля для эффекта сброса
+      void intro.offsetWidth;
       intro.style.backgroundImage = `url(${gifUrl})`;
     }
   
-    restartGif(); // Запустить при загрузке страницы
+    restartGif();
   });
   

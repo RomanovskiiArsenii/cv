@@ -21,12 +21,8 @@ h2 {
 }
 
 a {
-    /* color: black;
-    /* color: rgb(255, 180, 40); */
-    /* background: transparent; */
-
-    color: whitesmoke;
-    background: rgba(19, 19, 19, 0.88);
+    color: rgb(255, 175, 27);
+    background: rgba(6, 10, 10, 0.88);
     
     font-weight: inherit;
     border-radius: 15px;
@@ -36,17 +32,11 @@ a {
 }
 
 a:hover { 
-    /* color: rgb(255, 180, 40);
-    background: rgba(19, 19, 19, 0.88); */
-
     color: rgb(0, 0, 0);
     background: rgb(239, 180, 255);
 }
 
 a:active {
-    /* color: rgb(255, 210, 85); */
-    /* background: rgba(19, 19, 19, 0.939); */
-    
     color: rgb(0, 0, 0);
     background: rgb(222, 115, 255);
 }
@@ -102,7 +92,7 @@ a:active {
     padding: 0px 10px;
 }
  
-/* ОТКЛЮЧЕНИЕ ОБВОДА ССЫЛОК НА ТЕЛЕФОННЫХ ЭКРАНАХ 
+/* ОТКЛЮЧЕНИЕ ОБВОДА ССЫЛОК НА ЭКРАНАХ < 769px
 @media (max-width: 768px) {
 
     a:hover,

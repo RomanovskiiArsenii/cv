@@ -10,16 +10,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const windowBottom = window.innerHeight;
 
             if (elementTop < windowBottom) {
-                if (previousTop === null || Math.floor(previousTop) !== Math.floor(elementTop)) {
-                    delay = 0; // Сбросить задержку, если это новый уровень элементов
-                }
+                
+                // if (previousTop === null || Math.floor(previousTop) !== Math.floor(elementTop)) {
+                //     delay = 200; // Сбросить задержку, если это новый уровень элементов
+                // }
 
                 setTimeout(() => {
                     element.classList.add('show');
                 }, delay);
 
                 previousTop = elementTop;
-                delay += 200; // Задержка в миллисекундах (можно изменить)
+                delay += 180; // Задержка в миллисекундах
             }
         });
     }
