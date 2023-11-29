@@ -42,19 +42,18 @@ a:active {
     background: rgb(219, 100, 255);
 }
 
+@media (max-width:768px){
+    a:hover, a:active{
+        color: inherit;
+        background: inherit;
+    }
+}
+
 @media (max-width: 500px) {
     a {
         font-size: 16px;
     }
-    a:hover {
-        color: inherit;
-        background: inherit;
-    }
 
-    a:active {
-        color: inherit;
-        background: inherit;
-    }
     h1{
         margin-top: 10px;
         font-size: 40px;
