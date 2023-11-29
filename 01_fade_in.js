@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const element = document.querySelector('.description');
-    element.classList.add('visible');
-});
-
-document.addEventListener('DOMContentLoaded', function () {
     const elements = document.querySelectorAll('.fade-in');
 
     function fadeInSequentially() {

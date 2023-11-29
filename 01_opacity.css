@@ -8,10 +8,15 @@
 }
 
 .description {
-    opacity: 0;
-    transition: opacity 1.4s ease-in-out;
+    animation: fadeIn 1.4s ease-in-out;
 }
 
-.description.visible {
-    opacity: 1;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
