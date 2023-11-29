@@ -20,7 +20,7 @@ a {
     background: transparent;
     border-radius: 17px;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 5px 20px;
     transition: all 0.5s;
 }
 
@@ -34,13 +34,36 @@ a:active {
     color: rgb(255, 213, 98);
 }
 
-.profile a{
-    color: rgb(252, 157, 236);
+.animatedlink{
+    color: rgb(255, 188, 244);
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
     }    
-    
-.profile a:hover, a:active{
-    color: rgb(255, 213, 98);
+
+.animatedlink:hover{
     background: none;
+}
+
+.animatedlink::after{
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 213, 98); /* Цвет линии */
+  transition: width 0.5s ease; /* Анимация для ширины */
+}
+
+.animatedlink:hover::after {
+  width:98%;
+  }
+
+.animatedlink:active{
+    color: rgb(255, 213, 98);
 }
 
 .name {
@@ -135,10 +158,10 @@ h2 {
 }
 
 .l_link{
-    color: rgb(84, 84, 84);
-    font-size: 30px;
+    color: rgb(85, 85, 8, 0.6);
+    font-size: 20px;
 }
 
 .l_link:hover, .l_link:active{
-    background: rgb(69, 69, 69);
+    background: rgb(82, 75, 63);
 }
