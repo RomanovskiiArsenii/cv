@@ -43,7 +43,7 @@ h1 {
 
 .description {
     position: absolute;
-    right: 10%;
+    right: 5%;
   }
   
 @media (max-width: 400px) {
@@ -52,26 +52,25 @@ h1 {
     }
 
     .description {
-        right: 5%;
-        bottom: 0;
+        bottom: 5%;
     }
 }
 
 @media (min-width: 401px) and (max-width: 768px) {
     .description {
-        bottom: 3%;
+        bottom: 10%;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
     .description {
-        bottom: 5%;
+        bottom: 7%;
     }
 }
 
 @media (min-width: 1201px) {
     .description {
-        bottom: 10%;
+        bottom: 5%;
     }
 }
 
