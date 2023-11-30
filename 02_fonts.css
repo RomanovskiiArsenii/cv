@@ -93,6 +93,13 @@ a:active {
     }
 }
 
+@media (max-height:600px){
+    h1 {
+        margin-top: 10px;
+        font-size: 40px;
+    }
+}
+
 .image a:hover,
 .image a:active {
     color: inherit;

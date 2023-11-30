@@ -74,6 +74,15 @@ h1 {
     }
 }
 
+@media (max-height: 600px) {
+    .name{
+        left: 47%;
+    }
+    .description {
+        top: 0;
+    }
+}
+
 .about {
     position: relative;
     max-width: 100%;
