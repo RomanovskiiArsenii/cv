@@ -180,3 +180,15 @@ a:active {
         font-size: 50px;
     }
 }
+
+@media (max-height: 400px) {
+    .name{
+        font-size: 20px;
+    }
+}
+
+@media (min-height: 401px) and (max-height: 600px) {
+    .name{
+        font-size: 25px;
+    }
+}
