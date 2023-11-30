@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, delay);
 
                 previousTop = elementTop;
-                delay += 180; // Задержка в миллисекундах
+                delay += 100; // Задержка в миллисекундах
             }
         });
     }

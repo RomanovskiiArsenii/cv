@@ -128,7 +128,7 @@ h1 {
 .contacts ul {
     text-align: center;
     position: absolute;
-    top: 10%;
+    top: 7%;
     width: 100%;
     padding: 0px 3% 3% 3%;
     list-style: none;
@@ -143,6 +143,9 @@ h1 {
 }
 
 @media (max-width: 400px) {
+    .footer .contacts ul{
+        top:0;
+    }
     .footer .contacts ul li {
         margin-bottom: 20px;
     }
@@ -152,6 +155,10 @@ h1 {
 }
 
 @media (min-width: 401px) and (max-width: 768px) {
+    .footer .contacts ul{
+        top:0;
+    }
+
     .footer .contacts ul li {
         margin-bottom: 40px;
     }
