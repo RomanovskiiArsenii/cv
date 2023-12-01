@@ -29,6 +29,7 @@ a {
     text-decoration: none;
     padding: 5px 20px;
     transition: all 0.5s;
+    box-shadow: 0 0 10px rgb(0 0 0 / 60%);
 }
 
 a:hover { 
