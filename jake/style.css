@@ -27,7 +27,7 @@ header h1 {
 
 footer {
   position: fixed;
-  bottom: 0;
+  bottom: 1em;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -150,11 +150,18 @@ button:hover {
   body {
     font-size: 8px;
   }
+  footer {
+    bottom: 12em;
+  }
 }
 
 @media (min-width: 401px) and (max-width: 768px) {
   body {
     font-size: 10px;
+  }
+
+  footer {
+    bottom: 8em;
   }
 }
 
@@ -162,13 +169,18 @@ button:hover {
   body {
     font-size: 14px;
   }
-.output{
-  letter-spacing: 0.03em;
-}
+
+  .output {
+    letter-spacing: 0.03em;
+  }
+
+  footer {
+    bottom: 4em;
+  }
 }
 
 @media (min-width: 1201px) {
-  .output{
+  .output {
     letter-spacing: 0.05em;
   }
 }
