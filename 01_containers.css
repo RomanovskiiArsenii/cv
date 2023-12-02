@@ -173,9 +173,21 @@ h1 {
     }
 }
 
-.l_link {
+.l_content{
     position: absolute;
     bottom: 10px;
     right: 5%;
     text-align: center;
 }
+
+.l_link{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* .l_link {
+    position: absolute;
+    bottom: 10px;
+    right: 5%;
+    text-align: center;
+} */

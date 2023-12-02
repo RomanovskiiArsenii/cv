@@ -1,0 +1,11 @@
+Model Information:
+* title:	Jake The Dog
+* source:	https://sketchfab.com/3d-models/jake-the-dog-f8a17c174f244e11af1fb668895ddcae
+* author:	Arnau Azorin (https://sketchfab.com/azorin)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Jake The Dog" (https://sketchfab.com/3d-models/jake-the-dog-f8a17c174f244e11af1fb668895ddcae) by Arnau Azorin (https://sketchfab.com/azorin) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
