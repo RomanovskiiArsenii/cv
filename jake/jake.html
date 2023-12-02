@@ -8,6 +8,19 @@
 
   <link rel="stylesheet" href="style.css" />
 
+  <style>
+    body {
+      visibility: hidden;
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.style.visibility = 'visible';
+    });
+  </script>
+
+
   <script type="module" src="model.js" defer></script>
   <script src="form.js" defer></script>
 </head>

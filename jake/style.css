@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(228 231 180);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
@@ -148,19 +148,19 @@ button:hover {
 
 @media (max-width: 400px) {
   body {
-    font-size: 10px;
+    font-size: 8px;
   }
 }
 
 @media (min-width: 401px) and (max-width: 768px) {
   body {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
   body {
-    font-size: 16px;
+    font-size: 14px;
   }
 .output{
   letter-spacing: 0.03em;

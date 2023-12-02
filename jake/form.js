@@ -73,7 +73,7 @@ const phrases = [
     "You're already at the bottom, so why the fuck bother?",
     "The stereotype that dogs are fond of bones is racist",
     "I hate mailmens! Think! Maybe you do hate them too?",
-    "I donG't understand my wife and it's just so fucking awesome",
+    "I don't understand my wife and it's just so fucking awesome",
     "Look at it this way, you can always kill yourself!",
     "Bruh",
     "I see...",
@@ -102,6 +102,10 @@ const phrases = [
     "Good idea! Now go clean your room, pig!",
     "Cold face leaders have already decided for you",
     "Stone heart leaders will throw you in an open fire",
+    "As my grandmother used to say: \"the door is opened to those who knock\".",
+    "If you don't try, you won't know",
+    "Why don't you have a little common sense?",
+    "Quit your job",
     "Are you fighting for your beliefs? You are fighting so that a fashionable whore will buy a cloak!"
 ];
 
