@@ -103,20 +103,20 @@ const phrases = [
     "Cold face leaders have already decided for you",
     "Stone heart leaders will throw you in an open fire",
     "Are you fighting for your beliefs? You are fighting so that a fashionable whore will buy a cloak!"
-  ];
-  
-  function generateRandomPhrase() {
+];
+
+function generateRandomPhrase() {
     const inputText = document.getElementById('textInput').value;
     const output = document.getElementById('output');
-  
+
     if (inputText.trim() !== '') {
-      const randomIndex = Math.floor(Math.random() * phrases.length);
-      output.textContent = phrases[randomIndex];
-  
-      output.classList.remove('animate-color');
-      void output.offsetWidth;
-      output.classList.add('animate-color');
-      output.textContent = "Ask a question - get an answer. It's not rocket science.";
+        const randomIndex = Math.floor(Math.random() * phrases.length);
+        output.textContent = phrases[randomIndex];
+
+        output.classList.remove('animate-color');
+        void output.offsetWidth;
+        output.classList.add('animate-color');
+    } else {
+        output.textContent = "Ask a question - get an answer. It's not rocket science.";
     }
-  }
-  
+}
