@@ -63,7 +63,7 @@ footer h3 {
 
   font-family: inherit;
   font-size: 1.5em;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.1em;
 }
 
 .placeholder {
@@ -79,7 +79,7 @@ footer h3 {
   pointer-events: none;
 
   font-size: 1.6em;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
