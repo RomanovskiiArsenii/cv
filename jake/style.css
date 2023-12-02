@@ -79,7 +79,8 @@ footer h3 {
 
   font-size: 1.6em;
   opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
+  transition: opacity 0.5s ease-in-out;
+  /* animation: fadeIn 0.5s ease-in-out forwards; */
 }
 
 @keyframes fadeIn {
