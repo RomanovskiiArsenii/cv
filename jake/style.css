@@ -27,7 +27,7 @@ header h1 {
 
 footer {
   position: fixed;
-  bottom: 1em;
+  bottom: 2em;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -161,7 +161,7 @@ button:hover {
   }
 
   footer {
-    bottom: 8em;
+    bottom: 10em;
   }
 }
 
