@@ -7,25 +7,18 @@
   <title>Ask Jake</title>
 
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    body {
-      visibility: hidden;
-    }
-  </style>
-
-  <script>
-    window.addEventListener('load', function () {
-      document.body.style.visibility = 'visible';
-    });
-  </script>
-
+  <link rel="stylesheet" href="orientation.css">
 
   <script type="module" src="model.js" defer></script>
   <script src="form.js" defer></script>
 </head>
 
 <body>
+  <div class="rotate-message">
+    <h1>Please rotate your device</h1>
+  </div>
+
+<div class="hidden_if_landscape">
   <header>
     <h1>I'm Jake the fortune dog. Ask me any of life's hard questions.</h1>
   </header>
@@ -52,7 +45,7 @@
       <button onclick="generateRandomPhrase()">GET ANSWERS</button>
     </div>
   </footer>
-
+</div>
   <script src="placeholder.js"></script>
 
 </body>
