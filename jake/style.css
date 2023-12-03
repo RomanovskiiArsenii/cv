@@ -11,6 +11,10 @@ body {
   font-size: 18px;
 }
 
+body {
+  overflow: hidden; /* Запретить скроллинг страницы */
+}
+
 
 header {
   padding: 20px;
