@@ -3,6 +3,7 @@
 }
 
 .rotate-message {
+    display: none;
     margin-top: 4em;
     width: 100%;
     font-family: 'Amatic SC', 'Courier New', Courier, monospace;
@@ -10,22 +11,24 @@
     font-size: 3em;
 }
 
-@media screen and (orientation: landscape) {
-    .rotate-message {
-        display: block;
+@media screen and (max-width: 900px) {
+    @media screen and (orientation: landscape) {
+        .rotate-message {
+            display: block;
+        }
+
+        .hidden_if_landscape {
+            visibility: hidden;
+        }
     }
 
-    .hidden_if_landscape {
-        visibility: hidden;
-    }
-}
+    @media screen and (orientation: portrait) {
+        .rotate-message {
+            display: none;
+        }
 
-@media screen and (orientation: portrait) {
-    .rotate-message {
-        display: none;
-    }
-
-    .hidden_if_landscape {
-        visibility: visible;
+        .hidden_if_landscape {
+            visibility: visible;
+        }
     }
 }
