@@ -5,6 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 /* font-family: 'Open Sans', sans-serif; */
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     font-family: 'Abel', 'Open Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
@@ -12,11 +16,6 @@ body {
     color: whitesmoke;
     text-align: left;
     letter-spacing: 0.5px;
-}
-
-h1 {
-    letter-spacing: 3px;
-    font-weight: 500;
 }
 
 a {
@@ -40,6 +39,11 @@ a:active {
     background: rgb(219, 100, 255);
 }
 
+.name a {
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
 @media (max-width:390px) {
 
     a:hover,
@@ -54,9 +58,12 @@ a:active {
         font-size: 16px;
     }
 
-    h1 {
-        margin-top: 10px;
+    .name a{
         font-size: 40px;
+    }
+
+    .name{
+        margin-top: 10px;
     }
 }
 
@@ -65,9 +72,12 @@ a:active {
         font-size: 20px;
     }
 
-    h1 {
-        margin-top: 20px;
+    .name a{
         font-size: 60px;
+    }
+
+    .name{
+        margin-top: 20px;
     }
 }
 
@@ -76,9 +86,12 @@ a:active {
         font-size: 30px;
     }
 
-    h1 {
-        margin-top: 30px;
+    .name a{
         font-size: 70px;
+    }
+
+    .name{
+        margin-top: 30px;
     }
 }
 
@@ -87,16 +100,22 @@ a:active {
         font-size: 40px;
     }
 
-    h1 {
-        margin-top: 40px;
+    .name a{
         font-size: 80px;
+    }
+
+    .name{
+        margin-top: 40px;
     }
 }
 
 @media (max-height:600px){
-    h1 {
-        margin-top: 10px;
+    .name a{
         font-size: 40px;
+    }
+
+    .name{
+        margin-top: 10px;
     }
 }
 

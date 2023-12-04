@@ -5,10 +5,10 @@ body {
     min-width: 260px;
 }
 
-h1 {
+/* h1 {
     margin: 0;
     padding: 0;
-}
+} */
 
 .header {
     position: relative;
@@ -42,10 +42,22 @@ h1 {
     }
 }
 
+@media(max-height: 500px){
+    .header{
+        height: 100vh;
+    }
+}
+
+
 .name {
     position: absolute;
     top: 0%;
     right: 10%;
+}
+
+.name a{
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 500px) {
