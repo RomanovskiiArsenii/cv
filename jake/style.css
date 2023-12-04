@@ -12,6 +12,11 @@ body {
   overflow: hidden;
 }
 
+#loadingMessage{
+  margin-top: 2em;
+  font-size: 2em;
+}
+
 header {
   padding: 20px;
   height: auto;

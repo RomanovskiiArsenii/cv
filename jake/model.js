@@ -2,6 +2,8 @@ import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module
 import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
 // import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
 
+document.getElementById('loadingMessage').style.display = 'block';
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.9, 100);
 let object;
@@ -11,8 +13,15 @@ const loader = new GLTFLoader();
 loader.load(
   `models/${objToRender}/scene.gltf`,
   function (gltf) {
+    document.getElementById('loadingMessage').style.display = 'none';
     object = gltf.scene;
     scene.add(object);
+  },
+  function(xhr) {
+    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+  },
+  function(error) {
+    console.error('Jake didn\'t show up, try to refresh the page (((', error);
   }
 );
 
