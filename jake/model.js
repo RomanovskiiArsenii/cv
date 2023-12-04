@@ -16,12 +16,6 @@ loader.load(
     document.getElementById('loadingMessage').style.display = 'none';
     object = gltf.scene;
     scene.add(object);
-  },
-  function(xhr) {
-    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-  },
-  function(error) {
-    console.error('Jake didn\'t show up, try to refresh the page (((', error);
   }
 );
 
