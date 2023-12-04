@@ -62,7 +62,7 @@ const phrases = [
     "You want to see a dead body?",
     "I'll pretend I didn't hear that and we won't have this conversation again",
     "Brian from Family Guy is on another website",
-    "Do you know my friend Jake? He never get scored either. Just like you...",
+    "Do you know my friend Finn? He never get scored either. Just like you...",
     "The advantages of living in the candy kingdom are that you can eat people. Cons: Diabetes",
     "I love my job",
     "Hey, you owe me a beer!",
