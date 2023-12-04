@@ -41,7 +41,12 @@ a:active {
 
 .name a {
     letter-spacing: 3px;
-    font-weight: 500;
+    font-weight: 500;    
+}
+
+.name a:hover, .name a:active{
+    color: inherit;
+    background: inherit;
 }
 
 @media (max-width:390px) {
