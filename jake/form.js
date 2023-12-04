@@ -131,6 +131,7 @@ const phrases = [
     "Social violence will be a common occurrence tomorrow",
     "No, I am not ChatGPT",
     "Yes, let's get drunk",
+    "Why are we still here? Just to suffer?",
     "Maybe you should be an astronaut like your dad?",
     "You have your mother's ugly and father's stupidity, or vice versa?",
     "Yes. Also you are a failure"
