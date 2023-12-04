@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: #fff;
+    min-width: 260px;
 }
 
 .blur_h, .blur_f {

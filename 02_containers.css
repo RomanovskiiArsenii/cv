@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: #131313;
+    min-width: 260px;
 }
 
 h1 {
@@ -12,7 +13,7 @@ h1 {
 .header {
     position: relative;
     max-width: 100%;
-    width: 100%;
+    width: 100%; 
     height: 75vh;
     margin: 0 auto;
     border-bottom: 4px solid rgb(45, 12, 42);
