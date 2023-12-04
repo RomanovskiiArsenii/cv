@@ -16,6 +16,7 @@ body {
     background-image: url(images/bloom.gif);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 @media (max-width: 768px) {
