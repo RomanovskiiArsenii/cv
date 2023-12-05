@@ -10,5 +10,3 @@ Despite this, I made the decision to maintain them as they are a crucial compone
 
 The browser won't allow the intro audio until you return to the main page from a secondary page 
 (such as certificates). This is the policy of all major browsers.
-
-You can check out the side project by clicking the link "Ask Jake" at the footer. It's fun )
