@@ -1,17 +1,15 @@
 # cv
-Personal CV Website
+Designed and developed personal portfolio website showcasing skills, experience, contact details and certifications.
 
-Developed and designed a personal portfolio website showcasing information,  skills, work experience, contact details, and certifications.
+Implemented user-friendly UI. Ensured seamless adaptability and responsiveness across multiple mobile devices. Looks best on desktop.
 
-Implemented a user-friendly interface. Ensured seamless adaptability and responsiveness for various mobile devices. Looks best on desktop.
+Used HTML and CSS to create the initial design and layout. The project is currently being used as part of an ongoing learning process in HTML and CSS. 
+Future enhancements and functionality improvements are planned for learning JavaScript. The site is hosted and version controlled on GitHub.
 
-Utilized HTML and CSS to construct the initial design and layout. The project is currently a part of ongoing learning in HTML and CSS. 
-Future enhancements and functionality improvements are planned for JavaScript learning. The website is hosted and version-controlled on GitHub.
+Conceptualised and implemented the design of the website from scratch. Designed layouts, colour schemes and visual elements to reflect personal style.
 
-Conceptualized and executed the design of the website from scratch. Designed layouts, color schemes, and visual elements to reflect personal style.
+The site contains several large images which can take a long time to load on a poor internet connection. 
+However, as they are an important part of the design, I decided to keep them.
 
-The site contains several big images, which can take a long time to load on a poor Internet connection. 
-Despite this, I made the decision to maintain them as they are a crucial component of the design.
-
-A browser won't allow an intro audio until you return to the main page from a secondary page 
+A browser won't allow an intro audio until you return to the main page from a secondary page. 
 (such as certificates). This is the policy of all major browsers.
