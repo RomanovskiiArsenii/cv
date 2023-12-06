@@ -35,10 +35,6 @@ h2 {
     color: rgb(255, 180, 40);
 }
 
-.animatedlink:active {
-    color: rgb(255, 213, 98);
-}
-
 .animatedlink::after {
     content: '';
     position: absolute;
@@ -54,7 +50,9 @@ h2 {
     width: 100%;
 }
 
-
+.animatedlink:active {
+    color: rgb(255, 213, 98);
+}
 
 footer a {
     padding: 0;
