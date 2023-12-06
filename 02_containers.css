@@ -2,12 +2,11 @@ body {
     margin: 0;
     padding: 0;
     background: #131313;
-    min-width: 260px;
+    min-width: 300px;
 }
 
 .header {
     position: relative;
-    max-width: 100%;
     width: 100%; 
     height: 100vh;
     margin: 0 auto;
@@ -19,22 +18,19 @@ body {
     background-attachment: fixed;
 }
 
+/* исправить положение цветка */
+
 @media (max-width: 768px) {
     .header {
-        height: 50vh;
+        height: 100vh;
         background-position: 50% 50%;
+        background-size: cover;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (min-width: 769px) {
     .header {
-        background-position: 30% 50%;
-    }
-}
-
-@media (min-width: 1201px) {
-    .header {
-        background-position: 10% 60%;
+        background-position: 50% 50%;
     }
 }
 
@@ -47,7 +43,7 @@ body {
 .name {
     position: absolute;
     top: 0%;
-    right: 10%;
+    right: 5em;
 }
 
 .name a{
@@ -57,13 +53,12 @@ body {
 
 @media (max-width: 500px) {
     .name {
-        right: 5%;
+        right: 2.5em;
     }
 }
 
 .footer {
     position: relative;
-    max-width: 100%;
     width: 100%;
     height: auto;
     margin: 0 0;
@@ -78,25 +73,18 @@ body {
 }
 
 .links ul li {
-    padding-right: 30px;
+    padding-right: 1.5em;
     display: inline-block;
+    margin-bottom:1.5em
 }
 
-@media (max-width: 400px) {
-    .links ul li {
-        margin-bottom: 10px;
-    }
-}
+@media (max-width: 650px) {
+    /* .links ul{
+        text-align: left;
+    } */
 
-@media (min-width: 401px) and (max-width: 600px) {
     .links ul li {
-        margin-bottom: 20px;
-    }
-}
-
-@media (min-width: 601px) {
-    .links ul li {
-        margin-bottom: 30px;
+        display: block;
     }
 }
 
@@ -108,41 +96,13 @@ body {
 }
 
 .return {
-    padding-bottom: 30px;
-}
-
-@media (max-width: 400px) {
-    .return {
-        padding-bottom: 20px;
-    }
+    margin-top: 5em;;
+    padding-bottom: 2.5em;
 }
 
 .image img {
+    width: 12em;
     transform: translate(-3%, 0);
     transform: rotate(350deg);
     margin-bottom: 50px;
-}
-
-@media (max-width: 400px) {
-    .image img {
-        width: 200px;
-    }
-}
-
-@media (min-width: 401px) and (max-width: 768px) {
-    .image img {
-        width: 300px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-    .image img {
-        width: 400px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .image img {
-        width: 500px;
-    }
 }
