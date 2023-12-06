@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (elementTop < windowBottom) {
                 
-                // if (previousTop === null || Math.floor(previousTop) !== Math.floor(elementTop)) {
-                //     delay = 200; // Сбросить задержку, если это новый уровень элементов
-                // }
-
                 setTimeout(() => {
                     element.classList.add('show');
                 }, delay);
