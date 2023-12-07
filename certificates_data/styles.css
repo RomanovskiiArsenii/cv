@@ -17,7 +17,6 @@ body {
 }
 
 a {
-    /* color: inherit; */
     color: rgb(255, 188, 244);
     text-decoration: none;
     margin: 0;
@@ -46,7 +45,7 @@ a::after {
 }
 
 a:hover::after {
-    width: calc(100% - 1em);
+    width: calc(100% - 3em);
 }
 
 p {
