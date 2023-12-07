@@ -17,7 +17,8 @@ body {
 }
 
 a {
-    color: inherit;
+    /* color: inherit; */
+    color: rgb(255, 188, 244);
     text-decoration: none;
     margin: 0;
     padding: 0;
@@ -84,7 +85,7 @@ p {
     padding: 0;
     width: 1em;
     white-space: nowrap;
-    color: rgb(213, 213, 213);
+    color: rgb(255, 255, 255);
 }
 
 .links {
