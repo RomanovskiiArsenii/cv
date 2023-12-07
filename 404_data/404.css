@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* font-family: 'Abel', sans-serif; */
+
+body {
+    font-family: 'Abel', 'Open Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: #19151d;
+
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+    overflow-y: hidden;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+p {
+    margin: 0;
+    padding: 0 1em;
+}
+
+.msg {
+    padding: 1em 0;
+    font-size: 3em;
+}
+
+.video-background {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 10px;
+    }
+
+    .video-background {
+        width: 150%;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    .video-background {
+        width: 150%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1401px) {
+    .video-background {
+        width: 75%;
+    }
+}
+
+@media (max-height:500px) {
+    body {
+        font-size: 12px;
+    }
+    .video-background {
+        width: 50%;
+    }
+}
