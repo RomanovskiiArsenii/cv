@@ -5,6 +5,50 @@ body {
     min-width: 300px;
 }
 
+.animated-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+}
+
+.animated-svg.hidden {
+    display: none;
+}
+
+svg {
+    width: 100px;
+    height: 100px;
+}
+
+polygon {
+    fill: none;
+    stroke: rgb(0, 0, 0);
+    stroke-width: 2;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: draw 3s forwards ease-in-out 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 300;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.hidden {
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
 .blur_h {
     position: absolute;
     top: 0;
@@ -26,7 +70,7 @@ h1 {
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    background: #ffffff;
+    background: #fff;
 
     background-image: url(images/header_ink.gif);
     background-size: cover;
@@ -124,19 +168,20 @@ footer {
 .f_underline {
     width: 100%;
     height: 4em;
-    background: #ffffff;
+    background: #fff;
     z-index: 1;
     margin: 0;
     padding: 0;
 }
 
 .f_underline {
+    margin: 0;
     padding: 2em 0;
 }
 
 .f_link_container {
     height: 1em;
-    background: #ffffff;
+    background: #fff;
     overflow: hidden;
     margin: 0;
     padding: 0;

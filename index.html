@@ -14,150 +14,154 @@
     <link rel="icon" href="index_data/images/obelisk.png" type="image/png">
     <audio id="audio_1" src="index_data/intro_audio.mp3" preload="auto"></audio>
 
-    <!-- страница будет скрыта до полной загрузки -->
-    <style>
-        body {
-            visibility: hidden;
-        }
-    </style>
-
-    <script>
-        window.addEventListener('load', function () {
-            document.body.style.visibility = 'visible';
-        });
-    </script>
-
-    <script src="index_data/restart_gif.js" defer></script>
     <script src="index_data/fade_in.js" defer></script>
     <script src="index_data/intro_audio.js" defer></script>
+    <script src="index_data/loader.js" defer></script>
+
 </head>
 
 <body>
-    <div class="intro">
-        <div class="blur_h"></div>
-        <div class="name">
-            <h1>ARSENII</h1>
-            <h1>ROMANOVSKII</h1>
-        </div>
+    
+    <svg class="animated-svg" width="100" height="100">
+        <polygon class="animated-polygon" points="50,5 95,50 50,95 5,50"/>
+    </svg>
 
-        <div class="description">
-            <h2>.NET C# developer</h2>
-        </div>
-    </div>
-
-    <div class="about">
-        <div class="column_1">
-            <div class="profile">
-                <h2 class="fade-in">About me</h2>
-
-                <p class="fade-in">Hello, my name is Arsenii! I have designed this website to showcase my CV. You have the option to <a
-                        href="https://drive.google.com/file/d/1wriqmqBb2VK3LikiN9MXP1R72RHJgP2u/view?usp=drive_link"
-                        class="animatedlink" target="_blank">
-                        download my CV in PDF format</a> as well.</p>
-
-                <p class="fade-in">I'm a developer with <strong>over 1 year of C# programming experience</strong>
-                    and over 7 years of experience in engineering and managing.</p>
-
-                <p class="fade-in">I have a strong comprehension of <strong>Object-Oriented Programming</strong> and
-                    <strong>SOLID</strong>
-                    principles, <strong>algorithms</strong>, and <strong>data structures</strong>. I am proficient in
-                    language features
-                    such as <strong>LINQ</strong>, <strong>multithreading</strong>, and <strong>async/await</strong>. My
-                    practical experience includes
-                    <strong>T-SQL</strong>, <strong>MySQL</strong>, <strong>Git</strong>, <strong>Entity Framework
-                        Core</strong>, <strong>HTML</strong>, <strong>CSS</strong>.
-                </p>
-
-                <p class="fade-in">I'm skilled at expressing my thoughts clearly, creating technical documentation,
-                    and working both independently and in a team.</p>
-
-                <p class="fade-in">I am an honest, hardworking, patient, and determined individual and I look
-                    forward to being useful and making an effort for my company and my team.
-                    I welcome any opportunity to learn and grow as a software developer.</p>
+    <div class="hidden">
+        <div class="intro">
+            <div class="blur_h"></div>
+            <div class="name">
+                <h1>ARSENII</h1>
+                <h1>ROMANOVSKII</h1>
             </div>
 
-            <div class="skills">
-                <h2 class="fade-in">Key skills</h2>
-
-                <p class="fade-in">.NET, CLR, C#, OOP, SOLID,
-                    LINQ, multithreading, async/await, data structures, algorithms, unit testing, MySQL, T-SQL, entity
-                    framework core, HTML, CSS, GIT, excellent soft skills. <a href="certificates.html" class="animatedlink">Here are the certificates that confirm my qualifications.</a></p>
+            <div class="description">
+                <h2>.NET C# developer</h2>
             </div>
+        </div>
 
-            <div class="contacts">
-                <h2 class="fade-in">Contacts</h2>
+        <div class="about">
+            <div class="column_1">
+                <div class="profile">
+                    <h2 class="fade-in">About me</h2>
+
+                    <p class="fade-in">Hello, my name is Arsenii! I have designed this website to showcase my CV. You
+                        have
+                        the option to <a
+                            href="https://drive.google.com/file/d/1wriqmqBb2VK3LikiN9MXP1R72RHJgP2u/view?usp=drive_link"
+                            class="animatedlink" target="_blank">
+                            download my CV in PDF format</a> as well.</p>
+
+                    <p class="fade-in">I'm a developer with <strong>over 1 year of C# programming experience</strong>
+                        and over 7 years of experience in engineering and managing.</p>
+
+                    <p class="fade-in">I have a strong comprehension of <strong>Object-Oriented Programming</strong> and
+                        <strong>SOLID</strong>
+                        principles, <strong>algorithms</strong>, and <strong>data structures</strong>. I am proficient
+                        in
+                        language features
+                        such as <strong>LINQ</strong>, <strong>multithreading</strong>, and
+                        <strong>async/await</strong>. My
+                        practical experience includes
+                        <strong>T-SQL</strong>, <strong>MySQL</strong>, <strong>Git</strong>, <strong>Entity Framework
+                            Core</strong>, <strong>HTML</strong>, <strong>CSS</strong>.
+                    </p>
+
+                    <p class="fade-in">I'm skilled at expressing my thoughts clearly, creating technical documentation,
+                        and working both independently and in a team.</p>
+
+                    <p class="fade-in">I am an honest, hardworking, patient, and determined individual and I look
+                        forward to being useful and making an effort for my company and my team.
+                        I welcome any opportunity to learn and grow as a software developer.</p>
+                </div>
+
+                <div class="skills">
+                    <h2 class="fade-in">Key skills</h2>
+
+                    <p class="fade-in">.NET, CLR, C#, OOP, SOLID,
+                        LINQ, multithreading, async/await, data structures, algorithms, unit testing, MySQL, T-SQL,
+                        entity
+                        framework core, HTML, CSS, GIT, excellent soft skills. <a href="certificates.html"
+                            class="animatedlink">Here are the certificates that confirm my qualifications.</a></p>
+                </div>
+
+                <div class="contacts">
+                    <h2 class="fade-in">Contacts</h2>
                     <p class="fade-in">
-                        You can connect with me on <a href="https://www.linkedin.com/in/arsenii-romanovskii/" class="animatedlink" target="_blank">LinkedIn</a> 
-                        and <a href="https://t.me/Arsenii_Romanovskii" class="animatedlink" target="_blank">Telegram</a>, 
-                        send me an email at <a href="mailto:romanovskyway@gmail.com" class="animatedlink" target="_blank">romanovskyway@gmail.com</a>, 
-                        and check out my <a href="https://github.com/RomanovskiiArsenii" class="animatedlink" target="_blank">GitHub</a> profile.</p>
+                        You can connect with me on <a href="https://www.linkedin.com/in/arsenii-romanovskii/"
+                            class="animatedlink" target="_blank">LinkedIn</a>
+                        and <a href="https://t.me/Arsenii_Romanovskii" class="animatedlink"
+                            target="_blank">Telegram</a>,
+                        send me an email at <a href="mailto:romanovskyway@gmail.com" class="animatedlink"
+                            target="_blank">romanovskyway@gmail.com</a>,
+                        and check out my <a href="https://github.com/RomanovskiiArsenii" class="animatedlink"
+                            target="_blank">GitHub</a> profile.</p>
+                </div>
+            </div>
+
+            <div class="column_2">
+                <div class="experience">
+                    <h2 class="fade-in">Languages and citizenship</h2>
+
+                    <p class="fade-in">
+                        My proficiency in English is advanced (C1-C2). Russian is my native language.
+                        I have dual citizenship - Armenian and Russian.
+                    </p>
+
+                    <h2 class="fade-in">Experience</h2>
+
+                    <ul>
+                        <li class="fade-in">2019 - 2023 <strong>Technical Director</strong>;
+                            2018 - 2019 <strong>Deputy Technical Director</strong>:
+                            Conclusion and maintenance of contracts with resource
+                            supplying organizations, contractors and services;
+                            Maintenance and repair of engineering communications;
+                            Analysis and processing of reporting data;
+                            Implementation of fire safety measures;
+                            Implementation of safety and health measures in the workplace.</li><br>
+
+                        <li class="fade-in">2018 - 2022 (Parallel) <strong>Personal creative experimentation
+                                workshop</strong>:
+                            Custom designs of various products of wood, metal, plastic, epoxy resins;
+                            Part-time work as a turner.</li><br>
+
+                        <li class="fade-in">2017 - 2018 Mandatory military training for citizens. </li><br>
+
+                        <li class="fade-in">2014 - 2016 <strong>Engineer</strong> in a furniture factory:
+                            Preparation of drawings and design documents;
+                            Project support from the drawing to the assembly;
+                            Taking measurements, coordinating with the customer.</li><br>
+
+                        <li class="fade-in">2013 - 2014 <strong>Sales Manager</strong> in a furniture factory:
+                            Development, coordination and approval of individual projects.</li><br>
+
+                        <li class="fade-in">2012 - 2013 <strong>Joinery Technician</strong> in a design studio:
+                            Design and manufacture of complex joinery.</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="column_2">
-            <div class="experience">
-                <h2 class="fade-in">Languages and citizenship</h2>
-                
-                <p class="fade-in">
-                    My proficiency in English is advanced (C1-C2). Russian is my native language.
-                    I have dual citizenship - Armenian and Russian.
-                </p>
+        <footer>
+            <div class="f_upperline"></div>
 
-                <h2 class="fade-in">Experience</h2>
-                
-                <ul>
-                    <li class="fade-in">2019 - 2023 <strong>Technical Director</strong>;
-                        2018 - 2019 <strong>Deputy Technical Director</strong>:
-                        Conclusion and maintenance of contracts with resource
-                        supplying organizations, contractors and services;
-                        Maintenance and repair of engineering communications;
-                        Analysis and processing of reporting data;
-                        Implementation of fire safety measures;
-                        Implementation of safety and health measures in the workplace.</li><br>
+            <div class="f_link_container">
+                <a href="mailto:romanovskyway@gmail.com">
+                    <p class="hello">SAY HELLO</p>
+                    <p class="hello" id="down">SAY HELLO</p>
+                </a>
+            </div>
 
-                    <li class="fade-in">2018 - 2022 (Parallel) <strong>Personal creative experimentation
-                            workshop</strong>:
-                        Custom designs of various products of wood, metal, plastic, epoxy resins;
-                        Part-time work as a turner.</li><br>
+            <div class="f_underline">
+                <a href="mailto:romanovskyway@gmail.com" id="email">romanovskyway@gmail.com</a>
+            </div>
+        </footer>
 
-                    <li class="fade-in">2017 - 2018 Mandatory military training for citizens. </li><br>
-
-                    <li class="fade-in">2014 - 2016 <strong>Engineer</strong> in a furniture factory:
-                        Preparation of drawings and design documents;
-                        Project support from the drawing to the assembly;
-                        Taking measurements, coordinating with the customer.</li><br>
-
-                    <li class="fade-in">2013 - 2014 <strong>Sales Manager</strong> in a furniture factory:
-                        Development, coordination and approval of individual projects.</li><br>
-
-                    <li class="fade-in">2012 - 2013 <strong>Joinery Technician</strong> in a design studio:
-                        Design and manufacture of complex joinery.</li>
-                </ul>
+        <div class="licence">
+            <div class="l_content">
+                <a href="licence.html" class="l_link">External resources</a>
             </div>
         </div>
     </div>
-
-    <footer>
-        <div class="f_upperline"></div>
-
-        <div class="f_link_container">
-            <a href="mailto:romanovskyway@gmail.com">
-                <p class="hello">SAY HELLO</p>
-                <p class="hello" id="down">SAY HELLO</p>
-            </a>
-        </div>
-
-        <div class="f_underline">
-            <a href="mailto:romanovskyway@gmail.com" id="email">romanovskyway@gmail.com</a>
-        </div>
-    </footer>
-
-    <div class="licence">
-        <div class="l_content">
-            <a href="licence.html" class="l_link">External resources</a>
-        </div>
-    </div>
-
 </body>
 
 </html>
