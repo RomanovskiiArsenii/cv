@@ -7,20 +7,16 @@ body {
 
 .animated-svg {
     position: absolute;
-    top: 50%;
+    top: 50vh;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-
+    width: 100px;
+    height: 100px;
 }
 
 .animated-svg.hidden {
     display: none;
-}
-
-svg {
-    width: 100px;
-    height: 100px;
 }
 
 polygon {
@@ -131,14 +127,14 @@ h1 {
     display: flex;
 }
 
-.about .column_1,
+.column_1,
 .column_2 {
     width: 90%;
     padding: 3%;
     padding-bottom: 50px;
 }
 
-.about .column_2 ul {
+.column_2 ul {
     padding-left: 0;
     list-style: none;
 }
@@ -147,12 +143,12 @@ h1 {
     .about {
         display: block;
     }
-
-    .about .column_1 {
+    
+    .column_1 {
         padding-bottom: 0;
     }
-
-    .about .column_2 {
+    
+    .column_2 {
         padding-top: 0;
     }
 }
