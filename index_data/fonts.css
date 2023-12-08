@@ -13,7 +13,6 @@ body {
 *::selection{
     background: rgba(84, 84, 84, 0.5);
     color: white;
-    /* color: rgb(255, 188, 244); */
 }
 
 h2 {
