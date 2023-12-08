@@ -149,6 +149,7 @@ h1 {
     width: 90%;
     padding: 3%;
     padding-bottom: 50px;
+    /* text-align: justify; */
 }
 
 .column_2 ul {

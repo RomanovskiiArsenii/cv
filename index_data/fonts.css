@@ -10,6 +10,12 @@ body {
     letter-spacing: 0.5px;
 }
 
+*::selection{
+    background: rgba(84, 84, 84, 0.5);
+    color: white;
+    /* color: rgb(255, 188, 244); */
+}
+
 h2 {
     font-weight: 600;
     letter-spacing: 3px;
