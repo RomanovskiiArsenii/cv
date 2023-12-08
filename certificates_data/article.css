@@ -12,7 +12,7 @@
     line-height: 1em;
     color: rgb(0, 0, 0);
     opacity: 0  ;
-    animation: moveDown .6s ease forwards 0.2s;
+    animation: moveDown 1s ease-out forwards 0.2s;
 }
 
 @keyframes moveDown {
