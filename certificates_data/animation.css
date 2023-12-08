@@ -1,80 +1,31 @@
-#m1 {
-    animation: moveRight .8s ease forwards 0.2s;
-}
-
-#m2 {
-    animation: moveRight .8s ease forwards 0.4s;
-}
-
-#m3 {
-    animation: moveRight .8s ease forwards 0.6s;
-}
-
-#m4 {
-    animation: moveRight .8s ease forwards 0.8s;
-}
-
-/* swap */
-html.is-changing .transition-fade {
-    transition: opacity 1.8s;
-}
-
-html.is-animating .transition-fade {
-    #m1 {
-        animation: moveLeft .8s ease forwards 0.2s;
-    }
-    
-    #m2 {
-        animation: moveLeft .8s ease forwards 0.4s;
-    }
-    
-    #m3 {
-        animation: moveLeft .8s ease forwards 0.6s;
-    }
-
-    #m4 {
-        animation: moveLeft .8s ease forwards 0.8s;
-    }
-
-}
-
-@keyframes moveRight {
+@keyframes moveRightLines {
     from {
         transform: translateX(0%);
     }
-    
+
     to {
         transform: translateX(100%);
     }
 }
 
-@keyframes moveLeft {
-    from {
-        transform: translateX(100%);
-    }
-    
-    to {
-        transform: translateX(0%);
-    }
-}
-
-@keyframes moveRightContainer{
+@keyframes moveRightTable {
 
     from {
         transform: translateX(-10%);
     }
-    
+
     to {
         transform: translateX(0%);
         opacity: 1;
     }
 }
 
-@keyframes fadein{
-    from{
+@keyframes fadein {
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
