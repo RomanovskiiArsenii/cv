@@ -4,13 +4,27 @@
 #cert_article {
     margin: 0;
     padding: 0;
-    font-family: 'Abel',  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Abel', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size:100px;
     margin-left: 1em;
     font-weight: normal;
     letter-spacing: 0.5px;
     line-height: 1em;
-    color: black;
+    color: rgb(0, 0, 0);
+    opacity: 0  ;
+    animation: moveDown .6s ease forwards 0.2s;
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-1em);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 #cert_article h1 {

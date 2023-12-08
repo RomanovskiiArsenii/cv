@@ -1,6 +1,6 @@
 /* swap */
 html.is-changing .transition-move {
-    transition: moveRight 1.8s;
+    transition: moveRight 2s;
 }
 
 html.is-animating .transition-move {
