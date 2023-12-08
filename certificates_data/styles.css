@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 /* font-family: 'Abel', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/* font-family: 'Saira Extra Condensed', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-/* font-family: 'Open Sans', sans-serif; */
 
 body {
     margin: 0;
@@ -12,7 +8,7 @@ body {
     min-width: 375px;
     color: white;
     font-size: 20px;
-    font-family: 'Abel', 'Open Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Abel','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     overflow-y: scroll;
 }
 
@@ -67,14 +63,14 @@ p {
     display: flex;
 }
 
-@media(max-width: 560px){
-    body{
+@media(max-width: 560px) {
+    body {
         font-size: 10px;
     }
 }
 
-@media (min-width: 561px) and (max-width: 768px){
-    body{
+@media (min-width: 561px) and (max-width: 768px) {
+    body {
         font-size: 15px;
     }
 }
@@ -103,7 +99,7 @@ p {
     width: fit-content;
 }
 
-#return_link{
+#return_link {
     position: fixed;
     padding: 0.3em 0.6em;
     border-radius: 0.6em;
@@ -115,26 +111,26 @@ p {
     transition: all 0.3s ease;
 }
 
-#return_link:hover{
+#return_link:hover {
     background: rgb(255, 188, 244);
-    color: black;   
+    color: black;
 }
 
-#return_link:hover::after{
+#return_link:hover::after {
     width: 0;
 }
 
 #return_link::before {
     content: "";
     position: absolute;
-    top: 2.5em; 
+    top: 2.5em;
     left: 50%;
     transform: translateX(100%);
     opacity: 0;
     transition: all 0.3s ease;
-    pointer-events: none; 
-    background-size: cover; 
-    width:  5em;
+    pointer-events: none;
+    background-size: cover;
+    width: 5em;
     height: 5em;
     border-radius: 50%;
 }
