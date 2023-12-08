@@ -10,21 +10,29 @@
 
     <link rel="stylesheet" href="index_data/containers.css">
     <link rel="stylesheet" href="index_data/fonts.css">
-    <link rel="stylesheet" href="index_data/opacity.css">
+    <link rel="stylesheet" href="index_data/animation.css">
     <link rel="icon" href="index_data/images/obelisk.png" type="image/png">
     <audio id="audio_1" src="index_data/intro_audio.mp3" preload="auto"></audio>
 
     <script src="index_data/fade_in.js" defer></script>
     <script src="index_data/intro_audio.js" defer></script>
     <script src="index_data/loader.js" defer></script>
-
 </head>
 
 <body>
-    
+
     <svg class="animated-svg">
-        <polygon class="animated-polygon" points="50,5 95,50 50,95 5,50"/>
+        <polygon class="animated-polygon" points="50,5 95,50 50,95 5,50" />
     </svg>
+
+    <div id="swup" class="transition-fade">
+        <div class="swup-container">
+            <div class="move-container" id="m1"></div>
+            <div class="move-container" id="m2"></div>
+            <div class="move-container" id="m3"></div>
+            <div class="move-container" id="m4"></div>
+        </div>
+    </div>
 
     <div class="hidden">
         <div class="intro">
@@ -44,29 +52,35 @@
                 <div class="profile">
                     <h2 class="fade-in">About me</h2>
 
-                    <p class="fade-in">Hello, my name is Arsenii! I have designed this website to showcase my CV. You
+                    <p class="fade-in">Hello, my name is Arsenii! I have designed this website to showcase my CV.
+                        You
                         have
                         the option to <a
                             href="https://drive.google.com/file/d/1wriqmqBb2VK3LikiN9MXP1R72RHJgP2u/view?usp=drive_link"
                             class="animatedlink" target="_blank">
                             download my CV in PDF format</a> as well.</p>
 
-                    <p class="fade-in">I'm a developer with <strong>over 1 year of C# programming experience</strong>
+                    <p class="fade-in">I'm a developer with <strong>over 1 year of C# programming
+                            experience</strong>
                         and over 7 years of experience in engineering and managing.</p>
 
-                    <p class="fade-in">I have a strong comprehension of <strong>Object-Oriented Programming</strong> and
+                    <p class="fade-in">I have a strong comprehension of <strong>Object-Oriented Programming</strong>
+                        and
                         <strong>SOLID</strong>
-                        principles, <strong>algorithms</strong>, and <strong>data structures</strong>. I am proficient
+                        principles, <strong>algorithms</strong>, and <strong>data structures</strong>. I am
+                        proficient
                         in
                         language features
                         such as <strong>LINQ</strong>, <strong>multithreading</strong>, and
                         <strong>async/await</strong>. My
                         practical experience includes
-                        <strong>T-SQL</strong>, <strong>MySQL</strong>, <strong>Git</strong>, <strong>Entity Framework
+                        <strong>T-SQL</strong>, <strong>MySQL</strong>, <strong>Git</strong>, <strong>Entity
+                            Framework
                             Core</strong>, <strong>HTML</strong>, <strong>CSS</strong>.
                     </p>
 
-                    <p class="fade-in">I'm skilled at expressing my thoughts clearly, creating technical documentation,
+                    <p class="fade-in">I'm skilled at expressing my thoughts clearly, creating technical
+                        documentation,
                         and working both independently and in a team.</p>
 
                     <p class="fade-in">I am an honest, hardworking, patient, and determined individual and I look
@@ -162,6 +176,11 @@
             </div>
         </div>
     </div>
+
+    <script type="module">
+        import Swup from 'https://unpkg.com/swup@4?module';
+        const swup = new Swup();
+    </script>
 </body>
 
 </html>
