@@ -15,10 +15,6 @@ body {
     height: 100px;
 }
 
-.animated-svg.hidden {
-    display: none;
-}
-
 polygon {
     fill: none;
     stroke: rgb(0, 0, 0);
@@ -59,7 +55,7 @@ polygon {
 .hidden {
     margin: 0;
     padding: 0;
-    visibility: hidden;
+    display: none;
 }
 
 .blur_h {
@@ -160,11 +156,11 @@ h1 {
     .about {
         display: block;
     }
-    
+
     .column_1 {
         padding-bottom: 0;
     }
-    
+
     .column_2 {
         padding-top: 0;
     }
