@@ -1,7 +1,8 @@
 /* about block */
 .fade-in {
     opacity: 0;
-    transition: opacity 2.5s ease-in-out;
+    transition: opacity 2.5s;
+
 }
 
 .fade-in.show {
@@ -11,7 +12,7 @@
 
 /* intro description */
 .description {
-    animation: fadeIn 1.4s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 @keyframes fadeIn {

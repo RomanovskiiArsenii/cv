@@ -1,26 +1,16 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const elements = document.querySelectorAll('.fade-in');
-
-    function fadeInSequentially() {
-        let delay = 0;
-        let previousTop = null;
-
-        elements.forEach((element) => {
-            const elementTop = element.getBoundingClientRect().top;
-            const windowBottom = window.innerHeight;
-
-            if (elementTop < windowBottom) {
-                
-                setTimeout(() => {
-                    element.classList.add('show');
-                }, delay);
-
-                previousTop = elementTop;
-                delay += 100; // Задержка в миллисекундах
-            }
-        });
-    }
-
-    window.addEventListener('scroll', fadeInSequentially);
-    fadeInSequentially();
-});
+function onEntry(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+       change.target.classList.add('show');
+      }
+    });
+  }
+  
+  let options = {
+    threshold: [0.5] };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll('.fade-in');
+  
+  for (let elm of elements) {
+    observer.observe(elm);
+  }
