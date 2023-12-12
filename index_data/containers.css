@@ -108,6 +108,7 @@ nav ul {
 
 nav ul>li {
     padding-right: 1em;
+    padding-bottom: .5em;
 }
 
 nav:hover ul {
