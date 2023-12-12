@@ -21,6 +21,11 @@ h2 {
     word-spacing: 4px;
 }
 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
 .animatedlink {
     color: rgb(255, 188, 244);
     background: none;
@@ -100,6 +105,14 @@ footer a:hover {
     box-shadow: none;
 }
 
+nav {
+    font-size: 2em;
+    font-weight: 300;
+    text-decoration: 2px white line-through;
+    mix-blend-mode: exclusion;  
+    color: white;
+}
+
 .name {
     letter-spacing: 2px;
     line-height: 2.5em;
@@ -109,9 +122,14 @@ footer a:hover {
 }
 
 .description {
-    text-shadow: -2px -2px 4px rgba(33, 33, 33, 0.3);
     text-align: left;
     font-size: 1.5em;
+    mix-blend-mode: exclusion;
+    color: white;
+}
+
+.description > h2{
+    font-weight: 300;
 }
 
 .about {
@@ -136,8 +154,6 @@ footer a:hover {
         font-size: 16px;
     }
 }
-
-
 
 @media (max-height: 400px) {
     body{

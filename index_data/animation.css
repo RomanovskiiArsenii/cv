@@ -2,19 +2,13 @@
 .fade-in {
     opacity: 0;
     transition: opacity 2.5s;
-
 }
 
 .fade-in.show {
     opacity: 1;
 }
 
-
-/* intro description */
-.description {
-    animation: fadeIn 1.5s ease-in-out;
-}
-
+/*description and nav*/
 @keyframes fadeIn {
     from {
         opacity: 0;

@@ -15,6 +15,6 @@ loadImage(backgroundImageUrl, function () {
     if (animatedSvgElement) {
         animatedSvgElement.classList.add('hidden');
     }
-    const audio = new Audio('index_data/intro_audio.mp3');
-    audio.play();
+    // const audio = new Audio('index_data/intro_audio.mp3');
+    // audio.play();
 });

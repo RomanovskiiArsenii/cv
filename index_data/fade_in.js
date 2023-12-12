@@ -13,4 +13,4 @@ function onEntry(entry) {
   
   for (let elm of elements) {
     observer.observe(elm);
-  }
+  } 
