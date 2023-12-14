@@ -177,3 +177,65 @@ p {
 #cm4 {
     animation: moveRightLines .8s ease forwards 2s;
 }
+
+#cert_article {
+    margin: 0;
+    padding: 0;
+    font-family: 'Abel', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:100px;
+    margin-left: 1em;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    line-height: 1em;
+    color: rgb(0, 0, 0);
+    opacity: 0  ;
+    animation: moveDown 1s ease-out forwards 0.2s;
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-1em);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+#cert_article h1 {
+    margin: 0;
+    padding: 0;
+
+}
+
+@media (max-width: 400px) {
+    #cert_article {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 768px) {
+    #cert_article{
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    #cert_article{
+        font-size: 60px;
+    }
+}
+
+@media (max-height: 400px) {
+    #cert_article{
+        font-size: 40px;
+    }
+}
+
+@media (min-height: 401px) and (max-height: 600px) {
+    #cert_article{
+        font-size: 60px;
+    }
+}
