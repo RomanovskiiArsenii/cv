@@ -417,11 +417,11 @@ footer {
 
 .l_circle_inner{
     position: absolute;
-    top: 3em;
+    top: 2em;
     left: 50%;
     transform: translateX(-50%);
-    width: 14em;
-    height: 14em;
+    width: 16em;
+    height: 16em;
     border: solid 1px black;
     border-radius: 50%;
     pointer-events: none;
