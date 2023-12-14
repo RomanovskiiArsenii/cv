@@ -10,6 +10,11 @@ body {
     letter-spacing: 0.5px;
 }
 
+*::selection{
+    background: rgba(84, 84, 84, 0.5);
+    color: white;
+}
+
 h1{
     font-weight: 300;
 }
@@ -20,9 +25,10 @@ h2 {
     word-spacing: 4px;
 }
 
-*::selection{
-    background: rgba(84, 84, 84, 0.5);
-    color: white;
+nav {
+    font-size: 2em;
+    text-decoration: 2px white line-through;
+    mix-blend-mode: exclusion;  
 }
 
 nav ul li a {
@@ -108,12 +114,6 @@ footer a:hover {
     background: transparent;
     text-shadow: none;
     box-shadow: none;
-}
-
-nav {
-    font-size: 2em;
-    text-decoration: 2px white line-through;
-    mix-blend-mode: exclusion;  
 }
 
 .header_name {

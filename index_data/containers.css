@@ -58,17 +58,12 @@ polygon {
     display: none;
 }
 
-h1 {
-    margin: 0;
-    padding: 0;
-}
-
 .header {
     position: relative;
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-
+    
     background-image: url(images/header_ink.gif);
     background-size: cover;
     background-position: top;
@@ -115,6 +110,11 @@ nav:hover ul {
     display: flex;
     flex-wrap: wrap;
     animation: fadeIn .3s forwards;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
 }
 
 .header_name {
@@ -245,21 +245,6 @@ nav {
     border-bottom: dashed 1px rgb(96, 96, 96);
 }
 
-.s_container summary{
-    list-style: none;
-}
-
-.s_left_col{
-    position: relative;
-}
-
-.s_triangle{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-}
-
 details[open] summary .s_triangle  {
     animation: change_color_to_orange 1s alternate forwards;
 }
@@ -274,8 +259,19 @@ details[open] summary .s_triangle  {
     }
 }
 
+.s_container summary{
+    list-style: none;
+}
+
 .s_container:hover {
     background: #2b2b2b;
+}
+
+.s_triangle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
 }
 
 .s_year_role {
@@ -284,8 +280,8 @@ details[open] summary .s_triangle  {
     text-wrap: nowrap;
 }
 
-
 .s_left_col {
+    position: relative;
     padding: 0 1em;
     margin: 0;
 }
@@ -321,6 +317,18 @@ footer {
     height: 4em;
 }
 
+.f_link_container {
+    height: 1em;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.f_hello {
+    margin: 0;
+    padding: 0;
+}
+
 .f_underline {
     position: relative;
     margin: 0;
@@ -337,18 +345,6 @@ footer {
     left: 50%;
 }
 
-.f_link_container {
-    height: 1em;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.f_hello {
-    margin: 0;
-    padding: 0;
-}
-
 .f_underline_circle {
     position: absolute;
     bottom: 5em;
@@ -360,18 +356,6 @@ footer {
     border-radius: 50%;
     pointer-events: none;
     z-index: 2;
-}
-
-.l_circle {
-    position: absolute;
-    top: 0em;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20em;
-    height: 20em;
-    border: solid 1px black;
-    border-radius: 50%;
-    pointer-events: none;
 }
 
 .f_underline_contacts {
@@ -413,4 +397,32 @@ footer {
 
 .l_content a {
     margin: 0;
+}
+
+.l_circle {
+    position: absolute;
+    top: 0em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20em;
+    height: 20em;
+    /* border: solid 1px black; */
+    border-radius: 50%;
+    pointer-events: none;
+    background-image: url(images/orange_texture.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.l_circle_inner{
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14em;
+    height: 14em;
+    border: solid 1px black;
+    border-radius: 50%;
+    pointer-events: none;
 }
