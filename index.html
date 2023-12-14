@@ -20,15 +20,15 @@
 
     <link rel="icon" href="index_data/images/obelisk.png" type="image/png">
 
-    <audio id="audio_1" src="index_data/intro_audio.mp3" preload="auto"></audio>
+    <!-- <audio id="audio_1" src="index_data/intro_audio.mp3" preload="auto"></audio> -->
 
     <script src="index_data/fade_in.js" defer></script>
-    <script src="index_data/loader.js" defer></script>
+    <script src="index_data/loading.js" defer></script>
 </head>
 
 <body>
 
-    <svg class="animated-svg">
+    <svg class="loading_animation">
         <polygon class="animated-polygon" points="50,5 95,50 50,95 5,50" />
     </svg>
 
@@ -42,16 +42,16 @@
     </div>
 
     <div class="hidden">
-        <div class="intro">
-            <div class="blur_h"></div>
+        <div class="header">
+            <div class="header_blue_mask"></div>
 
-            <div class="name">
-                <h1>ARSENII</h1>
-                <h1>ROMANOVSKII</h1>
+            <div class="header_name">
+                <h1>Arsenii</h1>
+                <h1>Romanovskii</h1>
             </div>
 
-            <div class="description">
-                <h2>.NET C# developer</h2>
+            <div class="header_role">
+                <p>.NET C# developer</p>
             </div>
 
             <nav>
@@ -60,14 +60,18 @@
                     <li><a href="#contacts">CONTACTS</a></li>
                     <li><a href="certificates.html">CERTIFICATES</a></li>
                 </ul>
-            </p>
+                </p>
             </nav>
         </div>
 
-        <div class="about">
-            <div class="column_1">
-                <div class="profile">
-                    <h2 class="fade-in">About me</h2>
+        <div class="main_headline">
+            <h2>About</h2>
+        </div>
+
+        <div class="main">
+            <div class="m_left_col">
+                <div class="m_article">
+                    <h2 class="fade-in">So this is me</h2>
 
                     <p class="fade-in">Hello, my name is Arsenii! I have designed this website to showcase my CV.
                         You
@@ -100,12 +104,14 @@
                         documentation,
                         and working both independently and in a team.</p>
 
-                    <p class="fade-in">I am an honest, hardworking, patient, and determined individual and I look
+                    <p class="fade-in">I am an honest, hardworking, creative, and determined individual and I look
                         forward to being useful and making an effort for my company and my team.
                         I welcome any opportunity to learn and grow as a software developer.</p>
                 </div>
+            </div>
 
-                <div class="skills">
+            <div class="m_right_col">
+                <div class="m_article">
                     <h2 class="fade-in">Key skills</h2>
 
                     <p class="fade-in">.NET, CLR, C#, OOP, SOLID,
@@ -115,8 +121,9 @@
                             class="animatedlink">Here are the certificates</a> that confirm my qualifications.</p>
                 </div>
 
-                <div class="contacts" id="contacts">
+                <div class="m_article" id="contacts">
                     <h2 class="fade-in">Contacts</h2>
+
                     <p class="fade-in">
                         You can connect with me on <a href="https://www.linkedin.com/in/arsenii-romanovskii/"
                             class="animatedlink" target="_blank">LinkedIn</a>
@@ -127,48 +134,105 @@
                         and check out my <a href="https://github.com/RomanovskiiArsenii" class="animatedlink"
                             target="_blank">GitHub</a> profile.</p>
                 </div>
-            </div>
 
-            <div class="column_2">
-                <div class="experience">
+                <div class="m_article">
                     <h2 class="fade-in">Languages and citizenship</h2>
 
                     <p class="fade-in">
                         My proficiency in English is advanced (C1-C2). Russian is my native language.
                         I have dual citizenship - Armenian and Russian.
                     </p>
-
-                    <h2 class="fade-in">Experience</h2>
-
-                    <ul>
-                        <li class="fade-in">2019 - 2023 <strong>Technical Director</strong>;
-                            2018 - 2019 <strong>Deputy Technical Director</strong>:
-                            Conclusion and maintenance of contracts with resource
-                            supplying organizations, contractors and services;
-                            Maintenance and repair of engineering communications;
-                            Analysis and processing of reporting data;
-                            Implementation of fire safety measures;
-                            Implementation of safety and health measures in the workplace.</li><br>
-
-                        <li class="fade-in">2018 - 2022 (Parallel) <strong>Personal creative experimentation
-                                workshop</strong>:
-                            Custom designs of various products of wood, metal, plastic, epoxy resins;
-                            Part-time work as a turner.</li><br>
-
-                        <li class="fade-in">2017 - 2018 Mandatory military training for citizens. </li><br>
-
-                        <li class="fade-in">2014 - 2016 <strong>Engineer</strong> in a furniture factory:
-                            Preparation of drawings and design documents;
-                            Project support from the drawing to the assembly;
-                            Taking measurements, coordinating with the customer.</li><br>
-
-                        <li class="fade-in">2013 - 2014 <strong>Sales Manager</strong> in a furniture factory:
-                            Development, coordination and approval of individual projects.</li><br>
-
-                        <li class="fade-in">2012 - 2013 <strong>Joinery Technician</strong> in a design studio:
-                            Design and manufacture of complex joinery.</li>
-                    </ul>
                 </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="fade-in">
+                <h2>Experience</h2>
+
+                <details class="s_container">
+                    <summary class="s_year_role">
+                        <p class="s_left_col"><span class="s_triangle">&blacktriangledown;</span> 2019 - 2023</p>
+                        <p class="s_right_col">Technical Director</p>
+                    </summary>
+
+                    <p class="s_content">Conclusion and maintenance of contracts with resource
+                        supplying organizations, contractors and services;</p>
+                    <p class="s_content">Maintenance and repair of engineering communications;</p>
+                    <p class="s_content">Analysis and processing of reporting data;</p>
+                    <p class="s_content">Implementation of fire safety measures;</p>
+                    <p class="s_content">Implementation of safety and health measures in the workplace.</p>
+                    <p class="s_content" style="margin-bottom: 0;">Monitoring of compliance with COVID-19 infection
+                        control measures.</p>
+                </details>
+
+                <details class="s_container">
+                    <summary class="s_year_role">
+                        <p class="s_left_col"><span class="s_triangle">&blacktriangledown;</span> 2018 - 2019</p>
+                        <p class="s_right_col">Dep. Technical Director</p>
+                    </summary>
+
+                    <p class="s_content">Conclusion and maintenance of contracts with resource
+                        supplying organizations, contractors and services;</p>
+                    <p class="s_content">Maintenance and repair of engineering communications;</p>
+                    <p class="s_content" style="margin-bottom: 0;">Analysis and processing of reporting data;</p>
+                </details>
+
+                <details class="s_container">
+                    <summary class="s_year_role">
+                        <p class="s_left_col"><span class="s_triangle">&blacktriangledown;</span> 2018 - 2022</p>
+                        <p class="s_right_col">Creative workshop</p>
+                    </summary>
+
+                    <p class="s_content">(Parallel) Custom DIY designs of various products of wood, metal, plastic,
+                        epoxy
+                        resins;</p>
+                    <p class="s_content" style="margin-bottom: 0;">Part-time work as a turner.</p>
+                </details>
+
+                <details class="s_container">
+                    <summary class="s_year_role">
+                        <p class="s_left_col"><span class="s_triangle">&blacktriangledown;</span> 2017 - 2018</p>
+                        <p class="s_right_col">Military training</p>
+                    </summary>
+
+                    <p class="s_content">Involuntary career break.</p>
+                    <p class="s_content">Every russian citizen is obliged by law to undergo military training. </p>
+                    <p class="s_content" style="margin-bottom: 0;">I trained in first aid, since i
+                        was a combat medic.</p>
+                </details>
+
+                <details class="s_container">
+                    <summary class="s_year_role">
+                        <p class="s_left_col"><span class="s_triangle">&blacktriangledown;</span> 2014 - 2016</p>
+                        <p class="s_right_col">Engineer</p>
+                    </summary>
+
+                    <p class="s_content">Preparation of drawings (AutoCAD) and design documents;</p>
+                    <p class="s_content">Project support from the drawing to the assembly;</p>
+                    <p class="s_content" style="margin-bottom: 0;">Taking measurements, coordinating with the
+                        customer.</p>
+                </details>
+
+                <details class="s_container">
+                    <summary class="s_year_role">
+                        <p class="s_left_col"><span class="s_triangle">&blacktriangledown;</span> 2013 - 2014</p>
+                        <p class="s_right_col">Sales Manager</p>
+                    </summary>
+
+                    <p class="s_content" style="margin-bottom: 0;">Development, coordination and approval of
+                        individual projects.</p>
+                </details>
+
+                <details class="s_container">
+                    <summary class="s_year_role">
+                        <p class="s_left_col"><span class="s_triangle">&blacktriangledown;</span> 2012 - 2013</p>
+                        <p class="s_right_col">Joinery Technician</p>
+                    </summary>
+
+                    <p class="s_content" style="margin-bottom: 0;">Design and manufacture of complex joinery.</p>
+                </details>
+
             </div>
         </div>
 
@@ -177,20 +241,36 @@
 
             <div class="f_link_container">
                 <a href="mailto:romanovskyway@gmail.com">
-                    <p class="hello">SAY HELLO</p>
-                    <p class="hello" id="down">SAY HELLO</p>
+                    <p class="f_hello">SAY HELLO</p>
+                    <p class="f_hello" id="f_hello_down">SAY HELLO</p>
                 </a>
             </div>
 
             <div class="f_underline">
-                <a href="mailto:romanovskyway@gmail.com" id="email">romanovskyway@gmail.com</a>
+                <a href="mailto:romanovskyway@gmail.com" id="f_email">romanovskyway@gmail.com</a>
+
+                <div class="f_underline_contacts">
+                    <div class="contacts_btns">
+                        <a href=""><img src="index_data/images/li_btn.png" alt="LinkedIn"></a>
+                        <a href=""><img src="index_data/images/t_btn.png" alt="Telegram"></a>
+                    </div>
+                    <div class="contacts_btns">
+                        <a href=""><img src="index_data/images/git_btn.png" alt="GitHub"></a>
+                    </div>
+                </div>
+
             </div>
+
+            <div class="f_underline_circle"></div>
         </footer>
 
         <div class="licence">
             <div class="l_content">
                 <a href="licence.html" class="l_link">External resources</a>
             </div>
+
+            <div class="l_circle"></div>
+
         </div>
     </div>
 

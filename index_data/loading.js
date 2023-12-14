@@ -1,3 +1,5 @@
+//анимация загрузчика и сокрытие страницы до завершения загрузки header_ink.gif
+
 const backgroundImageUrl = 'index_data/images/header_ink.gif';
 
 function loadImage(url, callback) {
@@ -11,7 +13,7 @@ loadImage(backgroundImageUrl, function () {
     if (hiddenElement) {
         hiddenElement.classList.remove('hidden');
     }
-    const animatedSvgElement = document.querySelector('.animated-svg');
+    const animatedSvgElement = document.querySelector('.loading_animation');
     if (animatedSvgElement) {
         animatedSvgElement.classList.add('hidden');
     }

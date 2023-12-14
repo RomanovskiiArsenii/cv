@@ -1,4 +1,3 @@
-/* swap */
 html.is-changing .transition-move {
     transition: moveRight 2s;
 }

@@ -1,14 +1,16 @@
-/* about block */
+/* main block */
 .fade-in {
     opacity: 0;
-    transition: opacity 2.5s;
+    transform: translateY(20px);
+    transition: opacity 2s, transform .5s;
 }
 
 .fade-in.show {
     opacity: 1;
+    transform: translateY(0%);
 }
 
-/*description and nav*/
+/*header_role and nav*/
 @keyframes fadeIn {
     from {
         opacity: 0;
