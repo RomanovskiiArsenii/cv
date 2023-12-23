@@ -726,13 +726,11 @@ footer {
     transform: translateX(-50%);
     width: 30rem;
     height: 30rem;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); */
-    /* margin-top: 10px; */
+    border: solid 1px rgba(0, 0, 0, 0.6);
     border-radius: 50%;
     pointer-events: none;
     background-image: url(images/orange_texture.jpg);
     background-size: cover;
-    background-position: top;
     background-repeat: no-repeat;
 }
 
@@ -753,8 +751,6 @@ footer {
     transform: translateX(-50%);
     width: 26rem;
     height: 26rem;
-    /* border: solid 8px rgba(255, 255, 255, 0.6); */
-    /* filter: blur(3px); */
     border: solid 1px rgba(0, 0, 0, 0.6);
     border-radius: 50%;
     pointer-events: none;
