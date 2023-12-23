@@ -19,17 +19,20 @@
 
     <link rel="icon" href="index_data/images/obelisk.png" type="image/png">
 
-    <!-- <audio id="audio_1" src="index_data/intro_audio.mp3" preload="auto"></audio> -->
-
     <script src="index_data/animation_fade_in.js" defer></script>
     <script src="index_data/animation_loading.js" defer></script>
 </head>
 
 <body>
 
-    <svg class="loading_animation">
-        <polygon class="animated-polygon" points="50,5 95,50 50,95 5,50" />
-    </svg>
+
+    <!--<svg class="loading_animation">
+            <polygon class="animated-polygon" points="50,5 95,50 50,95 5,50" />
+        </svg> -->
+
+    <div class="loading_animation">
+        <div class="l_spinner"></div>
+    </div>
 
     <div id="swup" class="transition-move">
         <div class="swup-container">
@@ -40,19 +43,8 @@
         </div>
     </div>
 
-    <div class="hidden">
+    <div class="hidden" id="afterload">
         <div class="header">
-            <div class="header_blue_mask"></div>
-
-            <div class="header_name">
-                <h1>Arsenii</h1>
-                <h1>Romanovskii</h1>
-            </div>
-
-            <div class="header_role">
-                <p>.NET C# developer</p>
-            </div>
-
             <nav>
                 <p>NAV
                 <ul>
@@ -61,6 +53,31 @@
                 </ul>
                 </p>
             </nav>
+
+            <div class="header_image">
+                <div class="circle intro"></div>
+                <div class="circle backgr"></div>
+                <div class="circle large"></div>
+                <div class="circle_large_border"></div>
+                <div class="circle small"></div>
+            </div>
+
+            <!-- <div class="header_blue_mask"></div> -->
+
+            <!-- <div class="header_name">
+                <h1>Arsenii</h1>
+                <h1>Romanovskii</h1>
+            </div> -->
+
+            <!-- <div class="header_role">
+                <p>.NET C# developer</p>
+            </div> -->
+
+            <div class="header_description">
+                <p>&nbsp;Arsenii Romanovskii </p>
+                <p>.NET C# developer</p>
+            </div>
+
         </div>
 
         <div class="main_headline">
@@ -68,6 +85,10 @@
         </div>
 
         <div class="main">
+
+            <div class="m_circle m_c_large"></div>
+            <div class="m_circle m_c_small"></div>
+
             <div class="m_left_col">
                 <div class="m_article">
                     <h2 class="fade-in">So this is me</h2>
