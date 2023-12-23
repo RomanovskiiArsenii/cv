@@ -1,16 +1,19 @@
-/* MAIN */
+/* MAIN TEXT*/
+
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 3.5s, transform .5s;
 }
 
-.fade-in.show { 
+.fade-in.show {
     opacity: 1;
     transform: translateY(0%);
 }
 
-/*HEADER_ROLE + NAV*/
+
+/*HEADER_DESCRIPTION + NAV*/
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -19,6 +22,102 @@
     to {
         opacity: 1;
     }
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(20%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes reveal {
+    100% {
+        background-size: 300% 300%;
+    }
+}
+
+
+/* LOADING CIRCLE */
+
+.loading_animation {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+
+    width: 40vw;
+    /* height: 100vh; */
+    
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+@media screen and (max-width:1000px) and (orientation: landscape) {
+    .loading_animation {
+        width: 40vw;
+        height: 40vw;
+    }
+}
+
+@media screen and (max-width: 1000px) and (orientation: portrait)  {
+    .loading_animation {
+        width: 80vw;
+        height: 80vw;
+    }
+}
+
+@media screen and (min-width:1000px) and (max-width: 1300px){
+    .loading_animation {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
+
+.l_spinner {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+    radial-gradient(farthest-side, #ff9d00 94%, #0000) top/4px 4px no-repeat,
+    conic-gradient(#0000 30%, #000000);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 4px), #000 0);
+    animation: fadeIn 1s ease, s3 2s infinite linear;
+    overflow: hidden;
+}
+
+@keyframes s3 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
+
+/* SWUP */
+
+.swup-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.move-container {
+    transform: translateX(100%);
+    width: 100%;
+    height: 25vh;
+    background: rgb(255, 180, 40);
+}
+
+.hidden {
+    display: none;
 }
 
 @keyframes moveRight {
@@ -31,8 +130,10 @@
     }
 }
 
-/* LOADING */
-polygon {
+
+/* LOADING POLYGON */
+
+/* polygon {
     fill: none;
     stroke: rgb(0, 0, 0);
     stroke-width: 2;
@@ -60,26 +161,4 @@ polygon {
     z-index: -1;
     width: 100px;
     height: 100px;
-}
-
-/* SWUP */
-.swup-container {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    pointer-events: none;
-}
-
-.move-container {
-    transform: translateX(100%);
-    width: 100%;
-    height: 25vh;
-    background: rgb(255, 180, 40);
-}
-
-.hidden {
-    display: none;
-}
+} */
