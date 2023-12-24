@@ -572,6 +572,11 @@ details[open] summary .s_triangle {
     list-style: none;
     list-style-type: none;
     list-style: none outside none;
+    outline: none;
+}
+
+.s_container summary:focus{
+    outline: none;
 }
 
 .s_container summary::-webkit-details-marker {
