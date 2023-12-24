@@ -485,6 +485,7 @@ nav {
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 3;
+    pointer-events: none;
 }
 
 .m_circle.m_c_large {
