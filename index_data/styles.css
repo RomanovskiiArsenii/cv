@@ -56,13 +56,13 @@ body {
     line-height: 1.75rem;
 }
 
-#afterload{
+#afterload {
     opacity: 0;
     animation: fadeIn 1s ease forwards;
 }
 
 .circle.large,
-.circle_large_border{
+.circle_large_border {
     opacity: 0;
     animation: fadeIn 2.5s ease forwards;
 }
@@ -195,9 +195,9 @@ nav:hover ul {
 
 /* HEADER */
 
-nav{
+nav {
     opacity: 0;
-    animation: fadeIn 1s ease-in-out 2s forwards, moveUp 1s ease 2s forwards; 
+    animation: fadeIn 1s ease-in-out 2s forwards, moveUp 1s ease 2s forwards;
 }
 
 .header {
@@ -206,11 +206,6 @@ nav{
     height: 100vh;
     margin: 0 auto;
     overflow-X: hidden;
-
-    /* background-image: url(images/header_ink.gif);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat; */
 }
 
 .header_description {
@@ -226,6 +221,12 @@ nav{
     background-clip: text;
     color: transparent;
     animation: reveal 3000ms ease-in-out forwards 200ms;
+}
+
+@media (max-width: 768px) {
+    .header_description {
+        color: white;
+    }
 }
 
 @media (max-width: 600px) {
@@ -402,7 +403,7 @@ nav{
     }
 }
 
-@media (max-width: 1000px) and (orientation: portrait)  {
+@media (max-width: 1000px) and (orientation: portrait) {
     .circle.large {
         clip-path: circle(40vw at 50% 50%);
     }
@@ -417,7 +418,7 @@ nav{
     }
 }
 
-@media (min-width:1000px) and (max-width: 1300px){
+@media (min-width:1000px) and (max-width: 1300px) {
     .circle.large {
         clip-path: circle(25vw at 50% 50%);
     }
