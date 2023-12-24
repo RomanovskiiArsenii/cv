@@ -332,7 +332,6 @@ nav{
     background-image: url(images/header_image.jpg);
     background-size: cover;
     background-position: top right;
-    background-attachment: fixed;
 }
 
 .circle.small {
@@ -349,7 +348,6 @@ nav{
     background-image: url(images/header_img_cut.jpg);
     background-size: cover;
     background-position: top right;
-    background-attachment: fixed;
 }
 
 .circle.large::before {
