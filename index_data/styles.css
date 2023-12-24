@@ -116,6 +116,7 @@ body {
 
 .animatedlink:hover {
     color: rgb(255, 180, 40);
+    cursor: pointer;
 }
 
 .animatedlink:active {
@@ -172,6 +173,13 @@ nav {
     text-decoration: 2px white line-through;
     mix-blend-mode: exclusion;
     z-index: 6;
+    
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 2s forwards, moveUp 1s ease 2s forwards;
+}
+
+nav:hover{
+    cursor: pointer;
 }
 
 nav>* {
@@ -191,14 +199,10 @@ nav:hover ul {
     display: flex;
     flex-wrap: wrap;
     animation: fadeIn .5s forwards;
+    cursor: pointer;
 }
 
 /* HEADER */
-
-nav {
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out 2s forwards, moveUp 1s ease 2s forwards;
-}
 
 .header {
     position: relative;
@@ -586,6 +590,7 @@ details[open] summary .s_triangle {
 
 .s_container:hover {
     background: #2b2b2b;
+    cursor: pointer;
 }
 
 .s_triangle {
