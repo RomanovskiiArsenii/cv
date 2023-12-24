@@ -62,4 +62,3 @@ executeAfterBackgroundImagesLoaded(function () {
         animatedSvgElement.classList.add('hidden');
     }
 });
-

@@ -228,6 +228,7 @@ nav {
         color: white;
         opacity: 0;
         animation: fadeIn 1s ease-in-out 2s forwards, moveUp 1s ease 2s forwards;
+        bottom: 10rem;
     }
 }
 
@@ -569,6 +570,12 @@ details[open] summary .s_triangle {
 
 .s_container summary {
     list-style: none;
+    list-style-type: none;
+    list-style: none outside none;
+}
+
+.s_container summary::-webkit-details-marker {
+    display: none;
 }
 
 .s_container:hover {
@@ -593,6 +600,15 @@ details[open] summary .s_triangle {
     position: relative;
     padding: 0 1rem;
 }
+
+.s_left_col {
+    text-align: left;
+}
+
+.s_right_col {
+    text-align: right;
+}
+
 
 .s_content {
     padding: .5rem 1rem;
