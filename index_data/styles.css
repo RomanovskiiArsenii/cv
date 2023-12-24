@@ -329,7 +329,7 @@ nav{
 
 .circle.backgr,
 .circle.small {
-    background-image: url(images/img_1.JPG);
+    background-image: url(images/header_image.jpg);
     background-size: cover;
     background-position: top right;
     background-attachment: fixed;
@@ -346,7 +346,7 @@ nav{
     z-index: 3;
     position: relative;
 
-    background-image: url(images/img_1_cut.JPG);
+    background-image: url(images/header_img_cut.jpg);
     background-size: cover;
     background-position: top right;
     background-attachment: fixed;
