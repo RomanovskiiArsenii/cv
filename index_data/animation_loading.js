@@ -20,14 +20,18 @@
 //     // audio.play();
 // });
 
+
+//ожидание загрузки изображений, но с таймером
 function executeAfterBackgroundImagesLoaded(callback) {
     const elements = document.querySelectorAll('*');
     const imagesToLoad = [];
     let imagesLoaded = 0;
+    let timer;
 
     function checkAllImagesLoaded() {
         imagesLoaded++;
         if (imagesLoaded === imagesToLoad.length) {
+            clearTimeout(timer);
             callback();
         }
     }
@@ -42,6 +46,10 @@ function executeAfterBackgroundImagesLoaded(callback) {
             imagesToLoad.push(img);
         }
     });
+
+    timer = setTimeout(() => {
+        callback();
+    }, 15000);
 }
 
 executeAfterBackgroundImagesLoaded(function () {
@@ -54,3 +62,4 @@ executeAfterBackgroundImagesLoaded(function () {
         animatedSvgElement.classList.add('hidden');
     }
 });
+
