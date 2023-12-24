@@ -20,14 +20,18 @@
 //     // audio.play();
 // });
 
+
+//ожидание загрузки изображений, но с таймером на 10 секунд
 function executeAfterBackgroundImagesLoaded(callback) {
     const elements = document.querySelectorAll('*');
     const imagesToLoad = [];
     let imagesLoaded = 0;
+    let timer;
 
     function checkAllImagesLoaded() {
         imagesLoaded++;
         if (imagesLoaded === imagesToLoad.length) {
+            clearTimeout(timer);
             callback();
         }
     }
@@ -42,6 +46,11 @@ function executeAfterBackgroundImagesLoaded(callback) {
             imagesToLoad.push(img);
         }
     });
+
+    // Проверка через 10 секунд
+    timer = setTimeout(() => {
+        callback();
+    }, 15000);
 }
 
 executeAfterBackgroundImagesLoaded(function () {
