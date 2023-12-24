@@ -56,21 +56,21 @@
     overflow-y: hidden;
 }
 
-@media screen and (max-width:1000px) and (orientation: landscape) {
+@media (max-width:1000px) and (orientation: landscape) {
     .loading_animation {
         width: 40vw;
         height: 40vw;
     }
 }
 
-@media screen and (max-width: 1000px) and (orientation: portrait)  {
+@media (max-width: 1000px) and (orientation: portrait)  {
     .loading_animation {
         width: 80vw;
         height: 80vw;
     }
 }
 
-@media screen and (min-width:1000px) and (max-width: 1300px){
+@media (min-width:1000px) and (max-width: 1300px){
     .loading_animation {
         width: 50vw;
         height: 50vw;
