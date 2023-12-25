@@ -172,7 +172,7 @@ nav {
     font-size: 2rem;
     text-decoration: 2px white line-through;
     mix-blend-mode: exclusion;
-    z-index: 6;
+    z-index: 7;
     
     opacity: 0;
     animation: fadeIn 1s ease-in-out 2s forwards, moveUp 1s ease 2s forwards;
@@ -218,7 +218,7 @@ nav:hover ul {
     bottom: 2rem;
     font-size: 4rem;
     line-height: 1em;
-    z-index: 10;
+    z-index: 7;
 
     background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
     -webkit-background-clip: text;
@@ -309,7 +309,10 @@ nav:hover ul {
 /* CIRCLES */
 
 .header_image {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* position: relative; */
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -345,7 +348,7 @@ nav:hover ul {
 .circle.small {
     clip-path: circle(12vw at 50% 50%);
     opacity: 1;
-    z-index: 5;
+    z-index: 6;
 }
 
 .circle.large {
@@ -446,9 +449,9 @@ nav:hover ul {
 
 .main_headline,
 .section_headline {
+    position: relative;
     height: 6rem;
     background: #1d1d1d;
-    border-bottom: dashed 1px rgb(96, 96, 96);
 }
 
 .main_headline h2,
@@ -456,6 +459,7 @@ nav:hover ul {
     padding: 2rem 0;
     font-size: 2rem;
     text-align: center;
+    line-height: normal;
 }
 
 .main p,
@@ -469,6 +473,7 @@ nav:hover ul {
     padding: 2rem 2rem;
     background: #1d1d1d;
     display: flex;
+    border-top: dashed 1px rgb(96, 96, 96);
     border-bottom: dashed 1px rgb(96, 96, 96);
     font-size: 1rem;
 }
@@ -544,6 +549,7 @@ nav:hover ul {
 /* SECTION */
 
 .section {
+    border-top: dashed 1px rgb(96, 96, 96);
     position: relative;
     margin: 0 auto;
     padding: 0 2rem 3rem;
@@ -633,6 +639,7 @@ footer {
     text-align: center;
     width: 100%;
     overflow-x: hidden;
+    background-color: #fff;
 }
 
 .f_upperline,
@@ -726,6 +733,7 @@ footer {
     position: relative;
     height: 8rem;
     overflow: hidden;
+    background-color: #fff;
 }
 
 .l_content {
