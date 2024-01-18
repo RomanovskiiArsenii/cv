@@ -43,7 +43,7 @@
 
 /* LOADING CIRCLE */
 
-.loading_animation {
+#loading_animation {
     position: absolute;
     top: 50vh;
     left: 50vw;
@@ -57,26 +57,25 @@
 }
 
 @media (max-width:1000px) and (orientation: landscape) {
-    .loading_animation {
+    #loading_animation {
         width: 40vw;
         height: 40vw;
     }
 }
 
 @media (max-width: 1000px) and (orientation: portrait)  {
-    .loading_animation {
+    #loading_animation {
         width: 80vw;
         height: 80vw;
     }
 }
 
 @media (min-width:1000px) and (max-width: 1300px){
-    .loading_animation {
+    #loading_animation {
         width: 50vw;
         height: 50vw;
     }
 }
-
 
 .l_spinner {
     width: 100%;
@@ -129,36 +128,3 @@
         transform: translateX(0%);
     }
 }
-
-
-/* LOADING POLYGON */
-
-/* polygon {
-    fill: none;
-    stroke: rgb(0, 0, 0);
-    stroke-width: 2;
-    stroke-dasharray: 300;
-    stroke-dashoffset: 300;
-    animation: draw 3s forwards ease-in-out 1s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes draw {
-    from {
-        stroke-dashoffset: 300;
-    }
-
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-.loading_animation {
-    position: absolute;
-    top: 50vh;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    width: 100px;
-    height: 100px;
-} */

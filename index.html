@@ -17,17 +17,11 @@
     <link rel="stylesheet" href="swup_certificates/animation_swup.css">
 
     <link rel="icon" href="index_data/images/obelisk.png" type="image/png">
-    <script src="index_data/animation_loading.js" defer></script>
 </head>
 
 <body>
 
-
-    <!--<svg class="loading_animation">
-            <polygon class="animated-polygon" points="50,5 95,50 50,95 5,50" />
-        </svg> -->
-
-    <div class="loading_animation">
+    <div id="loading_animation">
         <div class="l_spinner"></div>
     </div>
 
@@ -302,7 +296,8 @@
         import Swup from 'https://unpkg.com/swup@4?module';
         const swup = new Swup();
     </script>
-    <script src="index_data/animation_fade_in.js" defer></script>
+    <script src="index_data/animation_fade_in.js"></script>
+    <script src="index_data/animation_loading.js"></script>
 </body>
 
 </html>

@@ -1,27 +1,4 @@
-//анимация загрузчика и сокрытие страницы до завершения загрузки img_1_cut.jpg
-// const backgroundImageUrl = 'index_data/images/img_1_cut.jpg';
-
-// function loadImage(url, callback) {
-//     const image = new Image();
-//     image.onload = callback;
-//     image.src = url;
-// }
-
-// loadImage(backgroundImageUrl, function () {
-//     const hiddenElement = document.querySelector('.hidden');
-//     if (hiddenElement) {
-//         hiddenElement.classList.remove('hidden');
-//     }
-//     const animatedSvgElement = document.querySelector('.loading_animation');
-//     if (animatedSvgElement) {
-//         animatedSvgElement.classList.add('hidden');
-//     }
-//     // const audio = new Audio('index_data/intro_audio.mp3');
-//     // audio.play();
-// });
-
-
-//ожидание загрузки изображений, но с таймером
+//ожидание загрузки изображений с таймером
 function executeAfterBackgroundImagesLoaded(callback) {
     const elements = document.querySelectorAll('*');
     const imagesToLoad = [];
@@ -49,7 +26,7 @@ function executeAfterBackgroundImagesLoaded(callback) {
 
     timer = setTimeout(() => {
         callback();
-    }, 15000);
+    }, 30000);
 }
 
 executeAfterBackgroundImagesLoaded(function () {
@@ -57,7 +34,7 @@ executeAfterBackgroundImagesLoaded(function () {
     if (hiddenElement) {
         hiddenElement.classList.remove('hidden');
     }
-    const animatedSvgElement = document.querySelector('.loading_animation');
+    const animatedSvgElement = document.getElementById('loading_animation');
     if (animatedSvgElement) {
         animatedSvgElement.classList.add('hidden');
     }
