@@ -85,6 +85,7 @@
     radial-gradient(farthest-side, #ff9d00 94%, #0000) top/4px 4px no-repeat,
     conic-gradient(#0000 30%, #000000);
     -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 4px), #000 0);
+    mask: radial-gradient(farthest-side, #0000 calc(100% - 4px), #000 0); 
     animation: fadeIn 1s ease, s3 2s infinite linear;
     overflow: hidden;
 }
