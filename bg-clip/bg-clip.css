@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --screenIndex: calc(1vw + 1vh);
+    --custColor: 20px rgba(0, 174, 255, 0.05);
+}
+
+body {
+    background-color: rgb(24, 24, 24);
+    font-family: 'Oswald', sans-serif;
+}
+
+.clip {
+    font-size: calc(var(--screenIndex)*6);
+    text-align: center;
+    line-height: 2em;
+    font-weight: 700;
+    color: transparent;
+
+    background-size: cover;
+    background-clip: text;
+
+    transition: filter 1s ease-in-out;
+    filter: blur(1.2px) saturate(60%);
+    background-position: center, center;
+}
+
+@media screen and (max-width: 768px) {
+    .clip{
+        filter: blur(0) saturate(100%);
+        font-size: calc(var(--screenIndex)*4);
+    }
+}
+
+.clip:hover{
+    filter: blur(0) saturate(100%);
+}
+
+#clip1 {
+    background-image: url(images/img_1.jpg);
+}
+
+#clip2 {
+    background-image: url(images/img_2.jpg);
+}
+
+#clip3 {
+    background-image: url(images/img_3.jpg);
+}
+
+#clip4 {
+    background-image: url(images/img_4.jpg);
+}
+
+#clip5 {
+    background-image: url(images/img_5.jpg);
+}
