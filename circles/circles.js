@@ -19,7 +19,7 @@ window.onload = () => {
     for (let i = 0; i < slidesImages.length; i++) {
         //каждому его изображению указываем путь на источник изображения
         for (let j = 0; j < slidesImages[i].length; j++) {
-            slidesImages[i][j].setAttribute("src", `images\\img_${i}.JPG`);
+            slidesImages[i][j].setAttribute("src", `images\\img_${i}.jpg`);
         }
     }
 
@@ -36,5 +36,6 @@ window.onload = () => {
         slides[index].classList.add('show')
     }
 
+    //запуск анимации с интервалом 8 секунд
     setInterval(animateCircles, 8000);
 }
