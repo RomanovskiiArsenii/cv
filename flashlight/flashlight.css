@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+:root{
+    --bgColor: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::selection{
+  background-color: transparent;
+  color: rgb(225, 0, 0);
+}
+
+body {
+  background: var(--bgColor);
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+
+.img_container{
+    width: 350px;
+    height: 350px;
+    background-size: cover;
+    background-image: 
+    radial-gradient(transparent 40%, var(--bgColor) 70%),
+    url("mickey with flashlight.gif");
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.fadein_text {
+  margin: 175px 2rem;
+  font-size: 4rem;
+
+  background: 0% 0% / 10% 50% no-repeat
+    radial-gradient(ellipse at top left, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text; 
+  color: transparent;
+  animation: reveal 6000ms ease-in alternate infinite 1000ms;
+}
+
+@keyframes reveal {
+  100% {
+    background-size: 300% 800%;
+  }
+}
