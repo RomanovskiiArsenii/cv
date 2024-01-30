@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 
-:root{
-    --bgColor: #000;
+:root {
+  --bgColor: #000;
+  --screenCoeff: calc(1vw + 1vh);
 }
 
 * {
@@ -9,7 +10,7 @@
   padding: 0;
 }
 
-*::selection{
+*::selection {
   background-color: transparent;
   color: rgb(225, 0, 0);
 }
@@ -17,33 +18,36 @@
 body {
   background: var(--bgColor);
   font-family: "Abel", sans-serif;
-  font-size: 20px;
 }
 
-.img_container{
-    width: 350px;
-    height: 350px;
-    background-size: cover;
-    background-image: 
-    radial-gradient(transparent 40%, var(--bgColor) 70%),
-    url("mickey with flashlight.gif");
+.img_container {
+  width: calc(var(--screenCoeff)*16);
+  height: calc(var(--screenCoeff)*16);
+  background-size: cover;
+  background-image: radial-gradient(transparent 40%, var(--bgColor) 70%),
+    url("https://github.com/RomanovskiiArsenii/cv/blob/main/flashlight/mickey%20with%20flashlight.gif?raw=true");
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
+.container {
+  display: flex;
+  flex-direction: row;
 }
 
 .fadein_text {
-  margin: 175px 2rem;
-  font-size: 4rem;
+  margin: calc(var(--screenCoeff)*8) 1em;
+  font-size: calc(var(--screenCoeff)*3);
 
-  background: 0% 0% / 10% 50% no-repeat
-    radial-gradient(ellipse at top left, #fff, transparent, transparent);
+  background: 0% 0% / 10% 50% no-repeat radial-gradient(ellipse at top left, #fff, transparent, transparent);
   -webkit-background-clip: text;
-  background-clip: text; 
+  background-clip: text;
   color: transparent;
   animation: reveal 6000ms ease-in alternate infinite 1000ms;
+}
+
+@media screen and (max-width:768px) {
+  .fadein_text {
+    font-size: calc(var(--screenCoeff)*2);
+  }
 }
 
 @keyframes reveal {
