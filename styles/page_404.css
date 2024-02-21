@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+:root {
+    --viewIndex: calc(1vw);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Abel', 'Open Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+        sans-serif;
+}
+
+.video-background {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1c2235;
+    overflow: hidden;
+}
+
+.msg,
+.link {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+
+    font-size: calc(var(--viewIndex) * 3.5);
+    font-weight: bold;
+
+    color: rgb(255, 255, 255);
+    text-shadow: -0.1em -0.1em 0.2em rgb(13, 74, 131);
+}
+
+.msg {
+    top: 0.5em;
+}
+
+.link {
+    bottom: 0.5em;
+    transition: bottom 0.8s ease;
+}
+
+.link:hover {
+    bottom: 0.8em;
+}
+
+#video-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100vh;
+    width: auto;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 768px) {
+    .msg,
+    .link {
+        font-size: calc(var(--viewIndex) * 5);
+    }
+}

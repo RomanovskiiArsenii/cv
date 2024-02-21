@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* font-family: 'Abel', sans-serif; */
+
+/* HTML BODY * */
+
+html {
+    font-size: 20px;
+}
+
+@media(max-width: 560px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 560px) and (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background: rgba(84, 84, 84, 0.5);
+    color: white;
+}
+
+body {
+    background: #1d1d1d;
+    min-width: 350px;
+    color: white;
+    font-family: 'Abel', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-y: scroll;
+}
+
+/* A  */
+
+a {
+    color: rgb(255, 188, 244);
+    text-decoration: none;
+    position: relative;
+}
+
+a:hover {
+    color: rgb(255, 180, 40);
+}
+
+a:active {
+    color: rgb(255, 213, 98);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 213, 98);
+    transition: width 0.8s ease;
+}
+
+a:hover::after {
+    width: calc(100% - 3rem);
+}
+
+.links {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.links a {
+    padding: 0 3rem 1rem 0;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+#return_link {
+    position: fixed;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.6rem;
+    top: 1rem;
+    right: 2rem;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadein .8s ease forwards 2.4s;
+    transition: all 0.3s ease;
+}
+
+#return_link:hover {
+    background: rgb(255, 188, 244);
+    color: black;
+}
+
+#return_link:hover::after {
+    width: 0;
+}
+
+#return_link::before {
+    content: "";
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background-size: cover;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+#return_link:hover::before {
+    transform: translateX(-50%);
+    opacity: 1;
+    box-shadow: 0px 0px 10px 1px rgb(255, 188, 244);
+}
+
+#return_link:hover::before {
+    background-image: url('images/doors.gif');
+}
+
+
+/* CONTAINERS */
+
+.table-container {
+    max-width: 80%;
+    margin: 4rem 4rem;
+    animation: moveRightTable .8s ease forwards 1.6s;
+    opacity: 0;
+    z-index: -1;
+}
+
+.description {
+    margin: 0 8rem 0 0rem;
+    padding: 0;
+    width: 1rem;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+}
+
+.row {
+    margin: 2rem;
+    font-size: 1.2rem;
+    display: flex;
+}
+
+@media(max-width: 400px) {
+    .table-container {
+        margin: 3rem 3rem;
+    }
+}
+
+
+/* LOADING INTRO */
+
+.intro {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.move-container {
+    width: 100%;
+    height: 25vh;
+    background: rgb(255, 180, 40);
+}
+
+#cm1 {
+    animation: moveRightLines .8s ease forwards 1.4s;
+}
+
+#cm2 {
+    animation: moveRightLines .8s ease forwards 1.6s;
+}
+
+#cm3 {
+    animation: moveRightLines .8s ease forwards 1.8s;
+}
+
+#cm4 {
+    animation: moveRightLines .8s ease forwards 2s;
+}
+
+#cert_article {
+    font-family: 'Abel', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 100px;
+    padding-top: 20px;
+    margin-left: 40px;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    animation: moveDown 1s ease-out forwards 0.2s;
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 400px) {
+    #cert_article {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+    #cert_article {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    #cert_article {
+        font-size: 60px;
+    }
+}
+
+@media (max-height: 400px) {
+    #cert_article {
+        font-size: 40px;
+    }
+}
+
+@media (min-height: 400px) and (max-height: 600px) {
+    #cert_article {
+        font-size: 60px;
+    }
+}
