@@ -1,6 +1,13 @@
-let placeholders = ['Will my wife leave me?', 'Should I live on an island?', 'Can I become a rock star?', 'Is the chicken still edible?', "Am I losing my mind?"];
+const placeholders = [
+    'Will my wife leave me?',
+    'Should I live on an island?',
+    'Can I become a rock star?',
+    'Is the chicken still edible?',
+    'Am I losing my mind?',
+    'Should I build a killdozer?',
+];
 let index = 0;
-let placeholderElement = document.getElementById('placeholder');
+const placeholderElement = document.getElementById('placeholder');
 let inputElement = document.getElementById('textInput');
 
 function changePlaceholder() {
@@ -12,7 +19,6 @@ function changePlaceholder() {
 
         placeholderElement.style.opacity = 1;
     }, 500);
-
 }
 
 setInterval(changePlaceholder, 3000);

@@ -10,14 +10,11 @@
   <meta property="og:title" content="Get answers to any of life's hard questions!">
   <meta property="og:description" content="Disappointment guaranteed!">
   <meta property="og:image" content="images/preview.png">
-  <meta property="og:site_name" content="Ask Jake now and increase your chances of receiving a prophecy!"/>
-  
+  <meta property="og:site_name" content="Ask Jake now and increase your chances of receiving a prophecy!" />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="orientation.css">
   <link rel="icon" href="images/jake.png" type="image/png">
-
-  <script type="module" src="model.js" defer></script>
-  <script src="form.js" defer></script>
 </head>
 
 <body>
@@ -25,40 +22,47 @@
     <h1>Please rotate your device</h1>
   </div>
 
-<div class="hidden_if_landscape">
-  <header>
-    <h1>I'm Jake the fortune dog. Ask me any of life's hard questions.</h1>
-  </header>
+  <div class="hidden_if_landscape">
+    <header>
+      <h1>I'm Jake the fortune dog. Ask me any of life's hard questions.</h1>
+    </header>
 
-  <main>
-    <div class="answer">
-      <div id="output" class="output"></div>
+    <main>
+      <div class="answer">
+        <div id="output" class="output"></div>
+      </div>
+
+      <div id="loadingMessage">
+        <p>Jake is coming soon and will answer any dumb questions you might have... </p><img src="images/sad_jake.png"
+          height="60px">
+      </div>
+
+      <div id="container3D"></div>
+    </main>
+
+    <footer>
+      <div>
+        <h3>Go on! Grab your fate by it's slippery ass!</h3>
+      </div>
+
+      <div class="inputform" id="inputform">
+        <input type="text" id="textInput" required minlength="6" maxlength="256" title="">
+        <span class="placeholder" id="placeholder"></span>
+      </div>
+
+      <div class="button">
+        <button onclick="generateRandomPhrase()">GET ANSWERS</button>
+      </div>
+    </footer>
+
+    <div class="license">
+      <p><a href="https://sketchfab.com/azorin" target="_blank" title="licensed under CC-BY-NC-SA-4.0">Author of the 3D
+          model - Aidan Azorin</a></p>
     </div>
-
-    <div id="loadingMessage"><p>Jake is coming soon and will answer any dumb questions you might have... </p><img src="images/sad_jake.png" height="60px"></div>
-
-    <div id="container3D"></div>
-  </main>
-
-  <footer>
-    <div>
-      <h3>Go on! Grab your fate by it's slippery ass!</h3>
-    </div>
-
-    <div class="inputform" id="inputform">
-      <input type="text" id="textInput" required minlength="6" maxlength="256" title="">
-      <span class="placeholder" id="placeholder"></span>
-    </div>
-
-    <div class="button">
-      <button onclick="generateRandomPhrase()">GET ANSWERS</button>
-    </div>
-  </footer>
-
-  <div class="license">
-    <p><a href="https://sketchfab.com/azorin" target="_blank" title="licensed under CC-BY-NC-SA-4.0">Author of the 3D model - Aidan Azorin</a></p>
   </div>
-</div>
+
+  <script type="module" src="model.js"></script>
+  <script src="form.js"></script>
   <script src="placeholder.js"></script>
 </body>
 
