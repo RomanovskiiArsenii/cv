@@ -766,8 +766,9 @@ main {
     left: 3vw;
     border-radius: 1vh 6vh;
     background-image: url(../images/gallery_images/nosignal.gif);
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .proj_decriber {

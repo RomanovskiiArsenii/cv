@@ -28,7 +28,7 @@ const projectsWindowControl = (() => {
 
     const changeSlideContent = (index) => {
         clearInterval(nosignalInterval);
-        galleryImg.src = `images/gallery_images/gallery_${index}.png`;
+        galleryImg.src = `images/gallery_images/gallery_${index}.jpg`;
 
         galleryImg.onload = function () {
             projDescriber.innerHTML = projectDescriptions[`id${index}`];
