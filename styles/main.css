@@ -713,13 +713,9 @@ main {
     color: rgb(22, 22, 22);
 }
 
-.tapes div:nth-child(6) p {
-    color: orange;
-    font-size: calc(var(--part) * 0.3);
-}
-
+.tapes div:nth-child(6) p,
 .tapes div:nth-child(8) p {
-    color: orange;
+    color: rgb(255, 255, 255);
 }
 
 .projects {
