@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+:root {
+    /*   size */
+    --screenCoeff: calc(1vw + 1vh);
+    --customWhite: whitesmoke;
+    /*   link color */
+    --customViolet: rgb(255, 188, 244);
+    /*   hovered link color */
+    --customOrange: rgb(255, 180, 40);
+    /*   active link color */
+    --customOrangeLight: rgb(255, 228, 152);
+    /*   selection color */
+    --customGray: rgba(85, 85, 85, 0.5);
+    /*   body background color */
+    --customBlack: rgb(15, 15, 15);
+    /* animation function */
+    --customFunction: ease-in-out;
+    /*   animation speed */
+    --customSpeed: 0.8s;
+}
+
+body {
+    font-family: 'Abel', Arial, sans-serif;
+    background: var(--customBlack) url(../images/content_images/paper_2.png);
+    background-size: cover;
+}
+
+*::selection {
+    background: var(--customGray);
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 90vw;
+
+    font-size: calc(var(--screenCoeff) * 1.5);
+    color: var(--customWhite);
+    margin: 1.5em auto;
+}
+
+.category {
+    flex-basis: 20%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    text-wrap: nowrap;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-wrap: nowrap;
+    justify-content: space-around;
+    margin: 1em;
+    color: var(--customViolet);
+}
+
+.links a {
+    position: relative;
+    margin: 0.5em 1.5em;
+    color: var(--fontColor);
+    text-decoration: none;
+    transition: color var(--customSpeed) var(--customFunction);
+}
+
+.links a::before,
+.links a::after {
+    content: '';
+    background-color: var(--customViolet);
+
+    width: 100%;
+    height: calc(var(--screenCoeff) / 10);
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    transform: scaleX(0);
+    transition: transform var(--customSpeed) var(--customFunction),
+        background-color var(--customSpeed) var(--customFunction);
+}
+
+.links a::before {
+    transform-origin: right;
+}
+
+.links a::after {
+    transform-origin: left;
+}
+
+.links a:hover {
+    cursor: pointer;
+    color: var(--customOrange);
+}
+
+.links a:hover::before {
+    background-color: var(--customOrange);
+    transform: scaleX(0.5);
+}
+
+.links a:hover::after {
+    background-color: var(--customOrange);
+    transform: scaleX(0.5);
+}
+
+.links a:active {
+    color: var(--customOrangeLight);
+}
+
+.links a:active::before,
+.links a:active::after {
+    background-color: var(--customOrangeLight);
+}
