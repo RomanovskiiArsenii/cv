@@ -13,6 +13,7 @@
 :root {
     --face-switch: 180deg;
     --back-switch: 0deg;
+    --introBGColor: rgb(37, 52, 48);
 }
 
 ::-webkit-scrollbar {
@@ -36,17 +37,17 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: rgb(37, 52, 48);
+    background-color: var(--introBGColor);
     border-right: 1px solid rgb(27, 27, 27);
     border-left: 1px solid rgb(27, 27, 27);
 }
 ::-moz-scrollbar-track {
-    background-color: rgb(37, 52, 48);
+    background-color: var(--introBGColor);
     border-right: 1px solid rgb(27, 27, 27);
     border-left: 1px solid rgb(27, 27, 27);
 }
 ::-ms-scrollbar-track {
-    background-color: rgb(37, 52, 48);
+    background-color: var(--introBGColor);
     border-right: 1px solid rgb(27, 27, 27);
     border-left: 1px solid rgb(27, 27, 27);
 }
@@ -74,6 +75,17 @@ body {
 
 #hidden_untill_loaded {
     display: none;
+}
+
+#showed_untill_load {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--introBGColor);
+    color: #cbe8cf;
 }
 
 .vignette {
@@ -127,7 +139,7 @@ body {
 }
 
 .face {
-    background-color: rgb(37, 52, 48);
+    background-color: var(--introBGColor);
     color: white;
     transform: rotate3d(0, 1, 0, 180deg);
 }
@@ -911,7 +923,7 @@ main {
     width: 12.5vw;
     display: block;
     transform: translateY(0%);
-    background-color: rgb(37, 52, 48);
+    background-color: var(--introBGColor);
     border-left: 1px solid rgb(32, 43, 40);
 }
 
@@ -942,7 +954,7 @@ main {
     height: 25vh;
     display: block;
     transform: translateX(-100%);
-    background-color: rgb(37, 52, 48);
+    background-color: var(--introBGColor);
     border-bottom: 1px solid rgb(32, 43, 40);
 }
 

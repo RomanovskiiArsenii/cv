@@ -1,9 +1,11 @@
 const loadingAnimation = (() => {
     const hidden = document.getElementById('hidden_untill_loaded');
+    const showed = document.getElementById('showed_untill_load');
     const introStripArray = document.getElementsByClassName('intro_strip');
     const outroStripArray = document.getElementsByClassName('outro_strip');
 
     const onLoadMain = () => {
+        showed.style.display = 'none';
         hidden.style.display = 'block';
         setTimeout(() => {
             for (let i = 0; i < introStripArray.length; i++) {
