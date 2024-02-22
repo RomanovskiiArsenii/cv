@@ -1,5 +1,5 @@
 import setPartsSizes from './setPartsSizes.js';
-import animateIntro from './animateIntro.js';
+import loadingAnimation from './loadingAnimation.js';
 import switchingAnimation from './switchingAnimation.js';
 import rowsTextFiller from './rowsTextFiller.js';
 import projectsWindowControl from './projectsWindowControl.js';
@@ -32,7 +32,7 @@ pauseBtn.addEventListener('click', switchingAnimation.toggleSwitching, false);
 nextBtnSlide.addEventListener('click', projectsWindowControl.nextSlide, false);
 previousBtnSlide.addEventListener('click', projectsWindowControl.previousSlide, false);
 closeProjectsWindowBtn.addEventListener('click', projectsWindowControl.hideProjectsWindow, false);
-certificatesLink.addEventListener('click', animateIntro.onLeaveMain, false);
+certificatesLink.addEventListener('click', loadingAnimation.onLeaveMain, false);
 closeProjectsWindowBtn.addEventListener('click', tapesShelf, false);
 
 document.addEventListener('visibilitychange', function () {
@@ -43,4 +43,4 @@ document.addEventListener('visibilitychange', function () {
     }
 });
 
-window.addEventListener('load', animateIntro.onLoadMain, false);
+window.addEventListener('load', loadingAnimation.onLoadMain, false);

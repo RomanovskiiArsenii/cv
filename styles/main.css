@@ -66,11 +66,14 @@ html {
 }
 
 body {
-    display: none;
     font-family: 'Martian Mono', monospace;
     font-weight: 600;
     background-color: #fff;
     overflow-x: hidden;
+}
+
+#hidden_untill_loaded {
+    display: none;
 }
 
 .vignette {

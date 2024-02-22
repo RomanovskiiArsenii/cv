@@ -1,16 +1,17 @@
-const animateIntro = (() => {
-    const body = document.querySelector('body');
+const loadingAnimation = (() => {
+    const hidden = document.getElementById('hidden_untill_loaded');
     const introStripArray = document.getElementsByClassName('intro_strip');
     const outroStripArray = document.getElementsByClassName('outro_strip');
 
     const onLoadMain = () => {
-        body.style.display = 'block';
-
-        for (let i = 0; i < introStripArray.length; i++) {
-            setTimeout(() => {
-                introStripArray[i].style.animation = 'introMoveUp 0.8s ease 0.2s forwards';
-            }, i * 100);
-        }
+        hidden.style.display = 'block';
+        setTimeout(() => {
+            for (let i = 0; i < introStripArray.length; i++) {
+                setTimeout(() => {
+                    introStripArray[i].style.animation = 'introMoveUp 0.8s ease 0.2s forwards';
+                }, i * 100);
+            }
+        }, 500);
     };
 
     const onLeaveMain = (e) => {
@@ -33,4 +34,4 @@ const animateIntro = (() => {
     };
 })();
 
-export default animateIntro;
+export default loadingAnimation;
