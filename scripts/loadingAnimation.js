@@ -10,7 +10,7 @@ const loadingAnimation = (() => {
         setTimeout(() => {
             for (let i = 0; i < introStripArray.length; i++) {
                 setTimeout(() => {
-                    introStripArray[i].style.animation = 'introMove 0.6s ease 0.5s forwards';
+                    introStripArray[i].style.animation = 'introMove 0.6s ease 0.6s forwards';
                 }, i * 100);
             }
         }, 500);

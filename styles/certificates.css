@@ -18,6 +18,21 @@
     --customFunction: ease-in-out;
     /*   animation speed */
     --customSpeed: 0.8s;
+
+    --loaderBGColor: rgb(29, 34, 33);
+    --loaderFontColor: #cbe8cf;
+    --introAndOutroStripesColor: rgb(29, 34, 33);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: var(--customGray);
+    color: white;
 }
 
 body {
@@ -26,15 +41,41 @@ body {
     background-size: cover;
 }
 
-*::selection {
-    background: var(--customGray);
-    color: white;
+#hidden_untill_loaded {
+    display: none;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#showed_untill_load {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--loaderBGColor);
+}
+
+#back_link {
+    position: absolute;
+    top: calc(var(--screenCoeff));
+    right: calc(var(--screenCoeff));
+    content: ' ';
+    width: calc(var(--screenCoeff) * 4);
+    height: calc(var(--screenCoeff) * 4);
+    background-image: url(../images/buttons_images/back_ico.png);
+    background-size: cover;
+    transition: transform 0.8s ease;
+    transform: rotate(0deg) scale(0.9);
+}
+
+#back_link:hover {
+    transform: rotate(5deg) scale(0.99);
+}
+
+main {
+    /* transform: rotate(5deg); */
+    overflow-x: hidden;
+}
+
+.flex-container:nth-child(1) {
+    margin: 8em auto 0;
 }
 
 .flex-container {
@@ -46,9 +87,8 @@ body {
 
     width: 90vw;
 
-    font-size: calc(var(--screenCoeff) * 1.5);
     color: var(--customWhite);
-    margin: 1.5em auto;
+    margin: 1.5em auto 0;
 }
 
 .category {
@@ -56,6 +96,7 @@ body {
     flex-shrink: 0;
     flex-grow: 0;
     text-wrap: nowrap;
+    font-size: calc(var(--screenCoeff) * 2);
 }
 
 .links {
@@ -66,6 +107,7 @@ body {
     justify-content: space-around;
     margin: 1em;
     color: var(--customViolet);
+    font-size: calc(var(--screenCoeff) * 1.4);
 }
 
 .links a {
@@ -123,4 +165,83 @@ body {
 .links a:active::before,
 .links a:active::after {
     background-color: var(--customOrangeLight);
+}
+
+.intro_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    z-index: 200;
+}
+
+.intro_strip {
+    position: relative;
+    height: 25vh;
+    width: 100vw;
+    display: block;
+    transform: translateY(0%);
+    background-color: var(--introAndOutroStripesColor);
+}
+
+.describer {
+    position: absolute;
+    top: 1vh;
+    left: 5vw;
+    color: var(--loaderFontColor);
+    font-size: calc(var(--screenCoeff) * 4);
+    animation: describerFadeIn 0.2s ease;
+}
+
+@keyframes describerFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes introMove {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.outro_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    z-index: 201;
+}
+
+.outro_strip {
+    width: 100%;
+    height: 25vh;
+    display: block;
+    transform: translateX(100%);
+    background-color: var(--introAndOutroStripesColor);
+}
+
+@keyframes outroMove {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }

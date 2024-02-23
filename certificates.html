@@ -12,66 +12,91 @@
     <title>Romanovskii A. certificates</title>
     <link rel="stylesheet" href="styles/certificates.css">
     <link rel="icon" href="images/content_images/horse_favicon.png">
+    <script type="module" src="scripts/certificates.js"></script>
 </head>
 
 <body>
 
-    <main>
-        <div class="flex-container">
-            <div class="category">Front-end</div>
-            <div class="links">
-                <a href="https://testprovider.com/ru/search-certificate/TP59602538" target="_blank">HTML&CSS starter</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP53272901" target="_blank">HTML&CSS
-                    essential</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP39248817" target="_blank">HTML&CSS basis</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP73801656" target="_blank">JavaScript
-                    starter</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP77324399" target="_blank">JavaScript
-                    essential</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP35906016" target="_blank">JavaScript
-                    advanced</a>
+    <div id="showed_untill_load"></div>
+
+    <div id="hidden_untill_loaded">
+
+        <a href="index.html" id="back_link"></a>
+
+        <div class="intro_container">
+            <div class="intro_strip"></div>
+            <div class="intro_strip">
+                <p class="describer">CERTIFICATES</p>
             </div>
+            <div class="intro_strip"></div>
+            <div class="intro_strip"></div>
         </div>
 
-        <div class="flex-container">
-            <div class="category">Back-end</div>
-            <div class="links">
-                <a href="https://testprovider.com/ru/search-certificate/TP17309398" target="_blank">C# starter</a>
-                <a href="https://www.hackerrank.com/certificates/4f1281d950e0" target="_blank">C# basic</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP00323987" target="_blank">C# essential</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP64357659" target="_blank">C# professional</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP13960810" target="_blank">Unit testing in
-                    C#</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP93032887" target="_blank">T-SQL</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP08320134" target="_blank">MySQL</a>
-                <a href="https://www.hackerrank.com/certificates/3a2f3b0c928d" target="_blank">SQL basic</a>
-                <a href="https://www.hackerrank.com/certificates/d805a3157083" target="_blank">SQL advanced</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP46687386" target="_blank">Entity Framework
-                    Core</a>
-            </div>
+        <div class="outro_container">
+            <div class="outro_strip"></div>
+            <div class="outro_strip"></div>
+            <div class="outro_strip"></div>
+            <div class="outro_strip"></div>
         </div>
 
-        <div class="flex-container">
-            <div class="category">Fundamentals</div>
-            <div class="links">
-                <a href="https://testprovider.com/ru/search-certificate/TP56812475" target="_blank">Git basics</a>
-                <a href="https://testprovider.com/ru/search-certificate/TP12939373" target="_blank">Algorithms and data
-                    structures</a>
+        <main>
+            <div class="flex-container">
+                <div class="category">Front-end</div>
+                <div class="links">
+                    <a href="https://testprovider.com/ru/search-certificate/TP59602538" target="_blank">HTML&CSS
+                        starter</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP53272901" target="_blank">HTML&CSS
+                        essential</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP39248817" target="_blank">HTML&CSS
+                        basis</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP73801656" target="_blank">JavaScript
+                        starter</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP77324399" target="_blank">JavaScript
+                        essential</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP35906016" target="_blank">JavaScript
+                        advanced</a>
+                </div>
             </div>
-        </div>
 
-        <div class="flex-container">
-            <div class="category">English</div>
-            <div class="links">
-                <a href="https://cert.efset.org/c1mE2w" target="_blank">EF SET</a>
-                <a href="https://drive.google.com/file/d/1jC1aL3zNg_-ks7IKllo0mE3ZksKXFdSZ/view?usp=sharing"
-                    target="_blank">Grammar for life</a>
+            <div class="flex-container">
+                <div class="category">Back-end</div>
+                <div class="links">
+                    <a href="https://testprovider.com/ru/search-certificate/TP17309398" target="_blank">C# starter</a>
+                    <a href="https://www.hackerrank.com/certificates/4f1281d950e0" target="_blank">C# basic</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP00323987" target="_blank">C# essential</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP64357659" target="_blank">C#
+                        professional</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP13960810" target="_blank">Unit testing in
+                        C#</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP93032887" target="_blank">T-SQL</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP08320134" target="_blank">MySQL</a>
+                    <a href="https://www.hackerrank.com/certificates/3a2f3b0c928d" target="_blank">SQL basic</a>
+                    <a href="https://www.hackerrank.com/certificates/d805a3157083" target="_blank">SQL advanced</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP46687386" target="_blank">Entity Framework
+                        Core</a>
+                </div>
             </div>
-        </div>
 
-    </main>
+            <div class="flex-container">
+                <div class="category">Fundamentals</div>
+                <div class="links">
+                    <a href="https://testprovider.com/ru/search-certificate/TP56812475" target="_blank">Git basics</a>
+                    <a href="https://testprovider.com/ru/search-certificate/TP12939373" target="_blank">Algorithms and
+                        data
+                        structures</a>
+                </div>
+            </div>
 
-
+            <div class="flex-container">
+                <div class="category">English</div>
+                <div class="links">
+                    <a href="https://cert.efset.org/c1mE2w" target="_blank">EF SET</a>
+                    <a href="https://drive.google.com/file/d/1jC1aL3zNg_-ks7IKllo0mE3ZksKXFdSZ/view?usp=sharing"
+                        target="_blank">Grammar for life</a>
+                </div>
+            </div>
+        </main>
+    </div>
 
 </body>
 
