@@ -54,7 +54,8 @@
 
     --projectWindowOuterPanelColor: rgb(242, 168, 0);
     --projectWindowInnerPanelColor: #1d1d1d;
-    --projectDescriberFontColor: #242424;
+    --projectDescriberBGColor: #242424;
+    --projectDescriberFontColor: whitesmoke;
     --projectDescriberLinkFontColor: #fac21e;
     --projectDescriberScrollbarThumb: #444444;
     --projectScrollbarTrackColor: #242424;
@@ -982,8 +983,8 @@ main {
     top: 3vh;
     right: 3vw;
     padding: 4vh 2vh;
-    color: whitesmoke;
-    background-color: var(--projectDescriberFontColor);
+    color: var(--projectDescriberFontColor);
+    background-color: var(--projectDescriberBGColor);
     border-radius: 1vh 6vh 1vh 1vh;
     font-size: calc(var(--part) * 0.2);
     overflow-y: scroll;
@@ -993,10 +994,10 @@ main {
 .proj_decriber::-webkit-scrollbar {
     width: 5px;
 }
-.proj_decriber::-moz-scrollbar-thumb {
+.proj_decriber::-moz-scrollbar {
     width: 5px;
 }
-.proj_decriber::-ms-scrollbar-thumb {
+.proj_decriber::-ms-scrollbar {
     width: 5px;
 }
 
