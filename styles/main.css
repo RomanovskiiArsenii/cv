@@ -14,7 +14,6 @@
     --loaderBGColor: rgb(37, 52, 48);
     --loaderFontColor: #cbe8cf;
     --introAndOutroStripesColor: rgb(29, 34, 33);
-    --introAndOutroStripesBordersColor: rgb(32, 43, 40);
 
     --slidersFaceSwitch: 180deg;
     --slidersBackSwitch: 0deg;
@@ -23,7 +22,6 @@
     --slidersBorderColor: rgba(127, 127, 127, 0.2);
 
     --perspectiveValue: perspective(10000px);
-    /* --perspectiveValue: ; */
 
     --scrollbarBorderColor: rgb(27, 27, 27);
     --scrollbarTrackColor: rgb(37, 52, 48);
@@ -93,7 +91,52 @@ body {
     align-items: center;
     text-align: center;
     background-color: var(--loaderBGColor);
+}
+
+#showed_untill_load p {
+    font-family: sans-serif;
     color: var(--loaderFontColor);
+    font-size: 5vw;
+    animation: loaderFadeIn 0.5s ease forwards;
+}
+
+.loader {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 100px;
+    display: inline-grid;
+    color: var(--loaderFontColor);
+}
+
+.loader:before,
+.loader:after {
+    content: 'Loading...';
+    grid-area: 1/1;
+    line-height: 1.1em;
+    mask: linear-gradient(90deg, #000 50%, #0000 0) 0 50%/2ch 100%;
+    mask-position: calc(var(--s, 0) * 1ch) 50%;
+    -webkit-mask: linear-gradient(90deg, #000 50%, #0000 0) 0 50%/2ch 100%;
+    -webkit-mask-position: calc(var(--s, 0) * 1ch) 50%;
+    animation: l30 2s infinite;
+}
+
+.loader:after {
+    --s: -1;
+}
+
+@keyframes l30 {
+    33% {
+        transform: translateY(calc(var(--s, 1) * 50%));
+        -webkit-mask-position: calc(var(--s, 0) * 1ch) 50%;
+    }
+    66% {
+        transform: translateY(calc(var(--s, 1) * 50%));
+        -webkit-mask-position: calc(var(--s, 0) * 1ch + 1ch) 50%;
+    }
+    100% {
+        transform: translateY(calc(var(--s, 1) * 0%));
+        -webkit-mask-position: calc(var(--s, 0) * 1ch + 1ch) 50%;
+    }
 }
 
 .vignette {
@@ -141,7 +184,7 @@ body {
 
 .strip {
     position: relative;
-    width: calc(var(--part) - 1px);
+    width: var(--part);
     height: 100%;
     font-size: calc(var(--part) * 0.9);
 }
@@ -1083,14 +1126,13 @@ main {
 
 .intro_strip {
     height: 100%;
-    width: 12.5vw;
+    width: calc(var(--part_dbl) - 2px);
     display: block;
     transform: translateY(0%);
     background-color: var(--introAndOutroStripesColor);
-    border-left: 1px solid var(--introAndOutroStripesBordersColor);
 }
 
-@keyframes introMoveUp {
+@keyframes introMove {
     from {
         transform: translateY(0%);
     }
@@ -1118,12 +1160,11 @@ main {
     display: block;
     transform: translateX(-100%);
     background-color: var(--introAndOutroStripesColor);
-    border-bottom: 1px solid var(--introAndOutroStripesBordersColor);
 }
 
-@keyframes outroMoveDown {
+@keyframes outroMove {
     from {
-        transform: translateX(-100%);
+        transform: translateX(100%);
     }
     to {
         transform: translateX(0);

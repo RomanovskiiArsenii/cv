@@ -10,7 +10,7 @@ const loadingAnimation = (() => {
         setTimeout(() => {
             for (let i = 0; i < introStripArray.length; i++) {
                 setTimeout(() => {
-                    introStripArray[i].style.animation = 'introMoveUp 0.8s ease 0.2s forwards';
+                    introStripArray[i].style.animation = 'introMove 0.6s ease 0.5s forwards';
                 }, i * 100);
             }
         }, 500);
@@ -21,7 +21,7 @@ const loadingAnimation = (() => {
 
         for (let i = 0; i < outroStripArray.length; i++) {
             setTimeout(() => {
-                outroStripArray[i].style.animation = 'outroMoveDown 0.8s ease 0.2s forwards';
+                outroStripArray[i].style.animation = 'outroMove 0.6s ease 0.2s forwards';
             }, i * 200);
         }
 
