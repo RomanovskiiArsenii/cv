@@ -153,7 +153,8 @@ body {
     backface-visibility: hidden;
     text-align: center;
     z-index: 2;
-    border: 1px solid var(--slidersBorderColor);
+    border-right: 1px solid var(--slidersBorderColor);
+    border-left: 1px solid var(--slidersBorderColor);
 }
 
 .face {

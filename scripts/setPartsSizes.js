@@ -1,6 +1,6 @@
 const setPartsSizesModule = {
     setPartsSizes() {
-        const part = Math.floor(window.innerWidth / 16);
+        const part = Math.ceil(window.innerWidth / 16);
         document.documentElement.style.setProperty('--part', `${part}px`);
         document.documentElement.style.setProperty('--part_dbl', `${part * 2}px`);
     },
