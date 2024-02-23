@@ -124,6 +124,8 @@ body {
     justify-content: center;
 
     overflow: hidden;
+    border: 0.001px solid transparent;
+    transform-style: preserve-3d;
 
     z-index: 1;
 }
@@ -139,7 +141,6 @@ body {
     position: relative;
     width: calc(var(--part) - 1px);
     height: 100%;
-    transform-style: preserve-3d;
     font-size: calc(var(--part) * 0.9);
 }
 
@@ -152,8 +153,7 @@ body {
     backface-visibility: hidden;
     text-align: center;
     z-index: 2;
-    border-right: 1px solid var(--slidersBorderColor);
-    border-left: 1px solid var(--slidersBorderColor);
+    border: 1px solid var(--slidersBorderColor);
 }
 
 .face {
