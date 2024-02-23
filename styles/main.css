@@ -226,9 +226,28 @@ body {
 
 .describer p,
 .describer a {
+    position: relative;
     text-decoration: none;
     margin-top: 0.5em;
     color: var(--describerFontColor);
+}
+
+.pointing_arrow {
+    position: absolute;
+    top: calc(var(--part) * -0.18);
+    left: calc(var(--part) * -0.2);
+    font-size: calc(var(--part) * 0.4);
+    animation: pointingArrowMove 3s ease-in-out alternate infinite;
+}
+
+@keyframes pointingArrowMove {
+    from {
+        left: calc(var(--part) * -0.4);
+    }
+
+    to {
+        left: calc(var(--part) * -0.2);
+    }
 }
 
 #pause {
