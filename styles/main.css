@@ -124,10 +124,12 @@ body {
     justify-content: center;
 
     overflow: hidden;
-    border: 0.001px solid transparent;
+
     transform-style: preserve-3d;
 
     z-index: 1;
+
+    transition: background-color 2s ease-in 0.5s;
 }
 
 @media screen and (max-width: 768px) {
