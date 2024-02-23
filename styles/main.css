@@ -11,24 +11,53 @@
 }
 
 :root {
-    --face-switch: 180deg;
-    --back-switch: 0deg;
-    --introBGColor: rgb(37, 52, 48);
-    --mainBGColor: #c9d0db;
+    --loaderBGColor: rgb(37, 52, 48);
+    --loaderFontColor: #cbe8cf;
+    --introAndOutroStripesColor: rgb(29, 34, 33);
+    --introAndOutroStripesBordersColor: rgb(32, 43, 40);
+
+    --slidersFaceSwitch: 180deg;
+    --slidersBackSwitch: 0deg;
+    --slidersFaceColor: rgb(37, 52, 48);
     --slidersBackColor: rgb(214, 232, 227);
     --slidersBorderColor: rgba(127, 127, 127, 0.2);
+
     --scrollbarBorderColor: rgb(27, 27, 27);
-    --selectionColor: rgba(63, 102, 107, 0.8);
+    --scrollbarTrackColor: rgb(37, 52, 48);
+
     --vignetteFirstColor: rgba(0, 0, 0, 0.4);
     --vignetteSecondColor: rgba(0, 0, 0, 0.7);
-    --weekColor: rgb(10, 100, 100);
+
+    --selectionColor: rgba(63, 102, 107, 0.8);
+
+    --weekBackgroundColor: #d6e8e3;
+    --weekFontColor: rgb(10, 100, 100);
+
+    --mainBGColor: #c9d0db;
     --mainFontColor: rgb(15, 15, 15);
-    --mainMixBlendedAndRedTapesFontColor: rgb(255, 255, 255);
+    --mainMixBlendedFontColor: rgb(255, 255, 255);
+
+    --sayHelloBottomFontColor: rgb(28 109 105);
+
+    --describerFontColor: #16be78;
+
+    --certificatesLinkPseudoColor: #ffe619;
+    --certificatesLinkBGColor: #494d80;
+    --certificatesLinkHoverBGColor: #ffb5f3;
+    --certificatesLinkFontColor: #ffe300;
+    --certificatesLinkHoverFontColor: #242424;
+
+    --textCuttedFontColor: #ffb756;
+
     --redTapesFontColor: rgb(255, 255, 255);
     --tapesFontColor: rgb(22, 22, 22);
-    --sayHelloBottomFontColor: rgb(28 109 105);
+
     --projectWindowOuterPanelColor: rgb(242, 168, 0);
-    --introAndOutroStripesColor: rgb(32, 43, 40);
+    --projectWindowInnerPanelColor: #1d1d1d;
+    --projectDescriberFontColor: #242424;
+    --projectDescriberLinkFontColor: #fac21e;
+    --projectDescriberScrollbarThumb: #444444;
+    --projectScrollbarTrackColor: #242424;
 }
 
 ::-webkit-scrollbar {
@@ -52,17 +81,17 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--introBGColor);
+    background-color: var(--scrollbarTrackColor);
     border-right: 1px solid var(--scrollbarBorderColor);
     border-left: 1px solid var(--scrollbarBorderColor);
 }
 ::-moz-scrollbar-track {
-    background-color: var(--introBGColor);
+    background-color: var(--scrollbarTrackColor);
     border-right: 1px solid var(--scrollbarBorderColor);
     border-left: 1px solid var(--scrollbarBorderColor);
 }
 ::-ms-scrollbar-track {
-    background-color: var(--introBGColor);
+    background-color: var(--scrollbarTrackColor);
     border-right: 1px solid var(--scrollbarBorderColor);
     border-left: 1px solid var(--scrollbarBorderColor);
 }
@@ -99,8 +128,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--introBGColor);
-    color: #cbe8cf;
+    background-color: var(--loaderBGColor);
+    color: var(--loaderFontColor);
 }
 
 .vignette {
@@ -166,7 +195,7 @@ body {
 }
 
 .face {
-    background-color: var(--introBGColor);
+    background-color: var(--slidersFaceColor);
     color: white;
     transform: rotate3d(0, 1, 0, 180deg);
 }
@@ -189,7 +218,7 @@ body {
 .describer a {
     text-decoration: none;
     margin-top: 0.5em;
-    color: #16be78;
+    color: var(--describerFontColor);
 }
 
 #pause {
@@ -228,53 +257,53 @@ body {
 
 @keyframes face-slide {
     0% {
-        transform: rotate3d(0, 1, 0, calc(var(--face-switch)));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch)));
     }
 
     50% {
-        transform: rotate3d(0, 1, 0, calc(var(--face-switch) - 210deg));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 210deg));
     }
 
     70% {
-        transform: rotate3d(0, 1, 0, calc(var(--face-switch) - 160deg));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 160deg));
     }
 
     85% {
-        transform: rotate3d(0, 1, 0, calc(var(--face-switch) - 195deg));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 195deg));
     }
 
     95% {
-        transform: rotate3d(0, 1, 0, calc(var(--face-switch) - 168deg));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 168deg));
     }
 
     100% {
-        transform: rotate3d(0, 1, 0, calc(var(--face-switch) - 180deg));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 180deg));
     }
 }
 
 @keyframes back-slide {
     0% {
-        transform: rotate3d(0, 1, 0, calc(var(--back-switch)));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch)));
     }
 
     50% {
-        transform: rotate3d(0, 1, 0, calc(var(--back-switch) - 210deg));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 210deg));
     }
 
     70% {
-        transform: rotate3d(0, 1, 0, calc(var(--back-switch) - 160deg));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 160deg));
     }
 
     85% {
-        transform: rotate3d(0, 1, 0, calc(var(--back-switch) - 195deg));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 195deg));
     }
 
     95% {
-        transform: rotate3d(0, 1, 0, calc(var(--back-switch) - 168deg));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 168deg));
     }
 
     100% {
-        transform: rotate3d(0, 1, 0, calc(var(--back-switch) - 180deg));
+        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 180deg));
     }
 }
 
@@ -284,19 +313,19 @@ body {
     width: 100%;
     text-align: center;
     overflow: hidden;
-    background-color: #d6e8e3;
-    border-top: calc(var(--part) * 0.1) double var(--weekColor);
-    border-bottom: calc(var(--part) * 0.1) double var(--weekColor);
+    background-color: var(--weekBackgroundColor);
+    border-top: calc(var(--part) * 0.1) double var(--weekFontColor);
+    border-bottom: calc(var(--part) * 0.1) double var(--weekFontColor);
 }
 
 .week div:not(:last-child) {
-    border-right: calc(var(--part) * 0.1) double var(--weekColor);
+    border-right: calc(var(--part) * 0.1) double var(--weekFontColor);
 }
 
 .week div {
     width: 14.28%;
     font-size: calc(var(--part) * 0.5);
-    color: var(--weekColor);
+    color: var(--weekFontColor);
     text-decoration: line-through;
 }
 
@@ -684,7 +713,7 @@ main {
     text-wrap: nowrap;
     position: absolute;
     right: 0;
-    color: var(--mainMixBlendedAndRedTapesFontColor);
+    color: var(--mainMixBlendedFontColor);
 }
 
 .top_med_1 {
@@ -743,10 +772,10 @@ main {
 
 #certificates_link {
     position: relative;
-    background-color: #494d80;
+    background-color: var(--certificatesLinkBGColor);
     padding: 0.1em 0.4em 0.25em;
     border-radius: 0.2em;
-    color: #ffe300;
+    color: var(--certificatesLinkFontColor);
     transition: background-color 1s, color 1s;
     text-decoration: none;
     text-wrap: nowrap;
@@ -755,7 +784,7 @@ main {
 #certificates_link::before,
 #certificates_link::after {
     content: '';
-    background-color: #ffe619;
+    background-color: var(--certificatesLinkPseudoColor);
 
     width: 96%;
     height: 0.15em;
@@ -778,14 +807,14 @@ main {
 
 #certificates_link:hover {
     cursor: pointer;
-    background-color: #ffb5f3;
-    color: #242424;
+    background-color: var(--certificatesLinkHoverBGColor);
+    color: var(--certificatesLinkHoverFontColor);
 }
 
 #certificates_link:hover::after,
 #certificates_link:hover::before {
     transform: scaleX(0.5);
-    background-color: #242424;
+    background-color: var(--certificatesLinkHoverFontColor);
 }
 
 .middle_lrg_1 {
@@ -828,7 +857,7 @@ main {
 }
 
 .text-cutted a {
-    color: #ffb756;
+    color: var(--textCuttedFontColor);
     text-decoration: none;
 }
 
@@ -930,7 +959,7 @@ main {
     width: 82vw;
     top: 4vh;
     left: 4vw;
-    background-color: #1d1d1d;
+    background-color: var(--projectWindowInnerPanelColor);
     border-radius: 2vh 9vh;
 }
 
@@ -954,7 +983,7 @@ main {
     right: 3vw;
     padding: 4vh 2vh;
     color: whitesmoke;
-    background-color: #242424;
+    background-color: var(--projectDescriberFontColor);
     border-radius: 1vh 6vh 1vh 1vh;
     font-size: calc(var(--part) * 0.2);
     overflow-y: scroll;
@@ -972,29 +1001,32 @@ main {
 }
 
 .proj_decriber::-webkit-scrollbar-thumb {
-    background-color: #444444;
+    background-color: var(--projectDescriberScrollbarThumb);
     border-radius: 5px;
 }
 .proj_decriber::-moz-scrollbar-thumb {
-    background-color: #444444;
+    background-color: var(--projectDescriberScrollbarThumb);
     border-radius: 5px;
 }
 .proj_decriber::-ms-scrollbar-thumb {
-    background-color: #444444;
+    background-color: var(--projectDescriberScrollbarThumb);
     border-radius: 5px;
 }
 
 .proj_decriber::-webkit-scrollbar-track {
     margin: 6vh;
-    background-color: #242424;
+    background-color: var(--projectScrollbarTrackColor);
+    border: none;
 }
 .proj_decriber::-moz-scrollbar-track {
     margin: 6vh;
-    background-color: #242424;
+    background-color: var(--projectScrollbarTrackColor);
+    border: none;
 }
 .proj_decriber::-ms-scrollbar-track {
     margin: 6vh;
-    background-color: #242424;
+    background-color: var(--projectScrollbarTrackColor);
+    border: none;
 }
 
 .proj_decriber p {
@@ -1003,7 +1035,7 @@ main {
 }
 
 .proj_decriber a {
-    color: #fac21e;
+    color: var(--projectDescriberLinkFontColor);
 }
 
 #previous_btn,
@@ -1088,8 +1120,8 @@ main {
     width: 12.5vw;
     display: block;
     transform: translateY(0%);
-    background-color: var(--introBGColor);
-    border-left: 1px solid var(--introAndOutroStripesColor);
+    background-color: var(--introAndOutroStripesColor);
+    border-left: 1px solid var(--introAndOutroStripesBordersColor);
 }
 
 @keyframes introMoveUp {
@@ -1119,8 +1151,8 @@ main {
     height: 25vh;
     display: block;
     transform: translateX(-100%);
-    background-color: var(--introBGColor);
-    border-bottom: 1px solid var(--introAndOutroStripesColor);
+    background-color: var(--introAndOutroStripesColor);
+    border-bottom: 1px solid var(--introAndOutroStripesBordersColor);
 }
 
 @keyframes outroMoveDown {
