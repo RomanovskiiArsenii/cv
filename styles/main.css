@@ -22,6 +22,9 @@
     --slidersBackColor: rgb(214, 232, 227);
     --slidersBorderColor: rgba(127, 127, 127, 0.2);
 
+    --perspectiveValue: perspective(10000px);
+    /* --perspectiveValue: ; */
+
     --scrollbarBorderColor: rgb(27, 27, 27);
     --scrollbarTrackColor: rgb(37, 52, 48);
 
@@ -61,42 +64,6 @@
     --projectScrollbarTrackColor: #242424;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-moz-scrollbar {
-    width: 8px;
-}
-::-ms-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--slidersBackColor);
-}
-::-moz-scrollbar-thumb {
-    background-color: var(--slidersBackColor);
-}
-::-ms-scrollbar-thumb {
-    background-color: var(--slidersBackColor);
-}
-
-::-webkit-scrollbar-track {
-    background-color: var(--scrollbarTrackColor);
-    border-right: 1px solid var(--scrollbarBorderColor);
-    border-left: 1px solid var(--scrollbarBorderColor);
-}
-::-moz-scrollbar-track {
-    background-color: var(--scrollbarTrackColor);
-    border-right: 1px solid var(--scrollbarBorderColor);
-    border-left: 1px solid var(--scrollbarBorderColor);
-}
-::-ms-scrollbar-track {
-    background-color: var(--scrollbarTrackColor);
-    border-right: 1px solid var(--scrollbarBorderColor);
-    border-left: 1px solid var(--scrollbarBorderColor);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -105,10 +72,6 @@
 
 *::selection {
     background-color: var(--selectionColor);
-}
-
-html {
-    overflow-x: hidden;
 }
 
 body {
@@ -144,7 +107,7 @@ body {
     background: radial-gradient(
         circle at center,
         transparent 30%,
-        var(--vignetteFirstColor) 80%,
+        var(--vignetteFirstColor) 60%,
         var(--vignetteSecondColor) 100%
     );
     z-index: 100;
@@ -152,11 +115,13 @@ body {
 }
 
 .slides_container {
-    width: 100vw;
+    max-width: 100%;
+    width: 100%;
     height: 100vh;
 
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
     overflow: hidden;
 
@@ -172,11 +137,8 @@ body {
 
 .strip {
     position: relative;
-    width: var(--part);
+    width: calc(var(--part) - 1px);
     height: 100%;
-}
-
-.strip {
     transform-style: preserve-3d;
     font-size: calc(var(--part) * 0.9);
 }
@@ -184,10 +146,9 @@ body {
 .face,
 .back {
     position: absolute;
-    width: var(--part);
+    width: 100%;
     height: 100%;
     padding-top: 1em;
-    transition: transform 2s;
     backface-visibility: hidden;
     text-align: center;
     z-index: 2;
@@ -258,53 +219,53 @@ body {
 
 @keyframes face-slide {
     0% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch)));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch)));
     }
 
     50% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 210deg));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 210deg));
     }
 
     70% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 160deg));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 160deg));
     }
 
     85% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 195deg));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 195deg));
     }
 
     95% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 168deg));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 168deg));
     }
 
     100% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 180deg));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersFaceSwitch) - 180deg));
     }
 }
 
 @keyframes back-slide {
     0% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch)));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersBackSwitch)));
     }
 
     50% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 210deg));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 210deg));
     }
 
     70% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 160deg));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 160deg));
     }
 
     85% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 195deg));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 195deg));
     }
 
     95% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 168deg));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 168deg));
     }
 
     100% {
-        transform: rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 180deg));
+        transform: var(--perspectiveValue) rotate3d(0, 1, 0, calc(var(--slidersBackSwitch) - 180deg));
     }
 }
 
@@ -312,8 +273,8 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
+    max-width: 100%;
     text-align: center;
-    overflow: hidden;
     background-color: var(--weekBackgroundColor);
     border-top: calc(var(--part) * 0.1) double var(--weekFontColor);
     border-bottom: calc(var(--part) * 0.1) double var(--weekFontColor);
@@ -324,7 +285,7 @@ body {
 }
 
 .week div {
-    width: 14.28%;
+    width: 14.27%;
     font-size: calc(var(--part) * 0.5);
     color: var(--weekFontColor);
     text-decoration: line-through;
@@ -332,7 +293,8 @@ body {
 
 main {
     position: relative;
-    width: 100vw;
+    max-width: 100%;
+    width: 100%;
     height: auto;
     display: grid;
     grid-template-columns:

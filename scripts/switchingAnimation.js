@@ -75,7 +75,7 @@ const SwitchingAnimation = ((intervalValue, durationValue) => {
         stopSwitching: stopSwitching,
         toggleSwitching: toggleSwitching,
     };
-})(5000, 3.5);
+})(5500, 3.5);
 // first argument (milliseconds) minimum 1500ms longer than second argument (seconds)
 
 export default SwitchingAnimation;
