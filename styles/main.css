@@ -107,7 +107,7 @@ body {
     background: radial-gradient(
         circle at center,
         transparent 30%,
-        var(--vignetteFirstColor) 60%,
+        var(--vignetteFirstColor) 75%,
         var(--vignetteSecondColor) 100%
     );
     z-index: 100;
