@@ -118,7 +118,7 @@ body {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(0deg, #ff9900 0%, #00e4c5 60%);
-    animation: loaderSpinning 0.5s infinite linear;
+    animation: loaderSpinning 1s infinite linear;
 }
 
 .loader::after {
