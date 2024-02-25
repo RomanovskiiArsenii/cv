@@ -1,6 +1,6 @@
 const glowingText = (() => {
     const textElement = document.getElementById('glowing_text');
-    let coloredText = '';
+    let coloredText;
     let index = 0;
 
     const startGlowing = () => {

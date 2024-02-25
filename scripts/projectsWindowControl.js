@@ -13,7 +13,10 @@ const fetchProjectDescriptions = fetch('projects_description.JSON')
 
 const projectsWindowControl = (() => {
     const previousBtnSlide = document.getElementById('previous_btn');
+    const nextBtnSlide = document.getElementById('next_btn');
+    const crossBtn = document.getElementById('cross_btn');
     const projects = document.getElementById('projects');
+    const projInner = document.getElementById('proj_inner');
     const projOuter = document.getElementById('proj_outer');
     const projGallery = document.getElementById('proj_gallery');
     const projDescriber = document.getElementById('proj_decriber_text');
@@ -75,11 +78,16 @@ const projectsWindowControl = (() => {
             projects.style.pointerEvents = 'auto';
             projects.style.transform = 'translateX(0)';
             projOuter.style.height = '90vh';
-            projOuter.style.width = '90vw';
             projOuter.style.top = '0';
             projOuter.style.left = '0';
             previousBtnSlide.style.opacity = '1';
-        }, 500);
+
+            if (window.innerWidth > 900) {
+                projOuter.style.width = '90vw';
+            } else {
+                projOuter.style.width = '100vw';
+            }
+        }, 600);
     };
 
     const hideProjectsWindow = () => {
@@ -87,11 +95,16 @@ const projectsWindowControl = (() => {
         projects.style.pointerEvents = 'none';
         projects.style.transform = 'translateX(-20vw)';
         projOuter.style.height = '86vh';
-        projOuter.style.width = '86vw';
         projOuter.style.top = '4vh';
         projOuter.style.left = '4vw';
         previousBtnSlide.style.opacity = '0';
         projGallery.style.backgroundImage = nosignalURL;
+
+        if (window.innerWidth > 900) {
+            projOuter.style.width = '86vw';
+        } else {
+            projOuter.style.width = '96vw';
+        }
 
         setTimeout(() => {
             projects.style.display = 'none';

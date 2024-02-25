@@ -123,7 +123,7 @@ body {
     background-color: var(--loaderBGColor);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-51%, -53%);
 }
 
 @keyframes loaderSpinning {
@@ -460,7 +460,7 @@ main {
 
 #arrows_2 {
     width: calc(var(--part) * 2.6);
-    transform: rotate(7deg) translate(-16%, -12%);
+    transform: rotate(7deg) translate(0%, -24%);
 }
 
 #arrows_3 {
@@ -743,11 +743,11 @@ main {
 /* **************************************************************************** */
 
 .bottom_med_1 {
-    grid-area: 10 / 4 / 11 / 6;
+    grid-area: 10 / 4 / 11 / 7;
     text-align: justify;
     font-family: 'Vintage_font', sans-serif;
     font-size: calc(var(--part) * 0.48);
-    transform: rotate(-10deg) translate(18%, 0%);
+    transform: rotate(-10deg) translate(5%, 0%);
     z-index: 0;
 }
 
@@ -1222,5 +1222,38 @@ main {
 
     .tapes {
         grid-area: 15 / 1 / 16 / 9 !important;
+    }
+
+    .projects {
+        margin: 7vh auto 3vh;
+        width: 100vw;
+    }
+
+    .proj_outer {
+        width: 96vw;
+        top: 4vh;
+        left: 8vw;
+    }
+
+    .proj_inner {
+        top: 4vh;
+        left: 8vw;
+    }
+
+    #previous_btn,
+    #next_btn {
+        height: 7vw;
+        width: 7vw;
+    }
+
+    #next_btn {
+        right: 2vw;
+    }
+
+    #cross_btn {
+        height: 10vw;
+        width: 10vw;
+        top: -11vw;
+        right: 4vw;
     }
 }
