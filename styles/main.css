@@ -756,6 +756,7 @@ main {
 
 #glowing_text {
     text-wrap: nowrap;
+    text-overflow: clip;
 }
 
 /* CERTIFICATES LINK */
