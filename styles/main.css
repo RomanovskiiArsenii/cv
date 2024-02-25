@@ -1231,12 +1231,10 @@ main {
 
     .proj_outer {
         width: 96vw;
-        top: 4vh;
         left: 8vw;
     }
 
     .proj_inner {
-        top: 4vh;
         left: 8vw;
     }
 
@@ -1251,9 +1249,9 @@ main {
     }
 
     #cross_btn {
-        height: 10vw;
-        width: 10vw;
-        top: -11vw;
+        height: 9vw;
+        width: 9vw;
+        top: -7vh;
         right: 4vw;
     }
 }

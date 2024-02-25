@@ -96,14 +96,15 @@ const projectsWindowControl = (() => {
         projects.style.transform = 'translateX(-20vw)';
         projOuter.style.height = '86vh';
         projOuter.style.top = '4vh';
-        projOuter.style.left = '4vw';
         previousBtnSlide.style.opacity = '0';
         projGallery.style.backgroundImage = nosignalURL;
 
         if (window.innerWidth > 900) {
             projOuter.style.width = '86vw';
+            projOuter.style.left = '4vw';
         } else {
             projOuter.style.width = '96vw';
+            projOuter.style.left = '8vw';
         }
 
         setTimeout(() => {
