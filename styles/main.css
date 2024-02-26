@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 @font-face {
     font-family: 'Vintage_font';
     src: url(../fonts/Vintage_font.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Marker_font';
-    src: url(../fonts/Marker_font.otf) format('opentype');
 }
 
 :root {
@@ -51,7 +47,8 @@
 
     --textCuttedFontColor: #ffb756;
 
-    --redTapesFontColor: rgb(255, 255, 255);
+    --redTapesFontColor: rgb(65, 255, 151);
+    --greenTapesFontColor: rgb(255, 230, 0);
     --tapesFontColor: rgb(22, 22, 22);
 
     --projectWindowOuterPanelColor: rgb(242, 168, 0);
@@ -873,17 +870,12 @@ main {
 
 .tapes div p {
     position: absolute;
-    font-family: 'Marker_font', sans-serif;
+    font-family: 'Permanent Marker', sans-serif;
     font-weight: 200;
-    font-size: calc(var(--part) * 0.35);
+    font-size: calc(var(--part) * 0.24);
     top: 7%;
     left: 35%;
     color: var(--tapesFontColor);
-}
-
-.tapes div:nth-child(6) p,
-.tapes div:nth-child(8) p {
-    color: var(--redTapesFontColor);
 }
 
 /* PROJECTS */
