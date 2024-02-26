@@ -200,9 +200,11 @@ main {
 
 @keyframes describerFadeIn {
     from {
+        transform: translateY(15%);
         opacity: 0;
     }
     to {
+        transform: translateY(0%);
         opacity: 1;
     }
 }
