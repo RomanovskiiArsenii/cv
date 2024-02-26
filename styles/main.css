@@ -927,7 +927,7 @@ main {
     background-image: url(../images/gallery_images/nosignal.gif);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
 }
 
 .proj_decriber {
@@ -1047,6 +1047,7 @@ main {
     .proj_gallery {
         height: 48vh;
         width: 76vw;
+        background-size: cover;
     }
 
     .proj_decriber {
