@@ -925,9 +925,19 @@ main {
     left: 3vw;
     border-radius: 1vh 6vh;
     background-image: url(../images/gallery_images/nosignal.gif);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
+    animation: galleryMove 6s ease infinite;
+}
+
+@keyframes galleryMove {
+    0% {
+        background-position: center bottom;
+    }
+    100% {
+        background-position: center top;
+    }
 }
 
 .proj_decriber {
@@ -1047,7 +1057,6 @@ main {
     .proj_gallery {
         height: 48vh;
         width: 76vw;
-        background-size: cover;
     }
 
     .proj_decriber {
