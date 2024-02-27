@@ -47,6 +47,9 @@
 
     --textCuttedFontColor: #ffb756;
 
+    --glowingTextFontColor: rgb(190 255 252);
+    --glowingTextGlowColor: 0 0 0.5em rgb(0, 255, 242);
+
     --redTapesFontColor: rgb(65, 255, 151);
     --greenTapesFontColor: rgb(255, 230, 0);
     --tapesFontColor: rgb(22, 22, 22);
