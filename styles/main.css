@@ -1067,7 +1067,7 @@ main {
         width: 76vw;
         top: 54vh;
         padding: 2vh;
-        font-size: calc(var(--part) * 0.35);
+        font-size: calc(var(--part) * 0.45);
         border-radius: 1vh 1vh 1vh 6vh;
     }
 
