@@ -54,7 +54,9 @@
     --greenTapesFontColor: rgb(255, 230, 0);
     --tapesFontColor: rgb(22, 22, 22);
 
-    --projectWindowOuterPanelColor: rgb(242, 168, 0);
+    /* --projectWindowOuterPanelColor: rgb(242, 168, 0); */
+    --projectWindowOuterPanelColor: rgb(89 133 120);
+
     --projectWindowInnerPanelColor: #1d1d1d;
     --projectDescriberBGColor: #242424;
     --projectDescriberFontColor: whitesmoke;
@@ -973,18 +975,20 @@ main {
 #next_btn {
     height: 4vw;
     width: 4vw;
-    top: 50%;
+    top: calc(50% - 10vw);
     z-index: 103;
     transform: scale(0.99);
     transition: transform 0.8s ease, opacity 0.8s ease 1.5s;
 }
 
 #previous_btn {
+    margin: 10vw 5vw 10vw 0;
     opacity: 0;
     left: 0vw;
 }
 
 #next_btn {
+    margin: 10vw 0vw 10vw 5vw;
     right: 0vw;
 }
 
@@ -1055,36 +1059,6 @@ main {
 
 /* MEDIA */
 /* **************************************************************************** */
-
-@media screen and (orientation: portrait) {
-    .proj_gallery {
-        height: 48vh;
-        width: 76vw;
-    }
-
-    .proj_decriber {
-        height: 25vh;
-        width: 76vw;
-        top: 54vh;
-        padding: 2vh;
-        font-size: calc(var(--part) * 0.45);
-        border-radius: 1vh 1vh 1vh 6vh;
-    }
-
-    .slides_container,
-    .vignette {
-        height: 55vw;
-    }
-
-    #pause {
-        top: 47vw;
-    }
-
-    .describer {
-        top: 50vw;
-        font-size: calc(var(--part) * 0.2);
-    }
-}
 
 @media screen and (max-width: 900px) {
     .slides_container,
@@ -1235,6 +1209,20 @@ main {
         width: 100vw;
     }
 
+    .proj_gallery {
+        height: 48vh;
+        width: 76vw;
+    }
+
+    .proj_decriber {
+        height: 25vh;
+        width: 76vw;
+        top: 54vh;
+        padding: 2vh;
+        font-size: calc(var(--part) * 0.45);
+        border-radius: 1vh 1vh 1vh 6vh;
+    }
+
     .proj_outer {
         width: 96vw;
         left: 8vw;
@@ -1253,11 +1241,22 @@ main {
     #next_btn {
         right: 2vw;
     }
+}
 
+@media screen and (min-width: 650px) and (max-width: 900px) {
     #cross_btn {
-        height: 9vw;
-        width: 9vw;
-        top: -7vh;
+        height: 7vw;
+        width: 7vw;
+        top: -4vh;
+        right: 4vw;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #cross_btn {
+        height: 10vw;
+        width: 10vw;
+        top: -4vh;
         right: 4vw;
     }
 }

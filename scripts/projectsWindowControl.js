@@ -77,15 +77,17 @@ const projectsWindowControl = (() => {
             projects.style.opacity = '1';
             projects.style.pointerEvents = 'auto';
             projects.style.transform = 'translateX(0)';
-            projOuter.style.height = '90vh';
-            projOuter.style.top = '0';
             projOuter.style.left = '0';
             previousBtnSlide.style.opacity = '1';
 
             if (window.innerWidth > 900) {
                 projOuter.style.width = '90vw';
+                projOuter.style.height = '90vh';
+                projOuter.style.top = '0';
             } else {
                 projOuter.style.width = '100vw';
+                projOuter.style.height = '82vh';
+                projOuter.style.top = '4vh';
             }
         }, 600);
     };
