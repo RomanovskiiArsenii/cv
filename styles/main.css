@@ -54,7 +54,6 @@
     --greenTapesFontColor: rgb(255, 230, 0);
     --tapesFontColor: rgb(22, 22, 22);
 
-    /* --projectWindowOuterPanelColor: rgb(242, 168, 0); */
     --projectWindowOuterPanelColor: rgb(89 133 120);
 
     --projectWindowInnerPanelColor: #1d1d1d;
@@ -403,12 +402,8 @@ main {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns:
-        var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl)
-        var(--part_dbl) var(--part_dbl);
-    grid-template-rows:
-        var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl)
-        var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl);
+    grid-template-columns: repeat(8, var(--part_dbl));
+    grid-template-rows: repeat(12, var(--part_dbl));
 
     padding-top: 10vh;
 
@@ -1071,14 +1066,7 @@ main {
     }
 
     main {
-        grid-template-rows:
-            var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(
-                --part_dbl
-            )
-            var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(--part_dbl) var(
-                --part_dbl
-            )
-            var(--part_dbl) var(--part_dbl) var(--part_dbl);
+        grid-template-rows: repeat(16, var(--part_dbl));
     }
 
     #horse {
