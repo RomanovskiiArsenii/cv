@@ -11,10 +11,6 @@ window.addEventListener('resize', headerControl.toggleBtnModifierOnNarrowScreen)
 window.addEventListener('load', headerControl.toggleBackgroundImageSourceOnNarrowScreen);
 window.addEventListener('resize', headerControl.toggleBackgroundImageSourceOnNarrowScreen);
 
-// header round svg text size and position calculating
-window.addEventListener('load', headerControl.setSizeOfRoundTextOnNarrowScreens);
-window.addEventListener('resize', headerControl.setSizeOfRoundTextOnNarrowScreens);
-
 //main block splitter/joiner
 window.addEventListener('load', mainControl.mainItemContentChangeOnNarrowScreen);
 window.addEventListener('resize', mainControl.mainItemContentChangeOnNarrowScreen);

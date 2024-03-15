@@ -228,13 +228,7 @@
     }
 
     .header__round-text-wrapper {
-        position: absolute;
-        top: unset;
-        overflow: hidden;
-    }
-
-    .header__round-text-wrapper_cut-right {
-        clip-path: polygon(50% 0%, 100% 0%, 100% 76%, 50% 42%);
+        display: none;
     }
 }
 
@@ -247,9 +241,5 @@
         top: unset;
         bottom: 0;
         width: auto;
-    }
-
-    .header__round-text-wrapper {
-        display: none;
     }
 }

@@ -45,31 +45,9 @@ const headerControl = (() => {
         }
     };
 
-    /**
-     *  calculates round text transform params
-     */
-    const setSizeOfRoundTextOnNarrowScreens = () => {
-        if ((window, innerWidth <= params.maxWidthBeforeChangeImageSrc)) {
-            const scaleCoeff = window.innerWidth / 860;
-            const translateCoeffX = (window.innerWidth - 392) / 786 + 50.5;
-            const translateCoeffY = (window.innerWidth - 392) / 11 - 15;
-
-            for (let i = 0; i < roundImageWrappers.length; i++) {
-                roundImageWrappers[i].style.bottom = `${translateCoeffY}vh`;
-                roundImageWrappers[i].style.transform = `translateX(-${translateCoeffX}%) scale(${scaleCoeff})`;
-            }
-        } else {
-            for (let i = 0; i < roundImageWrappers.length; i++) {
-                roundImageWrappers[i].style.top = 'top: -314px';
-                roundImageWrappers[i].style.transform = 'translateX(-22.6%) scale(1.01)';
-            }
-        }
-    };
-
     return {
         toggleBtnModifierOnNarrowScreen: toggleBtnModifierOnNarrowScreen,
         toggleBackgroundImageSourceOnNarrowScreen: toggleBackgroundImageSourceOnNarrowScreen,
-        setSizeOfRoundTextOnNarrowScreens: setSizeOfRoundTextOnNarrowScreens,
     };
 })();
 
