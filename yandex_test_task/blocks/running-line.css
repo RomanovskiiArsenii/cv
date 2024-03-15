@@ -1,0 +1,49 @@
+.running-line {
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    background-color: var(--backgroundColorRed);
+}
+
+.running-line-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.running-line__item {
+    display: flex;
+    gap: 0 12px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    color: var(--fontColorWhite);
+    animation: marquee 28s linear infinite;
+}
+
+.running-line__item_padding_right {
+    padding-right: 1ch;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .running-line {
+        height: 38px;
+    }
+
+    .running-line__item {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}

@@ -1,0 +1,233 @@
+.main__inner {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 250px 474px;
+    padding: 80px 72px 154px;
+    gap: 64px 0;
+    justify-content: center;
+}
+
+.main__title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 49px;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    color: var(--fontColorBlack);
+}
+
+.main__title-item-1 {
+    max-width: 764px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    display: inline;
+}
+
+.main__title-item-2 {
+    display: none;
+}
+
+.main__title-item-3 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    padding-left: 37.9vw;
+    padding-right: 1ch;
+}
+
+.main__title-item_text_red {
+    font-weight: 700;
+    color: var(--fontColorRed);
+}
+
+.main__title-item_text_nowrap {
+    text-wrap: nowrap;
+}
+
+.main__image-chessplayers {
+    min-width: 335px;
+    max-width: 28.84vw;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: center;
+    transform: translateX(4.3%);
+}
+
+.main__image-portrait {
+    min-width: 427px;
+    max-width: 38.65vw;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    transform: translate(-5.2%, -7.5%);
+}
+
+.main__table {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    padding-top: 207px;
+    padding-left: 37.9vw;
+}
+
+.main__table-row {
+    display: flex;
+    flex-direction: row;
+    max-width: 704px;
+    border-bottom: 2px solid var(--borderColorGray);
+}
+
+.main__table-row_border_bottom_none {
+    border-bottom: none;
+}
+
+.main__table-item {
+    width: 306px;
+    padding: 15px 16px 15px 0;
+    font-family: 'Golos Text', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--fontColorBlackLighter);
+    text-wrap: nowrap;
+}
+
+.main__table-item_border_right {
+    border-right: 2px solid var(--borderColorGray);
+}
+
+.main__table-item_padding_top_none {
+    padding-top: 0;
+}
+
+.main__table-item_padding_bottom_none {
+    padding-bottom: 0;
+}
+
+.main__table-item_text_bold_black {
+    padding-left: 16px;
+    font-weight: 600;
+    color: var(--fontColorBlack);
+}
+
+.main__table-item_text_red-overline {
+    position: relative;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.main__table-item_text_red-overline::after {
+    content: '';
+    position: absolute;
+    bottom: 36%;
+    left: -4px;
+    width: 102%;
+    height: 2px;
+    background-color: red;
+}
+
+.main__contacts {
+    font-family: 'Golos Text', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    transform: translateY(48px);
+}
+
+.main__contacts_text_blue {
+    color: var(--fontColorBlue);
+}
+
+@media screen and (max-width: 1152px) {
+    .main__inner {
+        grid-template-columns: repeat(1, 336px);
+        grid-template-rows: 152px 213px 150px 414px 248px 444px;
+        padding: 48px 19px 92px;
+        gap: 24px 0;
+    }
+
+    .main__title {
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 38px;
+    }
+
+    .main__title-item-1 {
+        width: 100%;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: inline;
+    }
+
+    .main__title-item-2 {
+        display: inline;
+    }
+
+    .main__title-item-3 {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        padding: 0;
+    }
+
+    .main__image-chessplayers {
+        width: 335px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        transform: none;
+    }
+
+    .main__image-portrait {
+        height: 427px;
+        width: auto;
+        min-width: unset;
+        max-width: unset;
+        grid-row: 4/5;
+        transform: translate(-17px, 0px);
+    }
+
+    .main__table {
+        grid-column: 1/2;
+        grid-row: 6/7;
+        padding: 0;
+    }
+
+    .main__table-row {
+        flex-direction: column;
+        width: 100%;
+        padding: 16px 0;
+    }
+
+    .main__table-row_padding_top_none {
+        padding-top: 0;
+    }
+
+    .main__table-row_flexdirection_row {
+        flex-direction: row;
+    }
+
+    .main__table-item {
+        width: 100%;
+        padding: 0;
+    }
+
+    .main__table-item_border_right {
+        border-right: none;
+    }
+
+    .main__table-item_padding_bottom_media {
+        padding-bottom: 11px;
+    }
+
+    .main__table-item_translate_top_media {
+        transform: translate(0px, -4px);
+    }
+
+    .main__contacts {
+        font-size: 18px;
+        line-height: 22px;
+        transform: translateY(20px);
+    }
+
+    .main__contacts-content {
+        display: block;
+    }
+}

@@ -1,0 +1,126 @@
+.gallery__inner {
+    padding: 100px 72px 197px;
+    position: relative;
+}
+
+.gallery__top {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.gallery__top-title {
+    font-family: 'Merriweather', serif;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 65px;
+    text-transform: uppercase;
+}
+
+.ctnums-counter-btns_translate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(17px, 9px);
+}
+
+.gallery__cards {
+    max-width: 1222px;
+    width: 89.45vw;
+    overflow-x: hidden;
+    color: var(--fontColorBlack);
+}
+
+.gallery__card__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 0 20px;
+    transition: transform 1s ease;
+}
+
+.gallery__card {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 32.24%;
+    max-width: 394px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: 'Golos Text', sans-serif;
+}
+
+.gallery__card-frame {
+    width: 81.22%;
+    padding-bottom: 28px;
+}
+
+.gallery__card-name {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    padding-bottom: 6px;
+}
+
+.gallery__card-intro {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-bottom: 20px;
+    color: var(--fontColorBlackLighterMore);
+}
+
+.gallery__card-link {
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 62px;
+    color: var(--fontColorBlue);
+    border: 1px solid var(--backgroundColorBlue);
+    transition: background-color 0.8s ease, color 0.3s ease;
+}
+
+.gallery__card-link:hover {
+    background-color: var(--backgroundColorBlue);
+    color: var(--fontColorWhite);
+}
+
+@media screen and (max-width: 1152px) {
+    .gallery__inner {
+        padding: 21px 20px 213px;
+        width: 375px;
+    }
+
+    .gallery__top {
+        padding-bottom: 40px;
+    }
+
+    .gallery__top-title {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .gallery__cards {
+        width: 335px;
+    }
+
+    .gallery__card__wrapper {
+        gap: 0 32px;
+    }
+
+    .gallery__card {
+        width: 335px;
+    }
+
+    .gallery__card-frame {
+        width: 244px;
+    }
+    .ctnums-counter-btns_position_media {
+        top: 547px;
+        left: 50%;
+        transform: translate(-40.3%);
+    }
+}

@@ -1,0 +1,70 @@
+.ctnums-counter-btns {
+    display: flex;
+    flex-direction: row;
+    height: 44px;
+    min-width: 151px;
+}
+
+.ctnums-counter-btns__btn {
+    width: 44px;
+    height: 44px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.ctnums-counter-btns__btn-prev {
+    transform: rotate(180deg);
+    margin-right: 14px;
+}
+
+.ctnums-counter-btns__btn-next {
+    margin-left: 14px;
+}
+
+.ctnums-counter-btns__btn_color_black {
+    background-image: url('../images/gallery/button_black.png');
+}
+
+.ctnums-counter-btns__btn_color_orange {
+    background-image: url('../images/gallery/button_orange.png');
+}
+
+.ctnums-counter-btns-counter {
+    font-family: 'Golos Text', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    align-self: center;
+    color: var(--fontColorBlackLighterMore);
+}
+
+.ctnums-counter-btns-counter-current {
+    color: var(--fontColorBlack);
+}
+
+@keyframes mouseooverBtnAnimationGallery {
+    0% {
+        background-image: url('../images/stages/button_black.png');
+    }
+    100% {
+        background-image: url('../images/stages/button_orange.png');
+    }
+}
+
+@keyframes mouseoleaveBtnAnimationGallery {
+    0% {
+        background-image: url('../images/stages/button_orange.png');
+    }
+    100% {
+        background-image: url('../images/stages/button_black.png');
+    }
+}
+
+@media screen and (max-width: 1152px) {
+    .ctnums-counter-btns__btn {
+        width: 36px;
+        height: 36px;
+    }
+}

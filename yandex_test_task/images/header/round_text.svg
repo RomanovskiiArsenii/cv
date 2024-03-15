@@ -1,0 +1,16 @@
+<svg width="1200" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="circlePath" d="M600,300 A300,300 0 1,1 600,900 A300,300 0 1,1 600,300" fill="none"/>
+  </defs>
+  
+   <path d="M600,300 A300,300 0 1,1 600,900 A300,300 0 1,1 600,300" fill="none"/>
+  
+  <!-- Text on Path -->
+  <text font-size="19px">
+    <textPath href="#circlePath"  textLength="1884" fill="#f8a90a">
+      ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ НА МАРС &#8226; ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ НА МАРС &#8226; ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ НА МАРС &#8226;  ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ НА МАРС &#8226; 
+    </textPath>
+  </text>
+</svg>
+
+

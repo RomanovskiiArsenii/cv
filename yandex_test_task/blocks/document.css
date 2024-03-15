@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:wght@400;700&display=swap');
+
+:root {
+    --fontColorWhite: #fff;
+    --fontColorBlackLighterMore: rgba(49, 49, 49, 0.6);
+    --fontColorBlackLighter: rgba(49, 49, 49, 0.7);
+    --fontColorBlack: #313131;
+    --fontColorBlackDarker: #1f1f1f;
+    --fontColorBlue: #3057a2;
+    --fontColorRed: #f54932;
+
+    --backgroundColorWhite: #fff;
+    --backgroundColorWhiteLight: hsla(0, 0%, 100%, 0.9);
+    --backgroundColorWhiteDark: rgb(240, 240, 240);
+    --backgroundColorBlack: #1f1f1f;
+    --backgroundColorBeige: #e9ded4;
+    --backgroundColorBlue: #3057a2;
+    --backgroundColorOrange: #fbce51;
+    --backgroundColorRed: #f54932;
+
+    --borderColorGray: #d0d0d0;
+
+    --roundCounterColorBlack: #313131;
+    --roundCounterColorGray: #d9d9d9;
+
+    --buttonColorBlack: #313131;
+    --buttonColorGray: rgba(49, 49, 49, 0.2);
+}
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--backgroundColorWhiteDark);
+    font-size: 20px;
+}
+
+.container {
+    position: relative;
+    max-width: 1920px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    background-color: var(--backgroundColorWhite);
+}
+
+.container-m {
+    position: relative;
+    max-width: 1366px;
+    margin: 0 auto;
+}

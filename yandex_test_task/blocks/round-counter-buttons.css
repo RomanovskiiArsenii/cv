@@ -1,0 +1,122 @@
+.round-counter {
+    display: none;
+}
+
+.round-counter__buttons {
+    padding: 28px 0 36px;
+    margin: 0 auto;
+    width: 179px;
+    height: 36px;
+    justify-content: space-between;
+    display: none;
+}
+
+.round-counter__button {
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.round-counter__button-prev {
+    transform: rotate(180deg);
+    margin-right: 10px;
+}
+
+.round-counter__button-next {
+    margin-left: 10px;
+}
+
+.round-counter__button_color_gray {
+    background-image: url('../images/stages/button_gray.png');
+}
+
+.round-counter__button_color_black {
+    background-image: url('../images/stages/button_black.png');
+}
+.round-counter__button_color_orange {
+    background-image: url('../images/stages/button_orange.png');
+}
+
+.round-counter__button-round-counter {
+    height: 88px;
+    width: 10px;
+    position: relative;
+}
+
+.round-counter__button-round-counter_bgcolor-black::before,
+.round-counter__button-round-counter_bgcolor-gray::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.round-counter__button-round-counter_bgcolor-gray::before {
+    background-color: var(--roundCounterColorGray);
+}
+
+.round-counter__button-round-counter_bgcolor-black::before {
+    background-color: var(--roundCounterColorBlack);
+}
+
+@keyframes mouseooverBtnAnimation {
+    0% {
+        background-image: url('../images/stages/button_black.png');
+    }
+    100% {
+        background-image: url('../images/stages/button_orange.png');
+    }
+}
+@keyframes mouseoleaveBtnAnimation {
+    0% {
+        background-image: url('../images/stages/button_orange.png');
+    }
+    100% {
+        background-image: url('../images/stages/button_black.png');
+    }
+}
+
+@keyframes blackBtnAnimation {
+    0% {
+        background-image: url('../images/stages/button_gray.png');
+    }
+    100% {
+        background-image: url('../images/stages/button_black.png');
+    }
+}
+
+@keyframes grayBtnAnimation {
+    0% {
+        background-image: url('../images/stages/button_black.png');
+    }
+    100% {
+        background-image: url('../images/stages/button_gray.png');
+    }
+}
+
+@keyframes grayBtnAnimationFromOrange {
+    0% {
+        background-image: url('../images/stages/button_orange.png');
+    }
+    100% {
+        background-image: url('../images/stages/button_gray.png');
+    }
+}
+
+@media screen and (max-width: 1152px) {
+    .round-counter {
+        display: flex;
+        flex-direction: row;
+    }
+    .round-counter__buttons {
+        display: flex;
+        flex-direction: row;
+    }
+}
