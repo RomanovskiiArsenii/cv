@@ -1,62 +1,64 @@
 const galleryControl = (() => {
-    //wrapper for animation
+    //the cards container is used to calculate the displacement factor
+    const galleryCardsContainer = document.querySelector('.gallery__cards');
+    //the cards container is used to calculate the displacement factor and to implement the displacement animation
     const galleryCardsWrapper = document.querySelector('.gallery__card__wrapper');
-    //array of cards
-    const galleryCards = document.querySelectorAll('.gallery__card');
+    //card array
+    let galleryCards = document.querySelectorAll('.gallery__card');
     //control buttons
     const galleryButtons = document.querySelectorAll('.ctnums-counter-btns__btn');
-    //current card
+    //current card number
     const currentCounter = document.querySelector('.ctnums-counter-btns-counter-current');
-    //total cards
+    //total number of cards
     const totalCounter = document.querySelector('.ctnums-counter-btns-counter-total');
 
-    //setInterval var
-    let swapInterval;
+    //displacement length
+    let translateValue = 0;
+    //automatic animation interval
+    let autoDisplacementInterval;
+    //width of the cards container
+    let galleryCardsContainerWidth;
+    //width of the card
+    let galleryCardWidth;
+    //swipes counter is used to calculate the displacement factor
+    let counter = 0;
+    //displacement factor is used for displacement animation
+    let displacemenFactor;
+    //wrapper column gap is used to calculate the displacement factor
+    let wrapperGapWidth;
 
     const params = {
-        //ini qty of cards
+        //initial number of cards
         initCardQty: galleryCards.length,
-        //3 cards on the page at the same time on wide screen
+        //three cards can be placed simultaneously on a wide screen
         counterMaxValue: 3,
-        //swap var
-        swapCoeff: 0,
-        //swipes counter
-        counter: 0,
 
-        //btns modifiers
+        // transition function of wrapper used on resize
+        transitionFunction: window.getComputedStyle(galleryCardsWrapper).getPropertyValue('transition'),
+
+        //button modifiers
         btnBlackModifier: 'ctnums-counter-btns__btn_color_black',
         btnOrangeModifier: 'ctnums-counter-btns__btn_color_orange',
 
-        //animation
-        mouseooverBtnAnimation: 'mouseooverBtnAnimationGallery',
-        mouseoleaveBtnAnimation: 'mouseoleaveBtnAnimationGallery',
+        //css animation
+        mouseooverBtnAnimation: 'mouseooverBtnAnimationGallery .8s ease forwards',
+        mouseoleaveBtnAnimation: 'mouseoleaveBtnAnimationGallery .8s ease forwards',
 
-        //screen width
-        narrowDisplayWidth: 1158,
+        //minimum width at which three cards are displayed on the screen
+        narrowDisplayWidth: 1152,
     };
 
     /**
-     * calculated swipes intervals depending on window width
+     * toggle button modifier
+     * @param {*} button modified button
+     * @param {*} modifier modifier to toggle to
+     * @param {*} animation modifing animation
      */
-    const getSwapCoeff = () => {
-        if (window.innerWidth > params.narrowDisplayWidth) {
-            params.swapCoeff = 33.87;
-        } else {
-            params.swapCoeff = 109.57;
-        }
-    };
-
-    /**
-     * toggle button
-     * @param {*} button
-     * @param {*} secondColor
-     * @param {*} animation
-     */
-    const toggleBtnClass = (button, secondColor, animation) => {
+    const toggleBtnModifier = (button, modifier, animation) => {
         button.classList.toggle(params.btnBlackModifier, false);
         button.classList.toggle(params.btnOrangeModifier, false);
-        button.classList.toggle(secondColor, true);
-        button.style.animation = `${animation} .8s ease forwards`;
+        button.classList.toggle(modifier, true);
+        button.style.animation = animation;
     };
 
     /**
@@ -65,7 +67,7 @@ const galleryControl = (() => {
      */
     const mouseOverHandler = (e) => {
         if (e.target.classList.contains(params.btnBlackModifier)) {
-            toggleBtnClass(e.target, params.btnOrangeModifier, params.mouseooverBtnAnimation);
+            toggleBtnModifier(e.target, params.btnOrangeModifier, params.mouseooverBtnAnimation);
         }
     };
 
@@ -75,92 +77,104 @@ const galleryControl = (() => {
      */
     const mouseLeaveHandler = (e) => {
         if (e.target.classList.contains(params.btnOrangeModifier)) {
-            toggleBtnClass(e.target, params.btnBlackModifier, params.mouseoleaveBtnAnimation);
+            toggleBtnModifier(e.target, params.btnBlackModifier, params.mouseoleaveBtnAnimation);
         }
     };
 
     /**
-     * swap gallery left
+     * the displacement factor calculation based on screen width
      */
-    const swapLeft = () => {
-        params.counter = params.counter > 1 ? params.counter - 1 : 0;
-        const translateValue = params.counter * params.swapCoeff;
-        galleryCardsWrapper.style.transform = `translateX(-${translateValue}%)`;
+    const getDisplacementFactor = () => {
+        galleryCards = document.querySelectorAll('.gallery__card');
+        galleryCardsContainerWidth = galleryCardsContainer.offsetWidth;
+        galleryCardWidth = galleryCards[0].offsetWidth;
+        wrapperGapWidth = parseInt(window.getComputedStyle(galleryCardsWrapper).getPropertyValue('column-gap'));
+        if (window.innerWidth > params.narrowDisplayWidth) {
+            displacemenFactor = galleryCardWidth + wrapperGapWidth;
+        } else {
+            displacemenFactor = galleryCardsContainerWidth;
+        }
+    };
+
+    /**
+     * horizontal cards wraper displacement
+     * @param {*} translateValue translateX value
+     */
+    const displacement = (translateValue) => {
+        getDisplacementFactor();
+        translateValue = counter * displacemenFactor;
+        galleryCardsWrapper.style.transform = `translateX(-${translateValue}px)`;
+    };
+
+    /**
+     * cloning cards for infinite animation
+     */
+    const cloneCards = () => {
+        const galleryCardsClone = Array.from(galleryCards).map((card) => card.cloneNode(true));
+        galleryCardsClone.forEach((cloneCard) => galleryCardsWrapper.appendChild(cloneCard));
+    };
+
+    /**
+     * changes the values of the client's slides counter
+     */
+    const printCurrentContainer = () => {
+        if (window.innerWidth > params.narrowDisplayWidth) {
+            if ((counter / params.counterMaxValue) % 2 == 0) {
+                currentCounter.textContent = params.initCardQty;
+            } else {
+                currentCounter.textContent = params.counterMaxValue;
+            }
+        } else {
+            let curValue = (counter + 1) % params.initCardQty;
+            currentCounter.textContent = curValue == 0 ? params.initCardQty : curValue;
+        }
+    };
+
+    /**
+     * displacement to the left
+     */
+    const displacementLeft = () => {
+        counter = counter > 1 ? counter - 1 : 0;
+        displacement(translateValue);
         printCurrentContainer;
     };
 
     /**
-     * swap gallery right
+     * displacement to the right
      */
-    const swapRight = () => {
-        params.counter++;
-        const translateValue = params.counter * params.swapCoeff;
-        galleryCardsWrapper.style.transform = `translateX(-${translateValue}%)`;
-        if (params.counter % params.counterMaxValue == 0) {
+    const displacementRight = () => {
+        counter++;
+        displacement(translateValue);
+        if ((counter % params.initCardQty) - 1 == 0) {
             cloneCards();
         }
         printCurrentContainer();
     };
 
     /**
-     * start auto right swap
+     * start automatic animation of the displacement
      */
-    const swapAutoStart = () => {
-        clearInterval(swapInterval);
-        getSwapCoeff();
-        swapInterval = setInterval(() => {
-            swapRight();
+    const autoDisplacementStart = () => {
+        clearInterval(autoDisplacementInterval);
+        autoDisplacementInterval = setInterval(() => {
+            displacementRight();
         }, 4000);
     };
 
     /**
-     * stop auto right swap
+     * pause automatic animation of the displacement
      */
     const swapAutoPause = () => {
-        clearInterval(swapInterval);
+        clearInterval(autoDisplacementInterval);
         setTimeout(() => {
-            swapAutoStart();
+            autoDisplacementStart();
         }, 6000);
     };
 
     /**
-     * change innerText of current slide counter
+     * remove cloned cards
      */
-    const printCurrentContainer = () => {
-        if (window.innerWidth > params.narrowDisplayWidth) {
-            if ((params.counter / params.counterMaxValue) % 2 == 0) {
-                currentCounter.textContent = params.initCardQty;
-            } else {
-                currentCounter.textContent = params.counterMaxValue;
-            }
-        } else {
-            let curValue = (params.counter + 1) % params.initCardQty;
-            currentCounter.textContent = curValue == 0 ? params.initCardQty : curValue;
-        }
-    };
-
-    /**
-     * back to default params on resize
-     */
-    const backToDefaultOnResize = () => {
-        params.counter = 0;
-        cleanWrapper();
-        galleryCardsWrapper.style.transform = `translateX(0%)`;
-        getSwapCoeff();
-    };
-
-    /**
-     * clone cards for infinite animation
-     */
-    const cloneCards = () => {
-        const cloneCards = Array.from(galleryCards).map((card) => card.cloneNode(true));
-        cloneCards.forEach((cloneCard) => galleryCardsWrapper.appendChild(cloneCard));
-    };
-
-    /**
-     * clean wrapper of cloned cards
-     */
-    const cleanWrapper = () => {
+    const removeClonedCards = () => {
         const cardsCount = galleryCardsWrapper.childElementCount;
         if (cardsCount > params.initCardQty) {
             for (let i = 0; i < cardsCount - params.initCardQty; i++) {
@@ -170,7 +184,20 @@ const galleryControl = (() => {
     };
 
     /**
-     * buttons events listeners init
+     * back to default params on resize
+     */
+    const backToDefaultOnResize = () => {
+        galleryCardsWrapper.style.transition = `none`;
+        galleryCardsWrapper.style.transform = `translateX(0px)`;
+        removeClonedCards();
+        counter = 0;
+        setTimeout(() => {
+            galleryCardsWrapper.style.transition = params.transitionFunction;
+        }, 10);
+    };
+
+    /**
+     * configuring event handling for control buttons
      */
     const buttonsControlInit = () => {
         totalCounter.textContent = params.initCardQty;
@@ -178,15 +205,15 @@ const galleryControl = (() => {
             galleryButtons[i].addEventListener('mouseover', mouseOverHandler);
             galleryButtons[i].addEventListener('mouseleave', mouseLeaveHandler);
         }
-        galleryButtons[0].addEventListener('click', swapLeft);
+        galleryButtons[0].addEventListener('click', displacementLeft);
         galleryButtons[0].addEventListener('click', swapAutoPause);
-        galleryButtons[1].addEventListener('click', swapRight);
+        galleryButtons[1].addEventListener('click', displacementRight);
         galleryButtons[1].addEventListener('click', swapAutoPause);
     };
 
     return {
         buttonsControlInit: buttonsControlInit,
-        swapAutoStart: swapAutoStart,
+        autoDisplacementStart: autoDisplacementStart,
         backToDefaultOnResize: backToDefaultOnResize,
         printCurrentContainer: printCurrentContainer,
     };
