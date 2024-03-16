@@ -25,7 +25,7 @@ window.addEventListener('resize', stagesControl.backToDefaultOnResize);
 window.addEventListener('load', galleryControl.buttonsControlInit);
 
 //gallery autoswap on load
-window.addEventListener('load', galleryControl.swapAutoStart);
+window.addEventListener('load', galleryControl.autoDisplacementStart);
 
 //gallery clean and drop to defaults on resize
 window.addEventListener('resize', galleryControl.backToDefaultOnResize);
