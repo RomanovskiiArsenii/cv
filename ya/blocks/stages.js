@@ -1,16 +1,18 @@
 const stagesControl = (() => {
     //carousel of stages
     const carousel = document.querySelector('.stages_carousel');
-    //butons prev/next
+    //control buttons
     const stagesButtons = document.querySelectorAll('.round-counter__button');
-    //circles - counters of stages
+    //visual carousel slide counter elements
     const stagesCounters = document.querySelectorAll('.round-counter__button-round-counter');
 
+    // slides counter
+    let counter = 0;
+
     const params = {
-        // slides quantity
+        // slide total count
         slidesQty: 5,
-        // slides counter
-        counter: 0,
+
         //button color modifiers
         btnModifierBlack: 'round-counter__button_color_black',
         btnModifierGray: 'round-counter__button_color_gray',
@@ -18,32 +20,35 @@ const stagesControl = (() => {
 
         //css animations
         makeBtnBlack: 'blackBtnAnimation',
-        makeBtnGrayFromOrange: 'grayBtnAnimationFromOrange',
-        mouseoOverBtnAnimation: 'mouseooverBtnAnimation',
-        mouseoleaveBtnAnimation: 'mouseoleaveBtnAnimation',
+        makeBtnGrayFromOrange: 'grayBtnAnimationFromOrange .8s ease forwards',
+        mouseoOverBtnAnimation: 'mouseooverBtnAnimation .8s ease forwards',
+        mouseoleaveBtnAnimation: 'mouseoleaveBtnAnimation .8s ease forwards',
 
         //counter color modifiers
         counterModifierBlack: 'round-counter__button-round-counter_bgcolor-black',
         counterModifierGray: 'round-counter__button-round-counter_bgcolor-gray',
+
+        //minimum width at which all params will be reset to defaut
+        narrowDisplayWidth: 1152,
     };
 
     /**
-     * toggles button modifier from any other color
-     * @param {*} button - btn element
-     * @param {*} secondColor - modifier to toggle in
-     * @param {*} animation - toggle animation css name
+     * switches the button modifier
+     * @param {*} button - button
+     * @param {*} modifier - modifier to toggle to
+     * @param {*} animation - animation css name
      */
-    const toggleBtnModifier = (button, secondColor, animation) => {
+    const toggleBtnModifier = (button, modifier, animation) => {
         button.classList.toggle(params.btnModifierBlack, false);
         button.classList.toggle(params.btnModifierGray, false);
         button.classList.toggle(params.btnModifierOrange, false);
-        button.classList.toggle(secondColor, true);
-        button.style.animation = `${animation} .8s ease forwards`;
+        button.classList.toggle(modifier, true);
+        button.style.animation = animation;
     };
 
     /**
-     *  toggles counter modifier to black (active)
-     * @param {*} current - index of counter to toggle modifier
+     *  toggles counter modifier to the focused phase
+     * @param {*} current - index of the counter to be toggled
      */
     const toggleCounterModifier = (current) => {
         for (let i = 0; i < stagesCounters.length; i++) {
@@ -53,37 +58,36 @@ const stagesControl = (() => {
         stagesCounters[current].classList.toggle(params.counterModifierBlack, true);
     };
 
+    const displacement = () => {
+        carousel.style.transform = `translateX(calc(-${counter}00% - ${counter * 40}px))`;
+        toggleCounterModifier(counter);
+    };
+
     /**
-     * swaps stage to the right
+     * displace stages to the right
      */
-    const swapRight = () => {
-        if (params.counter < params.slidesQty - 1) {
-            params.counter++;
-            carousel.style.transform = `translateX(calc(-${params.counter}00% - ${params.counter * 40}px))`;
-
-            toggleCounterModifier(params.counter);
-
-            if (params.counter == 1) {
+    const displacementRight = () => {
+        if (counter < params.slidesQty - 1) {
+            counter++;
+            displacement();
+            if (counter == 1) {
                 toggleBtnModifier(stagesButtons[0], params.btnModifierBlack, params.makeBtnBlack);
-            } else if (params.counter == params.slidesQty - 1) {
+            } else if (counter == params.slidesQty - 1) {
                 toggleBtnModifier(stagesButtons[1], params.btnModifierGray, params.makeBtnGrayFromOrange);
             }
         }
     };
 
     /**
-     * swaps stage to the left
+     * displace stages to the left
      */
-    const swapLeft = () => {
-        if (params.counter > 0) {
-            params.counter--;
-            carousel.style.transform = `translateX(calc(-${params.counter}00% - ${params.counter * 40}px))`;
-
-            toggleCounterModifier(params.counter);
-
-            if (params.counter == 0) {
+    const displacementLeft = () => {
+        if (counter > 0) {
+            counter--;
+            displacement();
+            if (counter == 0) {
                 toggleBtnModifier(stagesButtons[0], params.btnModifierGray, params.makeBtnGrayFromOrange);
-            } else if (params.counter < params.slidesQty - 1) {
+            } else if (counter < params.slidesQty - 1) {
                 toggleBtnModifier(stagesButtons[1], params.btnModifierBlack, params.makeBtnBlack);
             }
         }
@@ -97,7 +101,6 @@ const stagesControl = (() => {
         if (e.target.classList.contains(params.btnModifierBlack)) {
             toggleBtnModifier(e.target, params.btnModifierOrange, params.mouseoOverBtnAnimation);
         }
-        console.log('over');
     };
 
     /**
@@ -108,30 +111,31 @@ const stagesControl = (() => {
         if (e.target.classList.contains(params.btnModifierOrange)) {
             toggleBtnModifier(e.target, params.btnModifierBlack, params.mouseoleaveBtnAnimation);
         }
-        console.log('leave');
     };
 
     /**
-     * swap to the fisrt stage and first counter on resize
+     * resets slides, counters and buttons to their original state
      */
     const backToDefaultOnResize = () => {
-        carousel.style.transform = 'none';
-        toggleBtnModifier(stagesButtons[0], params.btnModifierGray, 'none');
-        toggleBtnModifier(stagesButtons[1], params.btnModifierBlack, 'none');
-        toggleCounterModifier(0);
-        params.counter = 0;
+        if (window.innerWidth > params.narrowDisplayWidth) {
+            carousel.style.transform = 'none';
+            toggleBtnModifier(stagesButtons[0], params.btnModifierGray, 'none');
+            toggleBtnModifier(stagesButtons[1], params.btnModifierBlack, 'none');
+            toggleCounterModifier(0);
+            counter = 0;
+        }
     };
 
     /**
-     * btns events listeners init
+     * configuring event handling for control buttons
      */
     const buttonsControlInit = () => {
         for (let i = 0; i < stagesButtons.length; i++) {
             stagesButtons[i].addEventListener('mouseover', mouseOverHandler);
             stagesButtons[i].addEventListener('mouseleave', mouseLeaveHandler);
         }
-        stagesButtons[0].addEventListener('click', swapLeft);
-        stagesButtons[1].addEventListener('click', swapRight);
+        stagesButtons[0].addEventListener('click', displacementLeft);
+        stagesButtons[1].addEventListener('click', displacementRight);
     };
 
     return {
