@@ -2,6 +2,9 @@ const mainControl = (() => {
     // content block
     const mainItem1 = document.querySelector('.main__title-item-1');
 
+    //width value at which the block is changed
+    const minWidth = 1152;
+
     //content parts
     const content = {
         //part 1
@@ -14,10 +17,10 @@ const mainControl = (() => {
     };
 
     /**
-     *join/splits content parts in the block
+     *Configures the block content based on the screen width
      */
     const mainItemContentChangeOnNarrowScreen = () => {
-        if (window.innerWidth > 1152) {
+        if (window.innerWidth > minWidth) {
             mainItem1.innerHTML = content.contentPart1 + content.contentPart2;
         } else {
             mainItem1.innerHTML = content.contentPart1 + content.contentPartClosing;
