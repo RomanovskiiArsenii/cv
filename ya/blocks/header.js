@@ -3,8 +3,6 @@ const headerControl = (() => {
     const headerTransparentBtn = document.querySelector('.header__links-item_bg-color_transparent-black');
     //image element
     const headerBackgroundImg = document.querySelector('.header__background-image');
-    //round text
-    const roundImageWrappers = document.querySelectorAll('.header__round-text-wrapper');
 
     const params = {
         //when the width is less than this value, apply the white modifier to the transparent button
