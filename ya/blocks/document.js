@@ -33,3 +33,11 @@ window.addEventListener('resize', galleryControl.backToDefaultOnResize);
 //gallery counter of current card in DOM element
 window.addEventListener('load', galleryControl.printCurrentContainer);
 window.addEventListener('resize', galleryControl.printCurrentContainer);
+
+document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') {
+        galleryControl.autoDisplacementPause();
+    } else {
+        galleryControl.autoDisplacementStart();
+    }
+});

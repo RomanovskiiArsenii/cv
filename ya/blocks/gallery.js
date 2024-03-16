@@ -119,7 +119,7 @@ const galleryControl = (() => {
      */
     const printCurrentContainer = () => {
         if (window.innerWidth > params.narrowDisplayWidth) {
-            if ((counter / params.counterMaxValue) % 2 == 0) {
+            if ((counter - params.counterMaxValue) % params.initCardQty == 0) {
                 currentCounter.textContent = params.initCardQty;
             } else {
                 currentCounter.textContent = params.counterMaxValue;
@@ -136,7 +136,7 @@ const galleryControl = (() => {
     const displacementLeft = () => {
         counter = counter > 1 ? counter - 1 : 0;
         displacement(translateValue);
-        printCurrentContainer;
+        printCurrentContainer();
     };
 
     /**
@@ -164,7 +164,7 @@ const galleryControl = (() => {
     /**
      * pause automatic animation of the displacement
      */
-    const swapAutoPause = () => {
+    const autoDisplacementPause = () => {
         clearInterval(autoDisplacementInterval);
         setTimeout(() => {
             autoDisplacementStart();
@@ -206,14 +206,15 @@ const galleryControl = (() => {
             galleryButtons[i].addEventListener('mouseleave', mouseLeaveHandler);
         }
         galleryButtons[0].addEventListener('click', displacementLeft);
-        galleryButtons[0].addEventListener('click', swapAutoPause);
+        galleryButtons[0].addEventListener('click', autoDisplacementPause);
         galleryButtons[1].addEventListener('click', displacementRight);
-        galleryButtons[1].addEventListener('click', swapAutoPause);
+        galleryButtons[1].addEventListener('click', autoDisplacementPause);
     };
 
     return {
         buttonsControlInit: buttonsControlInit,
         autoDisplacementStart: autoDisplacementStart,
+        autoDisplacementPause: autoDisplacementPause,
         backToDefaultOnResize: backToDefaultOnResize,
         printCurrentContainer: printCurrentContainer,
     };
