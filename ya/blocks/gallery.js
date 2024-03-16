@@ -112,6 +112,10 @@ const galleryControl = (() => {
     const cloneCards = () => {
         const galleryCardsClone = Array.from(galleryCards).map((card) => card.cloneNode(true));
         galleryCardsClone.forEach((cloneCard) => galleryCardsWrapper.appendChild(cloneCard));
+        if (galleryCardsWrapper.childElementCount > params.initCardQty * 30) {
+            console.log('reset');
+            backToDefaultOnResize();
+        }
     };
 
     /**
