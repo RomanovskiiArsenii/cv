@@ -21,6 +21,9 @@ window.addEventListener('load', stagesControl.buttonsControlInit);
 //stages block and it's buttons resize event
 window.addEventListener('resize', stagesControl.backToDefaultOnResize);
 
+//preload orange button
+window.addEventListener('load', galleryControl.preloadBtnImage);
+
 //gallery control buttons events
 window.addEventListener('load', galleryControl.buttonsControlInit);
 

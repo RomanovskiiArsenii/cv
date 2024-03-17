@@ -62,6 +62,17 @@ const galleryControl = (() => {
     };
 
     /**
+     * preloads orange modifier
+     */
+    const preloadBtnImage = () => {
+        console.log(galleryButtons.length);
+        toggleBtnModifier(galleryButtons[1], params.btnOrangeModifier, 'none');
+        setTimeout(() => {
+            toggleBtnModifier(galleryButtons[1], params.btnBlackModifier, 'none');
+        }, 1);
+    };
+
+    /**
      * btn hover animation on mouse over
      * @param {*} e - event
      */
@@ -221,6 +232,7 @@ const galleryControl = (() => {
         autoDisplacementPause: autoDisplacementPause,
         backToDefaultOnResize: backToDefaultOnResize,
         printCurrentContainer: printCurrentContainer,
+        preloadBtnImage: preloadBtnImage,
     };
 })();
 
