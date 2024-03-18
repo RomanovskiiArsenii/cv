@@ -7,6 +7,7 @@
     <title>Test task for Yandex Crowd</title>
 
     <link rel="stylesheet" href="blocks/document.css">
+    <link rel="stylesheet" href="blocks/download.css">
     <link rel="stylesheet" href="blocks/header.css">
     <link rel="stylesheet" href="blocks/running-line.css">
     <link rel="stylesheet" href="blocks/main.css">
@@ -19,6 +20,11 @@
 </head>
 
 <body>
+    <div class="download show">
+        <img src="images/close.png" alt="close" class="download__hide">
+        <a href="figma/figma.zip" download="figma.zip" class="download__link">Download Figma project images</a>
+    </div>
+
     <header class="header">
         <div class="header__inner container">
             <img class="header__background-image" src="images/header/background.png" alt="header_background_image">
@@ -32,6 +38,7 @@
             </div>
 
             <img class="header__logo" src="images/header/logo.png" alt="header_logo">
+
 
             <div class="header__title">
                 <p class="header__title-item header__title-item_text-align_left">Превратите</p>

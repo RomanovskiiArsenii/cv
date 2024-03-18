@@ -2,6 +2,7 @@ import headerControl from './header.js';
 import mainControl from './main.js';
 import stagesControl from './stages.js';
 import galleryControl from './gallery.js';
+import downloadControl from './download.js';
 
 // header button transparent-white switch
 window.addEventListener('load', headerControl.toggleBtnModifierOnNarrowScreen);
@@ -42,5 +43,16 @@ document.addEventListener('visibilitychange', function () {
         galleryControl.autoDisplacementPause();
     } else {
         galleryControl.autoDisplacementStart();
+    }
+});
+
+window.addEventListener('load', downloadControl.buttonEventsInit);
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > 640) {
+        downloadControl.hideContainer();
+    } else if (scrollPosition == 0) {
+        downloadControl.showContainer();
     }
 });

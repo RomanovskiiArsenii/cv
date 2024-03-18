@@ -1,0 +1,59 @@
+.download {
+    width: 420px;
+    height: 40px;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: var(--backgroundColorWhite);
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.download__link {
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+    color: var(--backgroundColorBlack);
+    line-height: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+}
+
+.download__hide {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    align-self: center;
+    cursor: pointer;
+    transition: transform 1.3s linear;
+}
+
+.hide {
+    animation: close 1.5s ease forwards;
+}
+
+.show {
+    animation: open 1.5s ease forwards;
+}
+
+@keyframes close {
+    from {
+        width: 420px;
+    }
+    to {
+        width: 40px;
+    }
+}
+
+@keyframes open {
+    from {
+        width: 40px;
+    }
+    to {
+        width: 420px;
+    }
+}
