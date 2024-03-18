@@ -1,5 +1,5 @@
 .download {
-    width: 420px;
+    width: 340px;
     height: 40px;
     padding: 10px;
     position: fixed;
@@ -42,7 +42,7 @@
 
 @keyframes close {
     from {
-        width: 420px;
+        width: 340px;
     }
     to {
         width: 40px;
@@ -54,6 +54,6 @@
         width: 40px;
     }
     to {
-        width: 420px;
+        width: 340px;
     }
 }
