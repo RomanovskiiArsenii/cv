@@ -136,8 +136,10 @@
     }
 
     .gallery__top-title {
+        width: 500px;
         font-size: 36px;
         line-height: 40px;
+        text-align: center;
     }
 
     .gallery__cards {
