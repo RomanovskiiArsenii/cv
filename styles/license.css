@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(24, 24, 24);
+    font-size: calc(1vw + 1vh);
+    margin: 2em;
+}
+
+li {
+    color: white;
+    padding-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 200, 255);
+}

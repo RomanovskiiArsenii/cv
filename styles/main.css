@@ -859,6 +859,7 @@ main {
 .tapes div {
     position: absolute;
     transition: all 1s ease-in-out;
+    cursor: pointer;
 }
 
 .tapes div img {
