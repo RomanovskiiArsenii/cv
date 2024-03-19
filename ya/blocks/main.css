@@ -137,7 +137,7 @@
     color: var(--fontColorBlue);
 }
 
-@media screen and (max-width: 1152px) {
+@media screen and (max-width: 768px) {
     .main__inner {
         grid-template-columns: repeat(1, 336px);
         grid-template-rows: 152px 213px 150px 414px 248px 444px;
@@ -152,7 +152,6 @@
     }
 
     .main__title-item-1 {
-        width: 100%;
         grid-column: 1/2;
         grid-row: 1/2;
         display: inline;
@@ -169,7 +168,6 @@
     }
 
     .main__image-chessplayers {
-        width: 335px;
         grid-column: 1/2;
         grid-row: 2/3;
         transform: none;
@@ -229,5 +227,110 @@
 
     .main__contacts-content {
         display: block;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1152px) {
+    .main__inner {
+        grid-template-columns: repeat(1, 730px);
+        grid-template-rows: 152px 250px 150px 500px 192px 444px;
+        padding: 48px 19px 92px;
+        gap: 15px 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main__title {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 42px;
+    }
+
+    .main__title-item-1 {
+        width: 100%;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: inline;
+    }
+
+    .main__title-item-2 {
+        display: inline;
+    }
+
+    .main__title-item-3 {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        padding: 0;
+    }
+
+    .main__image-chessplayers {
+        width: 394px;
+        max-width: 500px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        transform: none;
+        justify-self: center;
+    }
+
+    .main__image-portrait {
+        height: 500px;
+        width: auto;
+        min-width: unset;
+        max-width: unset;
+        grid-row: 4/5;
+        transform: translate(-17px, 0px);
+        justify-self: center;
+    }
+
+    .main__table {
+        grid-column: 1/2;
+        grid-row: 6/7;
+        padding: 0;
+    }
+
+    .main__table-row {
+        width: 100%;
+        padding: 16px 0;
+        text-align: left;
+    }
+
+    .main__table-row_padding_top_none {
+        padding-top: 0;
+    }
+
+    .main__table-row_flexdirection_row {
+        flex-direction: row;
+    }
+
+    .main__table-item {
+        width: 100%;
+        padding: 0;
+    }
+
+    .main__table-item_border_right {
+        border-right: none;
+    }
+
+    .main__table-item_text_bold_black {
+        text-align: right;
+    }
+
+    .main__table-item_padding_bottom_media {
+        padding-bottom: 11px;
+    }
+
+    .main__table-item_translate_top_media {
+        transform: translate(0px, -4px);
+    }
+
+    .main__contacts {
+        font-size: 18px;
+        line-height: 22px;
+        transform: translateY(20px);
+    }
+
+    .main__contacts-content {
+        display: inline;
     }
 }
