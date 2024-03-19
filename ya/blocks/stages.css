@@ -207,12 +207,13 @@
     .stages__inner {
         display: flex;
         flex-direction: column;
-        padding: 61px 72px 100px;
+        padding: 21px 72px 92px;
         align-items: center;
     }
 
     .stage-titles {
-        margin-bottom: 148px;
+        margin-bottom: 70px;
+        text-align: center;
     }
 
     .stages-title {
@@ -229,6 +230,7 @@
         font-weight: 400;
         line-height: 22px;
         text-transform: none;
+        text-align: center;
     }
 
     .stages__items {
@@ -295,10 +297,10 @@
         padding-left: 60px;
     }
     .stages__image-plane {
-        width: 338px;
+        width: 378px;
         top: 241px;
         left: 53%;
-        transform: rotate(-3.7deg) translate(10%, 40%);
+        transform: rotate(-3.7deg) translate(5%, -25%);
     }
 }
 
