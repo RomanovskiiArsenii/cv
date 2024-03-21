@@ -9,7 +9,6 @@
 
 :root {
     --loaderFontColor: #cbe8cf;
-    --tapeBorderColor: #888;
     --introAndOutroStripesColor: rgb(29, 34, 33);
 
     --slidersFaceSwitch: 180deg;
@@ -131,6 +130,7 @@ body {
 .cassette_moving_hole {
     width: 3.5vw;
     height: 3.5vw;
+    border-radius: 50%;
     background-color: var(--introAndOutroStripesColor);
 }
 
@@ -139,7 +139,7 @@ body {
     height: 7vw;
     width: 7vw;
     border-radius: 50%;
-    border: 1px solid var(--tapeBorderColor);
+    border: 1px solid #888;
 }
 
 .cassette_moving_tape.right {
@@ -362,6 +362,7 @@ body {
     z-index: 3;
     filter: invert(50%) blur(3px);
     transition: filter 0.8s, transform 0.8s;
+    cursor: pointer;
 }
 
 #pause:hover {
@@ -1028,6 +1029,7 @@ main {
     z-index: 103;
     transform: scale(0.99);
     transition: transform 0.8s ease, opacity 0.8s ease 1.5s;
+    cursor: pointer;
 }
 
 #previous_btn {
@@ -1057,6 +1059,7 @@ main {
     transform-origin: center;
     transform: scale(0.8);
     transition: transform 0.8s ease, filter 0.8s ease;
+    cursor: pointer;
 }
 
 #cross_btn:hover {
