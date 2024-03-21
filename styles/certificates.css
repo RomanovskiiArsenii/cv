@@ -77,6 +77,12 @@ main {
     margin: 8em auto 0;
 }
 
+@media screen and (max-width: 768px) {
+    .flex-container:nth-child(1) {
+        margin: 4em auto 0;
+    }
+}
+
 .flex-container {
     display: flex;
     flex-direction: column;
