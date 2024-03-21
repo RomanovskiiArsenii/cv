@@ -795,11 +795,11 @@ main {
 /* **************************************************************************** */
 
 .bottom_med_1 {
-    grid-area: 10 / 4 / 11 / 7;
+    grid-area: 10 / 4 / 11 / 8;
     text-align: justify;
     font-family: 'Vintage_font', sans-serif;
     font-size: calc(var(--part) * 0.48);
-    transform: rotate(-10deg) translate(5%, 0%);
+    transform: rotate(-10deg) translate(5%, -8%);
     z-index: 0;
 }
 
