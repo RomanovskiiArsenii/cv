@@ -11,6 +11,8 @@
     --loaderFontColor: #cbe8cf;
     --introAndOutroStripesColor: rgb(29, 34, 33);
 
+    --bodyBGColor: rgb(15, 15, 15);
+
     --slidersFaceSwitch: 180deg;
     --slidersBackSwitch: 0deg;
     --slidersFaceColor: rgb(37, 52, 48);
@@ -76,7 +78,7 @@
 body {
     font-family: 'Martian Mono', monospace;
     font-weight: 600;
-    background-color: var(--mainBGColor);
+    background-color: var(--bodyBGColor);
     overflow-x: hidden;
 }
 
