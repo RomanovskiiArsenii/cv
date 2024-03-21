@@ -112,13 +112,13 @@ body {
 
 .cassette_moving {
     position: absolute;
-    width: 29.1vw;
-    top: 5.65vw;
+    width: 29.29vw;
+    top: 5.63vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    transform: translateX(-0.22vw);
+    transform: translateX(-0.19vw);
     height: 3.5vw;
     z-index: 1;
 }
@@ -143,11 +143,11 @@ body {
 }
 
 .cassette_moving_tape.right {
-    animation: cassetteTapeGrow 4s linear infinite alternate;
+    animation: cassetteTapeShrink 4s linear infinite alternate;
 }
 
 .cassette_moving_tape.left {
-    animation: cassetteTapeShrink 4s linear infinite alternate;
+    animation: cassetteTapeGrow 4s linear infinite alternate;
 }
 
 @keyframes cassetteElRotate {

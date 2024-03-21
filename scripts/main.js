@@ -43,4 +43,4 @@ document.addEventListener('visibilitychange', function () {
     }
 });
 
-window.addEventListener('load', loadingAnimation.onLoadMain, false);
+// window.addEventListener('load', loadingAnimation.onLoadMain, false);
