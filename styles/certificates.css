@@ -95,6 +95,7 @@ main {
     flex-shrink: 0;
     flex-grow: 0;
     text-wrap: nowrap;
+    white-space: nowrap;
     font-size: calc(var(--screenCoeff) * 2);
 }
 
@@ -103,6 +104,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     text-wrap: nowrap;
+    white-space: nowrap;
     justify-content: space-around;
     margin: 1em;
     color: var(--customViolet);

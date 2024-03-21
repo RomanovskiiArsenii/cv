@@ -698,6 +698,7 @@ main {
 
     font-size: calc(var(--part) * 2.3);
     text-wrap: nowrap;
+    white-space: nowrap;
     position: absolute;
     right: 0;
     color: var(--mainMixBlendedFontColor);
@@ -807,6 +808,7 @@ main {
 
 #glowing_text {
     text-wrap: nowrap;
+    white-space: nowrap;
     text-overflow: clip;
 }
 
@@ -822,6 +824,7 @@ main {
     transition: background-color 1s, color 1s;
     text-decoration: none;
     text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 #certificates_link::before,
