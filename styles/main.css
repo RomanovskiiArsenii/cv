@@ -865,11 +865,11 @@ main {
 
 .text-cutted {
     grid-area: 7 / 6 / 8 / 9;
-    font-size: calc(var(--part) * 0.8);
+    font-size: calc(var(--part) * 0.65);
     line-height: 1em;
     text-align: center;
     mix-blend-mode: difference;
-    transform: translate(7%, -50%) rotate(5deg);
+    transform: translate(0%, -50%) rotate(5.5deg);
 }
 
 .text-cutted a {
@@ -1241,8 +1241,8 @@ main {
 
     .text-cutted {
         grid-area: 10 / 6 / 11 / 9 !important;
-        font-size: calc(var(--part) * 0.9) !important;
-        transform: translate(6%, -78%) rotate(5deg) !important;
+        font-size: calc(var(--part) * 0.8) !important;
+        transform: translate(2%, -78%) rotate(5.5deg) !important;
     }
 
     .tapes {
