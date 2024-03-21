@@ -8,8 +8,8 @@
 }
 
 :root {
-    --loaderBGColor: rgb(37, 52, 48);
     --loaderFontColor: #cbe8cf;
+    --tapeBorderColor: #888;
     --introAndOutroStripesColor: rgb(29, 34, 33);
 
     --slidersFaceSwitch: 180deg;
@@ -89,47 +89,100 @@ body {
 /* **************************************************************************** */
 
 #showed_untill_load {
-    display: flex;
     width: 100vw;
     height: 100vh;
+    background-color: var(--introAndOutroStripesColor);
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--loaderBGColor);
 }
 
-.loader {
+.cassette {
     position: relative;
-    width: 10vw;
-    height: 10vw;
-    border-radius: 50%;
+    width: 30vw;
+    height: 18vw;
+    display: flex;
+    justify-content: center;
 }
 
-.loader::before,
-.loader::after {
-    content: '';
+.cassette_static {
+    position: relative;
+    z-index: 2;
+}
+
+.cassette_moving {
     position: absolute;
-    border-radius: inherit;
+    width: 29.1vw;
+    top: 5.65vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(-0.22vw);
+    height: 3.5vw;
+    z-index: 1;
 }
 
-.loader::before {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(0deg, #ff9900 0%, #00e4c5 60%);
-    animation: loaderSpinning 1s infinite linear;
+.cassette_moving_el {
+    width: 3.5vw;
+    animation: cassetteElRotate 4s linear infinite alternate;
 }
 
-.loader::after {
-    width: 95%;
-    height: 95%;
-    background-color: var(--loaderBGColor);
-    top: 50%;
-    left: 50%;
-    transform: translate(-51%, -53%);
+.cassette_moving_hole {
+    width: 3.5vw;
+    height: 3.5vw;
+    background-color: var(--introAndOutroStripesColor);
 }
 
-@keyframes loaderSpinning {
+.cassette_moving_tape {
+    background-color: #1d1d1d;
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    border: 1px solid var(--tapeBorderColor);
+}
+
+.cassette_moving_tape.right {
+    animation: cassetteTapeGrow 4s linear infinite alternate;
+}
+
+.cassette_moving_tape.left {
+    animation: cassetteTapeShrink 4s linear infinite alternate;
+}
+
+@keyframes cassetteElRotate {
+    from {
+        transform: rotate(0);
+    }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes cassetteTapeGrow {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(2);
+    }
+}
+
+@keyframes cassetteTapeShrink {
+    from {
+        transform: scale(2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes cassetteFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 
