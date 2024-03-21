@@ -7,7 +7,7 @@ const loadingAnimation = (() => {
 
     const onLoadMain = () => {
         setTimeout(() => {
-            cassette.style.animation = 'cassetteFadeOut .3s ease forwards';
+            if (cassette != null) cassette.style.animation = 'cassetteFadeOut .3s ease forwards';
         }, 1000);
         setTimeout(() => {
             showed.style.display = 'none';

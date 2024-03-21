@@ -19,7 +19,6 @@
     /*   animation speed */
     --customSpeed: 0.8s;
 
-    --loaderBGColor: rgb(29, 34, 33);
     --loaderFontColor: #cbe8cf;
     --introAndOutroStripesColor: rgb(29, 34, 33);
 }
@@ -49,7 +48,7 @@ body {
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-color: var(--loaderBGColor);
+    background-color: var(--introAndOutroStripesColor);
 }
 
 #back_link {
