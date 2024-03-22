@@ -100,7 +100,8 @@ body {
 
 .cassette_broken_tape_wrapper {
     position: absolute;
-    top: -14.5vw;
+    top: 13.5vw;
+    transform: rotate(180deg);
 }
 
 .cassette_broken_tape {
@@ -123,6 +124,7 @@ body {
 
 .cassette {
     position: relative;
+    bottom: 5vw;
     width: 30vw;
     height: 18vw;
     display: flex;
