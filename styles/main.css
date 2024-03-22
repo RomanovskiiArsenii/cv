@@ -581,11 +581,18 @@ main {
     transform: rotate(80deg) translate(40%, -10%);
 }
 
-#broken_tape_gray {
+#broken_tape_1 {
     grid-area: 9 / 5 / 11 / 8;
     width: calc(var(--part) * 4.5);
     transform: translate(-33%, 5%);
+    pointer-events: none;
     z-index: 100;
+}
+
+#broken_tape_2 {
+    grid-area: 11 / 5 / 12 / 8;
+    width: calc(var(--part) * 3);
+    transform: translate(-50%, 85%);
     pointer-events: none;
 }
 
@@ -1205,8 +1212,12 @@ main {
         grid-area: 13 / 1 / 15/ 4 !important;
     }
 
-    #broken_tape_gray {
+    #broken_tape_1 {
         grid-area: 12 / 5 / 13 / 7 !important;
+    }
+
+    #broken_tape_2 {
+        grid-area: 14 / 5 / 15 / 6 !important;
     }
 
     .windrose {
