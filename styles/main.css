@@ -98,6 +98,29 @@ body {
     align-items: center;
 }
 
+.tape_wrapper {
+    position: absolute;
+    top: -14.5vw;
+}
+
+.tape {
+    z-index: 10;
+    width: 22vw;
+    height: 18vw;
+    stroke-dasharray: 302%;
+    stroke-dashoffset: 302%;
+    animation: brokeTape 1s ease alternate infinite;
+}
+
+@keyframes brokeTape {
+    from {
+        stroke-dashoffset: 302%;
+    }
+    to {
+        stroke-dashoffset: 0%;
+    }
+}
+
 .cassette {
     position: relative;
     width: 30vw;
