@@ -92,17 +92,17 @@ const generator = (() => {
         transformedInfo.fbImageHeight = `<meta property="og:image:height" content="${collectedInfo[11]}">`;
 
         //facebook additional
-        if (collectedInfo[5] != undefined) {
-            transformedInfo.fbLanguageCountry = `<meta property="og:locale" content="${collectedInfo[4]}-${collectedInfo[5]}">`;
-        } else {
-            transformedInfo.fbLanguageCountry = `<meta property="og:locale" content="${collectedInfo[4]}">`;
+        if (collectedInfo[4] != undefined) {
+            transformedInfo.fbLanguageCountry = `<meta property="og:locale" content="${collectedInfo[4].toLowerCase()}">`;
+        }
+        if (collectedInfo[4] != undefined && collectedInfo[5] != undefined) {
+            transformedInfo.fbLanguageCountry = `<meta property="og:locale" content="${collectedInfo[4].toLowerCase()}-${collectedInfo[5].toUpperCase()}">`;
         }
         transformedInfo.fbAppID = `<meta property="fb:app_id" content="${collectedInfo[6]}">`;
         transformedInfo.fbVideoURL = `<meta property="og:video:url" content="${collectedInfo[7]}">`;
         if (collectedInfo[7] != undefined && collectedInfo[7].split('/')[0] == 'https') {
             transformedInfo.fbVideoSecureURL = `<meta property="og:video:secure_url" content="${collectedInfo[7]}"/>`;
         }
-
         transformedInfo.fbVideoWidth = `<meta property="og:video:width" content="${collectedInfo[8]}">`;
         transformedInfo.fbVideoHeight = `<meta property="og:video:height" content="${collectedInfo[9]}">`;
 
@@ -148,14 +148,13 @@ const generator = (() => {
 
         transformedInfo.twMediaPlayer = `<meta property="twitter:player" content="${collectedInfo[24]}">`;
         console.log(collectedInfo);
-        // console.log(transformedInfo);
+        console.log(transformedInfo);
     };
 
     const printInformationToHTML = () => {
         let htmlCode = '';
         for (const key in transformedInfo) {
-            // if (!transformedInfo[key].includes('undefined') && transformedInfo[key] != '') {
-            if (!transformedInfo[key].includes('undefined')) {
+            if (!transformedInfo[key].includes('undefined') && transformedInfo[key] != '') {
                 htmlCode += `${transformedInfo[key]}\n`;
             }
         }
