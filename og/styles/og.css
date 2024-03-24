@@ -54,6 +54,15 @@ h3 {
     margin-bottom: 2rem;
 }
 
+a {
+    color: inherit;
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    color: #81dbcf;
+}
+
 .main {
     width: 100%;
     display: flex;
@@ -133,14 +142,6 @@ label {
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
-}
-
-.note-link {
-    transition: color 0.5s ease;
-}
-
-.note-link:hover {
-    color: #81dbcf;
 }
 
 input[type='text'],
