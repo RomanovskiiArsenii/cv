@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/og.css">
+</head>
+
+<body>
+
+    <nav class="nav"></nav>
+
+    <header class="header">
+        <h1>OG &#9733; Generator</h1>
+
+        <h2> Open Graph (OG) is an HTML markup used by social networks like Facebook, Twitter, LinkedIn, and
+            others to display shared content in a more structured and visually appealing way. By adding Open Graph meta
+            tags to your web pages, you can control how your content appears when shared on these platforms, including
+            specifying the title, description, image, and other relevant information. This helps optimize the
+            presentation of your content and encourages engagement when shared on social media.</h2>
+    </header>
+
+    <main class="main">
+        <div class="input-box">
+            <div class="input-block">
+                <div class="input-title">
+                    <p>Required metadata</p>
+                    <img class="input-ico" src="images/lock.png" alt="required">
+                </div>
+
+                <label for="inp-page_type">Page type</label>
+                <select id="inp-page_type" name="inp-page_type">
+                    <option value="" selected></option>
+                    <option value="website">Website</option>
+                    <option value="business">Business</option>
+                    <option value="product">Product</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="article">Article</option>
+                    <option value="book">Book</option>
+                    <option value="place">Place</option>
+                    <option value="event">Event</option>
+                    <option value="profile">Profile</option>
+                    <option value="video.movie">Video - movie</option>
+                    <option value="video.tv_show">Video - TV show</option>
+                    <option value="video.episode">Video - episode</option>
+                    <option value="music.song">Music - song</option>
+                    <option value="music.album">Music - album</option>
+                    <option value="music.playlist">Music - playlist</option>
+                </select>
+
+                <label for="inp-title">Title</label>
+                <input type="text" id="inp-title" name="inp-title" placeholder="My awesome page" maxlength="1024">
+                <p class="note"><span class="bold_text">Recommended:</span> 55-60 characters</p>
+
+                <label for="inp-description">Description</label>
+                <input type="text" id="inp-description" name="inp-description" placeholder="Just look at it!"
+                    maxlength="1024">
+                <p class="note"><span class="bold_text">Recommended: </span>155-160 characters</p>
+                <p class="note"><span class="bold_text">To fit in one line: </span>55-60 characters</p>
+                <p class="note">Must be different from the title</p>
+
+                <label for="inp-image">Image URL</label>
+                <input type="url" id="inp-image" name="inp-image" placeholder="Secure URL is recommended">
+                <p class="note"><span class="bold_text">Recommended: </span>1200x630px</p>
+                <p class="note"><span class="bold_text">Minimum: </span>600x315px</p>
+                <p class="note"><span class="bold_text">Max file size: </span>8 MB</p>
+                <p class="note"><span class="bold_text">Ratio: </span>1.91 : 1</p>
+
+                <label for="inp-url">Page URL</label>
+                <input type="url" id="inp-url" name="inp-url">
+            </div>
+
+            <div class="input-block">
+
+                <div class="input-title">
+                    <p>Additional metadata</p>
+                    <img class="input-ico" src="images/unlock.png" alt="additional">
+                </div>
+
+                <label for="inp-fblanguage">Language</label>
+                <input type="text" id="inp-fblanguage" name="inp-fblanguage" placeholder="en" maxlength="7">
+                <a class="note note-link" href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes"
+                    target="_blank">ISO 639 Language Codes</a>
+
+                <label for="inp-fbcountry">Country</label>
+                <input type="text" id="inp-fbcountry" name="inp-fbcountry" placeholder="US" maxlength="2">
+                <a class="note note-link" href="https://en.wikipedia.org/wiki/ISO_3166-1" target="_blank">ISO 3166-1
+                    Country Codes</a>
+
+                <label for="inp-fbappid">Facebook App ID</label>
+                <input type="text" id="inp-fbappid" name="inp-fbappid">
+
+                <label for="inp-fbvideo">Video</label>
+                <input type="url" id="inp-fbvideo" name="inp-fbvideo" placeholder="Secure URL is recommended">
+                <p class="note"><span class="bold_text">Recommended: </span>1200x630px</p>
+
+                <div class="sizes">
+                    <div class="sizes-label">
+                        <label for="inp-fbvideowidth">Video sizes</label>
+                    </div>
+                    <div class="sizes-input">
+                        <input type="number" class="number-input" id="inp-fbvideowidth" name="inp-fbvideowidth"
+                            placeholder="Video width in px" min="1">
+                        <input type="number" class="number-input" id="inp-fbvideoheight" name="inp-fbvideoheight"
+                            placeholder="Video height in px" min="1">
+                    </div>
+                </div>
+
+                <div class="sizes">
+                    <div class="sizes-label">
+                        <label for="inp-fbimagewidth">Image sizes</label>
+                    </div>
+                    <div class="sizes-input">
+                        <input type="number" class="number-input" id="inp-fbimagewidth" name="inp-fbimagewidth"
+                            placeholder="Image width in px" min="1">
+                        <input type="number" class="number-input" id="inp-fbimageheight" name="inp-fbimageheight"
+                            placeholder="Image height in px" min="1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-block">
+                <div class="input-title">
+                    <p>Article metadata</p>
+                    <img class="input-ico" src="images/article.png" alt="article">
+                </div>
+
+                <label for="inp-author">Author</label>
+                <input type="text" id="inp-author" name="inp-author" maxlength="1024">
+
+                <label for="inp-section">Section</label>
+                <input type="text" id="inp-section" name="inp-section" maxlength="1024">
+
+                <div class="date-and-time">
+                    <div class="date-and-time-label">
+                        <label for="inp-published-date">Date and</label>
+                        <label for="inp-published-time">time of publication</label>
+
+                    </div>
+                    <div class="date-and-time-input">
+                        <input type="date" id="inp-published-date" name="inp-published-date">
+                        <input type="time" id="inp-published-time" name="inp-published-time">
+                    </div>
+                    </p>
+                </div>
+
+                <div class="date-and-time">
+                    <div class="date-and-time-label">
+                        <label for="inp-modified-date">Date and</label>
+                        <label for="inp-modified-time">time of modification</label>
+
+                    </div>
+                    <div class="date-and-time-input">
+                        <input type="date" id="inp-modified-date" name="inp-modified-date">
+                        <input type="time" id="inp-modified-time" name="inp-modified-time">
+                    </div>
+                    </p>
+                </div>
+
+                <label for="inp-tags">Tags</label>
+                <input type="text" id="inp-tags" name="inp-tags" placeholder="biology,human_genome,dna" pattern="^\S+$"
+                    title="Spases are prohibited" maxlength="2046">
+                <p class="note">Put the tags in commas without spaces</p>
+                <p class="note">Separate the word combinations with an underscore</p>
+
+            </div>
+
+            <div class="input-block">
+
+                <div class="input-title">
+                    <p>X (Twitter) metadata</p>
+                    <img class="input-ico" src="images/twitter.png" alt="twitter">
+                </div>
+
+                <label for="inp-twcard_type">Card type</label>
+                <select id="inp-twcard_type" name="inp-twcard_type">
+                    <option value="" selected></option>
+                    <option value="summary_large_image">Summary card with large image</option>
+                    <option value="summary">Summary card</option>
+                    <option value="player">Player card</option>
+                    <option value="app">App card</option>
+                </select>
+                <p class="note note_help">What type of card should I choose?</p>
+                <div class="note_help_msg">
+                    <p>Summary with a large image: text with a large, rectangular image (Minimum 1200x630px).</p>
+                    <p>Summary: text with a square image.</p>
+                    <p>Player: for showing videos. But to be able to use it, you need to be whitelisted.</p>
+                    <p>App: for promoting apps.</p>
+                </div>
+
+                <label for="inp-twsiteacc">The website's X account</label>
+                <input type="text" id="inp-twsiteacc" name="inp-twsiteacc" placeholder="@awesomesite" value="@"
+                    title="must have a prefix of @." pattern="@.*" required maxlength="1024">
+
+                <label for="inp-twauthacc">The author's X account</label>
+                <input type="text" id="inp-twauthacc" name="inp-twauthacc" placeholder="@author" value="@"
+                    title="must have a prefix of @." pattern="@.*" required maxlength="1024">
+
+
+                <label for="inp-twimage">Image URL</label>
+                <input type="url" id="inp-twimage" name="inp-twimage" placeholder="Requirements depend on card type">
+                <p class="note"><span class="bold_text">Maximum: </span>4096x4096px</p>
+                <p class="note"><span class="bold_text">Minimum: </span>144x144px (300x157px for large image) </p>
+                <p class="note"><span class="bold_text">Max file size: </span>8 MB</p>
+                <p class="note"><span class="bold_text">Ratio: </span>1 : 1 (2 : 1 for large image)</p>
+
+                <div class="sizes">
+                    <div class="sizes-label">
+                        <label for="inp-twimagewidth">Image sizes</label>
+                    </div>
+                    <div class="sizes-input">
+                        <input type="number" class="number-input" id="inp-twimagewidth" name="inp-twimagewidth"
+                            placeholder="Image width in px" min="1">
+                        <input type="number" class="number-input" id="inp-twimageheight" name="inp-twimageheight"
+                            placeholder="Image height in px" min="1">
+                    </div>
+                </div>
+
+                <label for="inp-twplayer">Audio/Video player URL</label>
+                <input type="url" id="inp-twplayer" name="inp-twplayer">
+                <p class="note"><span class="bold_text">Recommended: </span>1200x1200px</p>
+                <p class="note"><span class="bold_text">Ratio: </span>1 : 1</p>
+            </div>
+
+            <div class="input-block">
+                <div class="input-title">
+                    <p>Meta tags</p>
+                    <img class="input-ico" src="images/code.png" alt="code">
+                </div>
+                <textarea name="output-text" id="output-text"></textarea>
+                <p>Insert these tags in your site's <span class="bold_text">head </span>section</p>
+
+                <button type="button" id="copy-btn">
+                    <div class="button-content" id="button-content">
+                        <p>Copy to clipboard<img src="images/clipboard.png" alt="clipboard" class="img-clipboard"></p>
+                        <p>Copied<img src="images/okey.png" alt="okey" class="img-clipboard"></p>
+                    </div>
+
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="scripts/generator.js"></script>
+</body>
+
+</html>
