@@ -77,15 +77,15 @@ const generator = (() => {
 
         // facebook main
         transformedInfo.fbPageURL = `<meta property="og:url" content="${collectedInfo[3]}">`;
-        if (collectedInfo[26] != undefined) {
-            transformedInfo.fbPageType = `<meta property="og:type" content="${collectedInfo[26]}">`;
+        if (collectedInfo[25] != undefined && collectedInfo[25] != '') {
+            transformedInfo.fbPageType = `<meta property="og:type" content="${collectedInfo[25]}">`;
         } else {
             transformedInfo.fbPageType = `<meta property="og:type" content="website">`;
         }
         transformedInfo.fbTitle = `<meta property="og:title" content="${collectedInfo[0]}">`;
         transformedInfo.fbDescription = `<meta property="og:description" content="${collectedInfo[1]}">`;
         transformedInfo.fbImageURL = `<meta property="og:image" content="${collectedInfo[2]}">`;
-        if (collectedInfo[2] != undefined && collectedInfo[2].split('/')[0] == 'https') {
+        if (collectedInfo[2] != undefined && collectedInfo[2].split(':')[0] == 'https') {
             transformedInfo.fbImageSecureURL = `<meta property="og:image:secure_url" content="${collectedInfo[2]}">`;
         }
         transformedInfo.fbImageWidth = `<meta property="og:image:width" content="${collectedInfo[10]}">`;
@@ -100,7 +100,7 @@ const generator = (() => {
         }
         transformedInfo.fbAppID = `<meta property="fb:app_id" content="${collectedInfo[6]}">`;
         transformedInfo.fbVideoURL = `<meta property="og:video:url" content="${collectedInfo[7]}">`;
-        if (collectedInfo[7] != undefined && collectedInfo[7].split('/')[0] == 'https') {
+        if (collectedInfo[7] != undefined && collectedInfo[7].split(':')[0] == 'https') {
             transformedInfo.fbVideoSecureURL = `<meta property="og:video:secure_url" content="${collectedInfo[7]}"/>`;
         }
         transformedInfo.fbVideoWidth = `<meta property="og:video:width" content="${collectedInfo[8]}">`;
@@ -109,12 +109,12 @@ const generator = (() => {
         //article
         transformedInfo.artAuthor = `<meta property="og:author" content="${collectedInfo[12]}">`;
         transformedInfo.artSection = `<meta property="og:section" content="${collectedInfo[13]}">`;
-        if (collectedInfo[15] != undefined) {
+        if (collectedInfo[15] != undefined && collectedInfo[15] != '') {
             transformedInfo.artDateOfPublication = `<meta property="og:published_time" content="${collectedInfo[14]}T${collectedInfo[15]}:00.000Z">`;
         } else {
             transformedInfo.artDateOfPublication = `<meta property="og:published_time" content="${collectedInfo[14]}T00:00:00.000Z">`;
         }
-        if (collectedInfo[17] != undefined) {
+        if (collectedInfo[17] != undefined && collectedInfo[17] != '') {
             transformedInfo.artDateOfModification = `<meta property="og:modified_time" content="${collectedInfo[16]}T${collectedInfo[17]}:00.000Z">`;
         } else {
             transformedInfo.artDateOfModification = `<meta property="og:modified_time" content="${collectedInfo[16]}T00:00:00.000Z">`;
@@ -123,8 +123,8 @@ const generator = (() => {
 
         //twitter
 
-        if (collectedInfo[27] != undefined) {
-            transformedInfo.twCard = `<meta name="twitter:card" content="${collectedInfo[27]}">`;
+        if (collectedInfo[26] != undefined && collectedInfo[26] != '') {
+            transformedInfo.twCard = `<meta name="twitter:card" content="${collectedInfo[26]}">`;
         } else {
             transformedInfo.twCard = `<meta name="twitter:card" content="summary_large_image">`;
         }
@@ -138,7 +138,7 @@ const generator = (() => {
         transformedInfo.twDescription = `<meta name="twitter:description" content="${collectedInfo[1]}">`;
         transformedInfo.twSiteAccount = `<meta property="twitter:site" content="${collectedInfo[19]}">`;
         transformedInfo.twAuthorAccount = `<meta property="twitter:creator" content="${collectedInfo[20]}">`;
-        if (collectedInfo[22] != undefined) {
+        if (collectedInfo[21] != undefined && collectedInfo[21] != '') {
             transformedInfo.twImageUrl = `<meta name="twitter:image" content="${collectedInfo[21]}">`;
         } else {
             transformedInfo.twImageUrl = `<meta name="twitter:image" content="${collectedInfo[2]}">`;
