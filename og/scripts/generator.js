@@ -144,7 +144,7 @@ const generator = (() => {
         transformedInfo.twAuthorAccount = `<meta property="twitter:creator" content="${collectedInfo[20]}">`;
         if (collectedInfo[21] != undefined && collectedInfo[21] != '') {
             transformedInfo.twImageUrl = `<meta name="twitter:image" content="${collectedInfo[21]}">`;
-        } else {
+        } else if (collectedInfo[2] != '') {
             transformedInfo.twImageUrl = `<meta name="twitter:image" content="${collectedInfo[2]}">`;
         }
         transformedInfo.twImageWidth = `<meta property="twitter:image:width" content="${collectedInfo[22]}">`;
