@@ -158,7 +158,11 @@ const generator = (() => {
     const printInformationToHTML = () => {
         let htmlCode = '';
         for (const key in transformedInfo) {
-            if (!transformedInfo[key].includes('undefined') && transformedInfo[key] != '') {
+            if (
+                !transformedInfo[key].includes('undefined') &&
+                !transformedInfo[key].includes('content=""') &&
+                transformedInfo[key] != ''
+            ) {
                 htmlCode += `${transformedInfo[key]}\n`;
             }
         }
