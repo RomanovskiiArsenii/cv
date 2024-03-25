@@ -85,7 +85,7 @@ const generator = (() => {
         transformedInfo.fbTitle = `<meta property="og:title" content="${collectedInfo[0]}">`;
         transformedInfo.fbDescription = `<meta property="og:description" content="${collectedInfo[1]}">`;
         transformedInfo.fbImageURL = `<meta property="og:image" content="${collectedInfo[2]}">`;
-        if (collectedInfo[2] != undefined && collectedInfo[2].split(':')[0] == 'https') {
+        if (collectedInfo[2] != undefined && collectedInfo[2] != '' && collectedInfo[2].split(':')[0] == 'https') {
             transformedInfo.fbImageSecureURL = `<meta property="og:image:secure_url" content="${collectedInfo[2]}">`;
         }
         transformedInfo.fbImageWidth = `<meta property="og:image:width" content="${collectedInfo[10]}">`;
@@ -100,7 +100,7 @@ const generator = (() => {
         }
         transformedInfo.fbAppID = `<meta property="fb:app_id" content="${collectedInfo[6]}">`;
         transformedInfo.fbVideoURL = `<meta property="og:video:url" content="${collectedInfo[7]}">`;
-        if (collectedInfo[7] != undefined && collectedInfo[7].split(':')[0] == 'https') {
+        if (collectedInfo[7] != undefined && collectedInfo[7] != '' && collectedInfo[7].split(':')[0] == 'https') {
             transformedInfo.fbVideoSecureURL = `<meta property="og:video:secure_url" content="${collectedInfo[7]}"/>`;
         }
         transformedInfo.fbVideoWidth = `<meta property="og:video:width" content="${collectedInfo[8]}">`;
