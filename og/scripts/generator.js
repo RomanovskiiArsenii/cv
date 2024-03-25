@@ -87,6 +87,8 @@ const generator = (() => {
         transformedInfo.fbImageURL = `<meta property="og:image" content="${collectedInfo[2]}">`;
         if (collectedInfo[2] != undefined && collectedInfo[2] != '' && collectedInfo[2].split(':')[0] == 'https') {
             transformedInfo.fbImageSecureURL = `<meta property="og:image:secure_url" content="${collectedInfo[2]}">`;
+        } else {
+            transformedInfo.fbImageSecureURL = '';
         }
         transformedInfo.fbImageWidth = `<meta property="og:image:width" content="${collectedInfo[10]}">`;
         transformedInfo.fbImageHeight = `<meta property="og:image:height" content="${collectedInfo[11]}">`;
@@ -102,6 +104,8 @@ const generator = (() => {
         transformedInfo.fbVideoURL = `<meta property="og:video:url" content="${collectedInfo[7]}">`;
         if (collectedInfo[7] != undefined && collectedInfo[7] != '' && collectedInfo[7].split(':')[0] == 'https') {
             transformedInfo.fbVideoSecureURL = `<meta property="og:video:secure_url" content="${collectedInfo[7]}"/>`;
+        } else {
+            transformedInfo.fbVideoSecureURL = '';
         }
         transformedInfo.fbVideoWidth = `<meta property="og:video:width" content="${collectedInfo[8]}">`;
         transformedInfo.fbVideoHeight = `<meta property="og:video:height" content="${collectedInfo[9]}">`;
