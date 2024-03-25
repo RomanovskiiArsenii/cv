@@ -803,6 +803,7 @@ main {
 }
 
 .middle_med_3 {
+    width: 91%;
     grid-area: 5 / 2 / 7 / 6;
     text-align: justify;
     transform: translate(5%, 35%);
@@ -817,8 +818,8 @@ main {
 .middle_med_4 {
     grid-area: 7 / 2 / 8 / 5;
     text-align: justify;
-    font-size: calc(var(--part) * 0.3);
-    transform: translate(20%, -20%);
+    font-size: calc(var(--part) * 0.26);
+    transform: translate(25%, 0%);
 }
 
 .middle_med_4 p {
@@ -1271,9 +1272,9 @@ main {
     }
 
     .middle_med_4 {
-        grid-area: 8 / 1 / 10 / 6 !important;
-        font-size: calc(var(--part) * 0.45) !important;
-        transform: translate(5%, 50%) !important;
+        grid-area: 9 / 1 / 10 / 5 !important;
+        font-size: calc(var(--part) * 0.32) !important;
+        transform: translate(25%, 65%) !important;
     }
 
     .bottom_med_1 {
