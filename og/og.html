@@ -78,9 +78,12 @@
         <div class="input-box">
             <div class="input-block">
                 <div class="input-title">
-                    <p>Required metadata</p>
+                    <p>Required</p>
                     <img class="input-ico" src="images/lock.png" alt="required">
                 </div>
+
+                <label for="inp-url">Page URL</label>
+                <input type="url" id="inp-url" name="inp-url">
 
                 <label for="inp-page_type">Page type</label>
                 <select id="inp-page_type" name="inp-page_type">
@@ -89,17 +92,10 @@
                     <option value="business">Business</option>
                     <option value="product">Product</option>
                     <option value="restaurant">Restaurant</option>
-                    <option value="article">Article</option>
-                    <option value="book">Book</option>
                     <option value="place">Place</option>
                     <option value="event">Event</option>
-                    <option value="profile">Profile</option>
-                    <option value="video.movie">Video - movie</option>
-                    <option value="video.tv_show">Video - TV show</option>
-                    <option value="video.episode">Video - episode</option>
-                    <option value="music.song">Music - song</option>
-                    <option value="music.album">Music - album</option>
-                    <option value="music.playlist">Music - playlist</option>
+                    <option value="article">Article</option>
+                    <option value="book">Book</option>
                 </select>
 
                 <label for="inp-title">Title</label>
@@ -119,45 +115,13 @@
                 <p class="note"><span class="bold_text">Minimum: </span>600x315px</p>
                 <p class="note"><span class="bold_text">Max file size: </span>8 MB</p>
                 <p class="note"><span class="bold_text">Ratio: </span>1.91 : 1</p>
-
-                <label for="inp-url">Page URL</label>
-                <input type="url" id="inp-url" name="inp-url">
             </div>
 
-            <div class="input-block">
+            <div class="input-block space-between">
 
                 <div class="input-title">
-                    <p>Additional metadata</p>
+                    <p>Additional</p>
                     <img class="input-ico" src="images/unlock.png" alt="additional">
-                </div>
-
-                <label for="inp-fblanguage">Language</label>
-                <input type="text" id="inp-fblanguage" name="inp-fblanguage" placeholder="en" maxlength="7">
-                <a class="note note-link" href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes"
-                    target="_blank">ISO 639 Language Codes</a>
-
-                <label for="inp-fbcountry">Country</label>
-                <input type="text" id="inp-fbcountry" name="inp-fbcountry" placeholder="US" maxlength="2">
-                <a class="note note-link" href="https://en.wikipedia.org/wiki/ISO_3166-1" target="_blank">ISO 3166-1
-                    Country Codes</a>
-
-                <label for="inp-fbappid">Facebook App ID</label>
-                <input type="text" id="inp-fbappid" name="inp-fbappid">
-
-                <label for="inp-fbvideo">Video</label>
-                <input type="url" id="inp-fbvideo" name="inp-fbvideo" placeholder="Secure URL is recommended">
-                <p class="note"><span class="bold_text">Recommended: </span>1200x630px</p>
-
-                <div class="sizes">
-                    <div class="sizes-label">
-                        <label for="inp-fbvideowidth">Video sizes</label>
-                    </div>
-                    <div class="sizes-input">
-                        <input type="number" class="number-input" id="inp-fbvideowidth" name="inp-fbvideowidth"
-                            placeholder="Video width in px" min="1">
-                        <input type="number" class="number-input" id="inp-fbvideoheight" name="inp-fbvideoheight"
-                            placeholder="Video height in px" min="1">
-                    </div>
                 </div>
 
                 <div class="sizes">
@@ -171,58 +135,56 @@
                             placeholder="Image height in px" min="1">
                     </div>
                 </div>
+
+                <div class="localization">
+                    <div class="localization-label">
+                        <label for="inp-fblanguage">Language and country</label>
+                    </div>
+
+                    <div class="localization-input">
+                        <input type="text" class="text-input" id="inp-fblanguage" name="inp-fblanguage" placeholder="en"
+                            maxlength="7" style="text-transform: lowercase;">
+                        <input type="text" class="text-input" id="inp-fbcountry" name="inp-fbcountry" placeholder="US"
+                            maxlength="2" style="text-transform: uppercase;">
+                    </div>
+
+                    <div class="localization-notes">
+                        <a class="note note-link" href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes"
+                            target="_blank">ISO 639
+                            Language Codes</a>
+                        <a class="note note-link" href="https://en.wikipedia.org/wiki/ISO_3166-1" target="_blank">ISO
+                            3166-1
+                            Country Codes</a>
+                    </div>
+                </div>
+
+                <label for="inp-adress">Street address</label>
+                <input type="text" id="inp-adress" name="inp-adress">
+
+                <label for="inp-city">City</label>
+                <input type="text" id="inp-city" name="inp-city">
+
+                <label for="inp-state">State/Province/Region</label>
+                <input type="text" id="inp-state" name="inp-state">
+
+                <label for="inp-zip">ZIP/Postal code</label>
+                <input type="text" id="inp-zip" name="inp-zip">
+
+                <label for="inp-country">Country</label>
+                <input type="text" id="inp-country" name="inp-country">
+
+                <label for="inp-price">Price</label>
+                <input type="number" id="inp-price" name="inp-price">
+
+                <label for="inp-currency">Currency</label>
+                <input type="text" id="inp-currency" name="inp-currency">
             </div>
 
-            <div class="input-block">
-                <div class="input-title">
-                    <p>Article metadata</p>
-                    <img class="input-ico" src="images/article.png" alt="article">
-                </div>
 
-                <label for="inp-author">Author</label>
-                <input type="text" id="inp-author" name="inp-author" maxlength="1024">
-
-                <label for="inp-section">Section</label>
-                <input type="text" id="inp-section" name="inp-section" maxlength="1024">
-
-                <div class="date-and-time">
-                    <div class="date-and-time-label">
-                        <label for="inp-published-date">Date and</label>
-                        <label for="inp-published-time">time of publication</label>
-
-                    </div>
-                    <div class="date-and-time-input">
-                        <input type="date" id="inp-published-date" name="inp-published-date">
-                        <input type="time" id="inp-published-time" name="inp-published-time">
-                    </div>
-                    </p>
-                </div>
-
-                <div class="date-and-time">
-                    <div class="date-and-time-label">
-                        <label for="inp-modified-date">Date and</label>
-                        <label for="inp-modified-time">time of modification</label>
-
-                    </div>
-                    <div class="date-and-time-input">
-                        <input type="date" id="inp-modified-date" name="inp-modified-date">
-                        <input type="time" id="inp-modified-time" name="inp-modified-time">
-                    </div>
-                    </p>
-                </div>
-
-                <label for="inp-tags">Tags</label>
-                <input type="text" id="inp-tags" name="inp-tags" placeholder="biology,human_genome,dna" pattern="^\S+$"
-                    title="Spases are prohibited" maxlength="2046">
-                <p class="note">Put the tags in commas without spaces</p>
-                <p class="note">Separate the word combinations with an underscore</p>
-
-            </div>
-
-            <div class="input-block">
+            <div class="input-block space-between">
 
                 <div class="input-title">
-                    <p>X (Twitter) metadata</p>
+                    <p>X (Twitter)</p>
                     <img class="input-ico" src="images/twitter.png" alt="twitter">
                 </div>
 
@@ -231,15 +193,14 @@
                     <option value="" selected></option>
                     <option value="summary_large_image">Summary card with large image</option>
                     <option value="summary">Summary card</option>
-                    <option value="player">Player card</option>
-                    <option value="app">App card</option>
+                    <option value="player">Player</option>
                 </select>
                 <p class="note note_help">What type of card should I choose?</p>
                 <div class="note_help_msg">
                     <p>Summary with a large image: text with a large, rectangular image (Minimum 1200x630px).</p>
                     <p>Summary: text with a square image.</p>
                     <p>Player: for showing videos. But to be able to use it, you need to be whitelisted.</p>
-                    <p>App: for promoting apps.</p>
+                    <!-- <p>App: for promoting apps.</p> -->
                 </div>
 
                 <label for="inp-twsiteacc">The website's X account</label>
@@ -258,22 +219,86 @@
                 <p class="note"><span class="bold_text">Max file size: </span>8 MB</p>
                 <p class="note"><span class="bold_text">Ratio: </span>1 : 1 (2 : 1 for large image)</p>
 
+                <label for="inp-twimage-alt">Image alt text</label>
+                <input type="url" id="inp-twimage-alt" name="inp-twimage-alt">
+
                 <div class="sizes">
                     <div class="sizes-label">
-                        <label for="inp-twimagewidth">Image sizes</label>
+                        <label for="inp-twimage-width">Image sizes</label>
                     </div>
                     <div class="sizes-input">
-                        <input type="number" class="number-input" id="inp-twimagewidth" name="inp-twimagewidth"
+                        <input type="number" class="number-input" id="inp-twimage-width" name="inp-twimage-width"
                             placeholder="Image width in px" min="1">
-                        <input type="number" class="number-input" id="inp-twimageheight" name="inp-twimageheight"
+                        <input type="number" class="number-input" id="inp-twimage-height" name="inp-twimage-height"
                             placeholder="Image height in px" min="1">
                     </div>
                 </div>
 
-                <label for="inp-twplayer">Audio/Video player URL</label>
-                <input type="url" id="inp-twplayer" name="inp-twplayer">
+                <label for="inp-twplayer">Player URL</label>
+                <input type="url" id="inp-twplayer" name="inp-twplayer" placeholder=" HTTPS URL only">
                 <p class="note"><span class="bold_text">Recommended: </span>1200x1200px</p>
                 <p class="note"><span class="bold_text">Ratio: </span>1 : 1</p>
+
+                <div class="sizes">
+                    <div class="sizes-label">
+                        <label for="inp-twplayer-width">Player sizes</label>
+                    </div>
+                    <div class="sizes-input">
+                        <input type="number" class="number-input" id="inp-twplayer-width" name="inp-twplayer-width"
+                            placeholder="Player width in px" min="1">
+                        <input type="number" class="number-input" id="inp-twplayer-height" name="inp-twplayer-height"
+                            placeholder="Player height in px" min="1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-block">
+                <div class="input-title">
+                    <p>Book</p>
+                    <img class="input-ico" src="images/article.png" alt="article">
+                </div>
+
+                <label for="inp-book-author">Author</label>
+                <input type="text" id="inp-book-author" name="inp-book-author" maxlength="1024">
+
+                <label for="inp-book-isbn">ISBN</label>
+                <input type="number" id="inp-book-isbn" name="inp-book-isbn">
+
+                <label for="inp-book-released-date">Date of release</label>
+                <input type="date" id="inp-book-released-date" name="inp-book-released-date">
+
+                <label for="inp-book-tags">Tags</label>
+                <input type="text" id="inp-book-tags" name="inp-book-tags" placeholder="biology,human_genome,dna"
+                    pattern="^\S+$" title="Spases are prohibited" maxlength="2046">
+                <p class="note">Put the tags in commas without spaces</p>
+                <p class="note">Separate the word combinations with an underscore</p>
+
+            </div>
+
+            <div class="input-block">
+                <div class="input-title">
+                    <p>Article</p>
+                    <img class="input-ico" src="images/article.png" alt="article">
+                </div>
+
+                <label for="inp-article-author">Author</label>
+                <input type="text" id="inp-article-author" name="inp-article-author" maxlength="1024">
+
+                <label for="inp-article-section">Section</label>
+                <input type="text" id="inp-article-section" name="inp-article-section" maxlength="1024">
+
+                <label for="inp-article-published-datetime">Date and time of publication</label>
+                <input type="datetime-local" id="inp-article-published-datetime" name="inp-article-published-datetime">
+
+                <label for="inp-article-modified-datetime">Date and time of modification</label>
+                <input type="datetime-local" id="inp-article-modified-datetime" name="inp-article-modified-datetime">
+
+                <label for="inp-article-tags">Tags</label>
+                <input type="text" id="inp-article-tags" name="inp-article-tags" placeholder="biology,human_genome,dna"
+                    pattern="^\S+$" title="Spases are prohibited" maxlength="2046">
+                <p class="note">Put the tags in commas without spaces</p>
+                <p class="note">Separate the word combinations with an underscore</p>
+
             </div>
 
             <div class="input-block">

@@ -91,8 +91,8 @@ a:hover {
     flex-grow: 1;
 }
 
-.input-block:last-child {
-    flex-grow: 20;
+.space-between {
+    justify-content: space-between;
 }
 
 .input-title {
@@ -148,6 +148,7 @@ input[type='text'],
 input[type='url'],
 input[type='date'],
 input[type='time'],
+input[type='datetime-local'],
 input[type='number'],
 select,
 textarea,
@@ -166,24 +167,29 @@ button {
 }
 
 .date-and-time,
-.sizes {
+.sizes,
+.localization {
     width: 100%;
 }
 
 .date-and-time-label,
-.sizes-label {
+.sizes-label,
+.localization-label {
     padding: 1.5rem 0 0.5rem;
 }
 
 .date-and-time-input,
-.sizes-input {
+.sizes-input,
+.localization-input,
+.localization-notes {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 1rem;
 }
 
-.number-input {
+.number-input,
+.text-input {
     width: 50%;
 }
 
@@ -192,9 +198,13 @@ input[type='time'] {
     flex-grow: 1;
 }
 
+#inp-book-released-date {
+    flex-grow: 0;
+}
+
 textarea {
     align-self: stretch;
-    height: 41.5rem;
+    height: 24.7rem;
     resize: none;
 }
 
@@ -255,6 +265,7 @@ input[type='text']:focus,
 input[type='url']:focus,
 input[type='date']:focus,
 input[type='time']:focus,
+input[type='datetime-local']:focus,
 input[type='number']:focus,
 select:focus {
     outline: none;
@@ -271,6 +282,7 @@ input[type='text']:invalid,
 input[type='url']:invalid,
 input[type='date']:invalid,
 input[type='time']:invalid,
+input[type='datetime-local']:invalid,
 input[type='number']:invalid {
     background-color: #ffcd21;
     box-shadow: 0 0 1rem #e0c254;

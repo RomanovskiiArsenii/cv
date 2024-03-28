@@ -24,147 +24,196 @@ const generator = (() => {
     const transformedInfo = {
         // html
         htmlComment: '<!-- HTML meta tags -->',
-        htmlTitle: '',
-        htmlDescription: '',
+        htmlCharset: '<meta charset="UTF-8">',
+        htmlViewport: '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+        htmlTitle: undefined,
+        htmlDescription: undefined,
 
         // facebook main
         fbComment: '<!-- Facebook meta tags -->',
-        fbPageURL: '',
-        fbPageType: '',
-        fbTitle: '',
-        fbDescription: '',
-        fbImageURL: '',
-        fbImageSecureURL: '',
+        fbPageURL: undefined,
+        fbPageType: undefined,
+        fbTitle: undefined,
+        fbDescription: undefined,
+        fbImageURL: undefined,
+        fbImageSecureURL: undefined,
 
         //facebook additional
-        fbLanguageCountry: '',
-        fbAppID: '',
-        fbVideoURL: '',
-        fbVideoSecureURL: '',
-        fbVideoWidth: '',
-        fbVideoHeight: '',
-        fbImageWidth: '',
-        fbImageHeight: '',
+        fbImageWidth: undefined,
+        fbImageHeight: undefined,
+        fbLanguageCountry: undefined,
+        fbStreet: undefined,
+        fbCity: undefined,
+        fbState: undefined,
+        fbZip: undefined,
+        fbCountry: undefined,
+        fbPrice: undefined,
+        fbCurrency: undefined,
 
         // twitter
         twComment: '<!-- Twitter meta tags -->',
-        twCard: '',
-        twDomain: '',
-        twURL: '',
-        twTitle: '',
-        twDescription: '',
-        twSiteAccount: '',
-        twAuthorAccount: '',
-        twImageUrl: '',
-        twImageWidth: '',
-        twImageHeight: '',
-        twMediaPlayer: '',
+        twCard: undefined,
+        twDomain: undefined,
+        twURL: undefined,
+        twTitle: undefined,
+        twDescription: undefined,
+        twSiteAccount: undefined,
+        twAuthorAccount: undefined,
+        twImageUrl: undefined,
+        twImageAlt: undefined,
+        twImageWidth: undefined,
+        twImageHeight: undefined,
+        twMediaPlayer: undefined,
+        twMediaPlayerWidth: undefined,
+        twMediaPlayerHeight: undefined,
+
+        //book
+        bookAuthor: undefined,
+        bookISBN: undefined,
+        boorDateOfRelease: undefined,
+        bookTags: undefined,
 
         // article
         articleComment: '<!-- Article meta tags -->',
-        artAuthor: '',
-        artSection: '',
-        artDateOfPublication: '',
-        artDateOfModification: '',
-        artTags: '',
+        articleAuthor: undefined,
+        articleSection: undefined,
+        articleDateOfPublication: undefined,
+        articleDateOfModification: undefined,
+        articleTags: undefined,
         linkComment: '<!-- Open graph generator: https://romanovskiiarsenii.github.io/cv/og/og.html -->',
+    };
+
+    const generateFbTag = (value, index, alternate = undefined) => {
+        if (collectedInfo[index] != undefined && collectedInfo[index] != '') {
+            return `<meta property="og:${value}" content="${collectedInfo[index]}">`;
+        } else if (typeof alternate !== 'undefined') {
+            return `<meta property="og:${value}" content="${alternate}">`;
+        } else {
+            return alternate;
+        }
+    };
+
+    const generateTwTag = (attribute, value, index, alternate = undefined) => {
+        if (collectedInfo[index] != undefined && collectedInfo[index] != '') {
+            return `<meta ${attribute}="twitter:${value}" content="${collectedInfo[index]}">`;
+        } else if (typeof alternate !== 'undefined') {
+            return `<meta ${attribute}="twitter:${value}" content="${alternate}">`;
+        } else {
+            return alternate;
+        }
+    };
+
+    const generateBsTag = (value, index) => {
+        if (collectedInfo[index] != undefined && collectedInfo[index] != '') {
+            return `<meta property="business:contact_data:${value}" content="${collectedInfo[index]}">`;
+        } else {
+            return undefined;
+        }
+    };
+    const generatePrTag = (value, index) => {
+        if (collectedInfo[index] != undefined && collectedInfo[index] != '') {
+            return `<meta property="product:price.${value}" content="${collectedInfo[index]}">`;
+        } else {
+            return undefined;
+        }
+    };
+    const generateBkTag = (value, index) => {
+        if (collectedInfo[index] != undefined && collectedInfo[index] != '') {
+            return `<meta property="book:${value}" content="${collectedInfo[index]}">`;
+        } else {
+            return undefined;
+        }
+    };
+
+    const generateArTag = (value, index) => {
+        if (collectedInfo[index] != undefined && collectedInfo[index] != '') {
+            return `<meta property="article:${value}" content="${collectedInfo[index]}"></meta>`;
+        } else {
+            return undefined;
+        }
     };
 
     const transformInformationToHtml = () => {
         // html
-        transformedInfo.htmlTitle = `<title>${collectedInfo[0]}</title>`;
-        transformedInfo.htmlDescription = `<meta name="description" content="${collectedInfo[1]}">`;
+        transformedInfo.htmlTitle = `<title>${collectedInfo[1]}</title>`;
+        transformedInfo.htmlDescription = `<meta name="description" content="${collectedInfo[2]}">`;
 
         // facebook main
-        transformedInfo.fbPageURL = `<meta property="og:url" content="${collectedInfo[3]}">`;
-        if (collectedInfo[25] != undefined && collectedInfo[25] != '') {
-            transformedInfo.fbPageType = `<meta property="og:type" content="${collectedInfo[25]}">`;
-        } else {
-            transformedInfo.fbPageType = `<meta property="og:type" content="website">`;
-        }
-        transformedInfo.fbTitle = `<meta property="og:title" content="${collectedInfo[0]}">`;
-        transformedInfo.fbDescription = `<meta property="og:description" content="${collectedInfo[1]}">`;
-        transformedInfo.fbImageURL = `<meta property="og:image" content="${collectedInfo[2]}">`;
-        if (collectedInfo[2] != undefined && collectedInfo[2] != '' && collectedInfo[2].split(':')[0] == 'https') {
-            transformedInfo.fbImageSecureURL = `<meta property="og:image:secure_url" content="${collectedInfo[2]}">`;
-        } else {
-            transformedInfo.fbImageSecureURL = '';
-        }
-        transformedInfo.fbImageWidth = `<meta property="og:image:width" content="${collectedInfo[10]}">`;
-        transformedInfo.fbImageHeight = `<meta property="og:image:height" content="${collectedInfo[11]}">`;
+        transformedInfo.fbPageURL = generateFbTag('url', 0);
+        transformedInfo.fbPageType = generateFbTag('type', 33, 'website');
+        transformedInfo.fbTitle = generateFbTag('title', 1);
+        transformedInfo.fbDescription = generateFbTag('description', 2);
 
-        //facebook additional
-        if (collectedInfo[4] != undefined) {
-            transformedInfo.fbLanguageCountry = `<meta property="og:locale" content="${collectedInfo[4].toLowerCase()}">`;
-        }
-        if (collectedInfo[4] != undefined && collectedInfo[5] != undefined) {
-            transformedInfo.fbLanguageCountry = `<meta property="og:locale" content="${collectedInfo[4].toLowerCase()}-${collectedInfo[5].toUpperCase()}">`;
-        }
-        transformedInfo.fbAppID = `<meta property="fb:app_id" content="${collectedInfo[6]}">`;
-        transformedInfo.fbVideoURL = `<meta property="og:video:url" content="${collectedInfo[7]}">`;
-        if (collectedInfo[7] != undefined && collectedInfo[7] != '' && collectedInfo[7].split(':')[0] == 'https') {
-            transformedInfo.fbVideoSecureURL = `<meta property="og:video:secure_url" content="${collectedInfo[7]}"/>`;
+        //facebook image
+        transformedInfo.fbImageURL = generateFbTag('image', 3);
+        if (typeof collectedInfo[3] != 'undefined' && collectedInfo[3].split(':')[0] == 'https') {
+            transformedInfo.fbImageSecureURL = generateFbTag('image:secure_url', 3);
         } else {
-            transformedInfo.fbVideoSecureURL = '';
+            transformedInfo.fbImageSecureURL = undefined;
         }
-        transformedInfo.fbVideoWidth = `<meta property="og:video:width" content="${collectedInfo[8]}">`;
-        transformedInfo.fbVideoHeight = `<meta property="og:video:height" content="${collectedInfo[9]}">`;
+        transformedInfo.fbImageWidth = generateFbTag('image:width', 4);
+        transformedInfo.fbImageHeight = generateFbTag('image:height', 5);
 
-        //article
-        transformedInfo.artAuthor = `<meta property="og:author" content="${collectedInfo[12]}">`;
-        transformedInfo.artSection = `<meta property="og:section" content="${collectedInfo[13]}">`;
-        if (collectedInfo[15] != undefined && collectedInfo[15] != '') {
-            transformedInfo.artDateOfPublication = `<meta property="og:published_time" content="${collectedInfo[14]}T${collectedInfo[15]}:00.000Z">`;
+        //facebook language and country
+        if (typeof collectedInfo[7] != 'undefined') {
+            transformedInfo.fbLanguageCountry = `<meta property="og:locale" content="${collectedInfo[6]}-${collectedInfo[7]}">`;
         } else {
-            transformedInfo.artDateOfPublication = `<meta property="og:published_time" content="${collectedInfo[14]}T00:00:00.000Z">`;
+            transformedInfo.fbLanguageCountry = generateFbTag('locale', 6);
         }
-        if (collectedInfo[17] != undefined && collectedInfo[17] != '') {
-            transformedInfo.artDateOfModification = `<meta property="og:modified_time" content="${collectedInfo[16]}T${collectedInfo[17]}:00.000Z">`;
-        } else {
-            transformedInfo.artDateOfModification = `<meta property="og:modified_time" content="${collectedInfo[16]}T00:00:00.000Z">`;
-        }
-        transformedInfo.artTags = `<meta property="og:tag" content="${collectedInfo[18]}">`;
+
+        //facebook business
+        transformedInfo.fbStreet = generateBsTag('street_address', 8);
+        transformedInfo.fbCity = generateBsTag('locality', 9);
+        transformedInfo.fbState = generateBsTag('region', 10);
+        transformedInfo.fbZip = generateBsTag('postal_code', 11);
+        transformedInfo.fbCountry = generateBsTag('country_name', 12);
+
+        //facebook product
+        transformedInfo.fbPrice = generatePrTag('amount', 13);
+        transformedInfo.fbCurrency = generatePrTag('currency', 14);
 
         //twitter
-
-        if (collectedInfo[26] != undefined && collectedInfo[26] != '') {
-            transformedInfo.twCard = `<meta name="twitter:card" content="${collectedInfo[26]}">`;
-        } else {
-            transformedInfo.twCard = `<meta name="twitter:card" content="summary_large_image">`;
+        transformedInfo.twCard = generateTwTag('name', 'card', 34, 'summary_large_image');
+        if (collectedInfo[0] != undefined) {
+            transformedInfo.twDomain = `<meta property="twitter:domain" content="${collectedInfo[0].split('/')[2]}">`;
         }
+        transformedInfo.twURL = generateTwTag('property', 'url', 0);
+        transformedInfo.twTitle = generateTwTag('name', 'title', 1);
+        transformedInfo.twDescription = generateTwTag('name', 'description', 2);
 
-        if (collectedInfo[3] != undefined) {
-            transformedInfo.twDomain = `<meta property="twitter:domain" content="${collectedInfo[3].split('/')[2]}">`;
-        }
+        //twitter accounts
+        transformedInfo.twSiteAccount = generateTwTag('property', 'site', 15);
+        transformedInfo.twAuthorAccount = generateTwTag('property', 'creator', 16);
 
-        transformedInfo.twURL = `<meta property="twitter:url" content="${collectedInfo[3]}">`;
-        transformedInfo.twTitle = `<meta name="twitter:title" content="${collectedInfo[0]}">`;
-        transformedInfo.twDescription = `<meta name="twitter:description" content="${collectedInfo[1]}">`;
-        transformedInfo.twSiteAccount = `<meta property="twitter:site" content="${collectedInfo[19]}">`;
-        transformedInfo.twAuthorAccount = `<meta property="twitter:creator" content="${collectedInfo[20]}">`;
-        if (collectedInfo[21] != undefined && collectedInfo[21] != '') {
-            transformedInfo.twImageUrl = `<meta name="twitter:image" content="${collectedInfo[21]}">`;
-        } else if (collectedInfo[2] != undefined && collectedInfo[2] != '') {
-            transformedInfo.twImageUrl = `<meta name="twitter:image" content="${collectedInfo[2]}">`;
-        } else {
-            transformedInfo.twImageUrl = '';
-        }
-        transformedInfo.twImageWidth = `<meta property="twitter:image:width" content="${collectedInfo[22]}">`;
-        transformedInfo.twImageHeight = `<meta property="twitter:image:height" content="${collectedInfo[23]}">`;
+        //twitter image
+        transformedInfo.twImageUrl = generateTwTag('name', 'image', 17, collectedInfo[3]);
+        transformedInfo.twImageAlt = generateTwTag('name', 'image:alt', 18);
+        transformedInfo.twImageWidth = generateTwTag('property', 'image:width', 19);
+        transformedInfo.twImageHeight = generateTwTag('property', 'image:height', 20);
 
-        transformedInfo.twMediaPlayer = `<meta property="twitter:player" content="${collectedInfo[24]}">`;
-        console.log(collectedInfo);
-        console.log(transformedInfo);
+        //twitter player
+        transformedInfo.twMediaPlayer = generateTwTag('property', 'player', 21);
+        transformedInfo.twMediaPlayerWidth = generateTwTag('property', 'player:width', 22);
+        transformedInfo.twMediaPlayerHeight = generateTwTag('property', 'player:height', 23);
+
+        //book
+        transformedInfo.bookAuthor = generateBkTag('author', 24);
+        transformedInfo.bookISBN = generateBkTag('isbn', 25);
+        transformedInfo.boorDateOfRelease = generateBkTag('release_date', 26);
+        transformedInfo.bookTags = generateBkTag('tag', 27);
+
+        //article
+        transformedInfo.artAuthor = generateArTag('author', 28);
+        transformedInfo.articleSection = generateArTag('section', 29);
+        transformedInfo.articleDateOfPublication = generateArTag('published_time', 30);
+        transformedInfo.articleDateOfModification = generateArTag('modified_time', 31);
+        transformedInfo.articleTags = generateArTag('tag', 32);
     };
 
     const printInformationToHTML = () => {
         let htmlCode = '';
         for (const key in transformedInfo) {
-            if (
-                !transformedInfo[key].includes('undefined') &&
-                !transformedInfo[key].includes('content=""') &&
-                transformedInfo[key] != ''
-            ) {
+            if (typeof transformedInfo[key] != 'undefined') {
                 htmlCode += `${transformedInfo[key]}\n`;
             }
         }
@@ -191,10 +240,10 @@ const generator = (() => {
 
     const inputsListenersInit = () => {
         pageType.addEventListener('change', (e) => {
-            collectInformation(e, 25);
+            collectInformation(e, 33);
         });
         cardType.addEventListener('change', (e) => {
-            collectInformation(e, 26);
+            collectInformation(e, 34);
         });
         for (let i = 0; i < inputArray.length; i++) {
             inputArray[i].addEventListener('input', (e) => {
