@@ -484,7 +484,7 @@ main {
     height: auto;
     display: grid;
     grid-template-columns: repeat(8, var(--part_dbl));
-    grid-template-rows: repeat(12, var(--part_dbl));
+    grid-template-rows: repeat(13, var(--part_dbl));
 
     padding-top: 10vh;
 
@@ -542,7 +542,7 @@ main {
 }
 
 #arrows_3 {
-    grid-area: 10 / 6 / 11/ 8;
+    grid-area: 11 / 6 / 12/ 8;
     width: calc(var(--part) * 3);
     transform: rotate(140deg) translate(-10%, 20%);
     animation: arrowMove 3s ease-in-out 0.5s infinite alternate;
@@ -582,7 +582,7 @@ main {
 }
 
 #broken_tape_1 {
-    grid-area: 9 / 5 / 11 / 8;
+    grid-area: 10 / 5 / 12 / 8;
     width: calc(var(--part) * 4.5);
     transform: translate(-33%, 5%);
     pointer-events: none;
@@ -590,7 +590,7 @@ main {
 }
 
 #broken_tape_2 {
-    grid-area: 11 / 5 / 12 / 8;
+    grid-area: 12 / 5 / 13 / 8;
     width: calc(var(--part) * 3);
     transform: translate(-50%, 85%);
     pointer-events: none;
@@ -603,19 +603,19 @@ main {
 }
 
 #stamp_1 {
-    grid-area: 10 / 8 / 12 / 9;
+    grid-area: 11 / 8 / 13 / 9;
     width: calc(var(--part) * 3);
     transform: translate(-12%, -34%);
 }
 
 #stamp_2 {
-    grid-area: 11 / 8 / 13 / 9;
+    grid-area: 12 / 8 / 14 / 9;
     width: calc(var(--part) * 3);
     transform: translate(-9%, 17%) rotate(26deg);
 }
 
 #stamp_3 {
-    grid-area: 10 / 7 / 12 / 9;
+    grid-area: 11 / 7 / 13 / 9;
     width: calc(var(--part) * 2.5);
     transform: translate(-12%, 43%);
 }
@@ -631,7 +631,7 @@ main {
 }
 
 .compas_container {
-    grid-area: 10 / 1 / 13/ 4;
+    grid-area: 11 / 1 / 14/ 4;
     transform: translate(-7%, -17%);
     pointer-events: none;
 }
@@ -658,7 +658,7 @@ main {
 
 .windrose {
     position: relative;
-    grid-area: 10 / 2 / 11 / 3;
+    grid-area: 11 / 2 / 12 / 3;
 }
 
 .windrose div {
@@ -760,7 +760,7 @@ main {
     height: 1em;
     overflow: hidden;
     font-size: calc(var(--part) * 1.45);
-    grid-area: 8 / 2 / 10 / 9;
+    grid-area: 9 / 2 / 11 / 9;
     word-spacing: -0.3ch;
     letter-spacing: 0;
     line-height: 1em;
@@ -782,12 +782,12 @@ main {
 
 .middle_lrg_2 {
     font-size: calc(var(--part) * 1.4);
-    grid-area: 8 / 5 / 10 / 9;
+    grid-area: 9 / 5 / 11 / 9;
     transform: rotate(3deg) translate(10%, 25%);
 }
 
 .middle_med_1 {
-    grid-area: 8 / 7/ 10 / 9;
+    grid-area: 9 / 7/ 11 / 9;
     transform: rotate(1deg) translate(-25%, -5%);
 }
 
@@ -803,8 +803,8 @@ main {
 }
 
 .middle_med_3 {
-    width: 91%;
-    grid-area: 5 / 2 / 7 / 6;
+    width: 80%;
+    grid-area: 5 / 2 / 7 / 7;
     text-align: justify;
     transform: translate(5%, 35%);
     font-size: calc(var(--part) * 0.21);
@@ -819,7 +819,7 @@ main {
     grid-area: 7 / 2 / 8 / 5;
     text-align: justify;
     font-size: calc(var(--part) * 0.26);
-    transform: translate(25%, 0%);
+    transform: translate(50%, 60%);
 }
 
 .middle_med_4 p {
@@ -830,7 +830,7 @@ main {
 /* **************************************************************************** */
 
 .bottom_med_1 {
-    grid-area: 10 / 4 / 11 / 8;
+    grid-area: 11 / 4 / 12 / 8;
     text-align: justify;
     font-family: 'Vintage_font', sans-serif;
     font-size: calc(var(--part) * 0.48);
@@ -943,7 +943,7 @@ main {
     position: relative;
     display: flex;
     flex-direction: row;
-    grid-area: 12 / 1 / 13 / 9;
+    grid-area: 13 / 1 / 14 / 9;
     transform: translateY(calc(var(--part) * 1));
     z-index: 1;
 }
@@ -1161,7 +1161,7 @@ main {
     }
 
     main {
-        grid-template-rows: repeat(16, var(--part_dbl));
+        grid-template-rows: repeat(17, var(--part_dbl));
     }
 
     #horse {
@@ -1181,7 +1181,7 @@ main {
     }
 
     #arrows_3 {
-        grid-area: 13 / 6 / 15/ 8 !important;
+        grid-area: 14 / 6 / 16/ 8 !important;
     }
 
     #flower_1 {
@@ -1198,31 +1198,31 @@ main {
     }
 
     #stamp_1 {
-        grid-area: 13 / 8 / 15 / 9 !important;
-    }
-
-    #stamp_2 {
         grid-area: 14 / 8 / 16 / 9 !important;
     }
 
+    #stamp_2 {
+        grid-area: 15 / 8 / 17 / 9 !important;
+    }
+
     #stamp_3 {
-        grid-area: 13 / 7 / 15 / 9 !important;
+        grid-area: 14 / 7 / 16 / 9 !important;
     }
 
     .compas_container {
-        grid-area: 13 / 1 / 15/ 4 !important;
+        grid-area: 14 / 1 / 16/ 4 !important;
     }
 
     #broken_tape_1 {
-        grid-area: 12 / 5 / 13 / 7 !important;
+        grid-area: 13 / 5 / 14 / 7 !important;
     }
 
     #broken_tape_2 {
-        grid-area: 14 / 5 / 15 / 6 !important;
+        grid-area: 15 / 5 / 16 / 6 !important;
     }
 
     .windrose {
-        grid-area: 13 / 2 / 15 / 3 !important;
+        grid-area: 14 / 2 / 16 / 3 !important;
     }
 
     .top_lrg_1,
@@ -1244,15 +1244,15 @@ main {
     }
 
     .middle_lrg_1 {
-        grid-area: 11 / 2 / 12 / 9 !important;
+        grid-area: 12 / 2 / 13 / 9 !important;
     }
 
     .middle_lrg_2 {
-        grid-area: 11 / 5 / 13 / 9 !important;
+        grid-area: 12 / 5 / 14 / 9 !important;
     }
 
     .middle_med_1 {
-        grid-area: 11 / 7/ 13 / 9 !important;
+        grid-area: 12 / 7/ 14 / 9 !important;
     }
 
     .middle_med_2 {
@@ -1261,24 +1261,24 @@ main {
     }
 
     .middle_med_3 {
-        grid-area: 5 / 1 / 8 / 6 !important;
+        width: 78%;
+        grid-area: 5 / 1 / 8 / 7 !important;
         transform: translate(5%, 35%) !important;
         font-size: calc(var(--part) * 0.4) !important;
     }
 
     .middle_med_3 p {
         line-height: 1.5em !important;
-        text-align: center;
     }
 
     .middle_med_4 {
-        grid-area: 9 / 1 / 10 / 5 !important;
-        font-size: calc(var(--part) * 0.32) !important;
-        transform: translate(25%, 65%) !important;
+        grid-area: 10 / 1 / 11 / 5 !important;
+        font-size: calc(var(--part) * 0.4) !important;
+        transform: translate(15%, 20%) !important;
     }
 
     .bottom_med_1 {
-        grid-area: 13 / 4 / 14 / 6 !important;
+        grid-area: 14 / 4 / 15 / 6 !important;
     }
 
     .text-cutted {
@@ -1288,7 +1288,7 @@ main {
     }
 
     .tapes {
-        grid-area: 15 / 1 / 16 / 9 !important;
+        grid-area: 16 / 1 / 17 / 9 !important;
     }
 
     .projects {
