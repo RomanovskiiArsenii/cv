@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 html {
     box-sizing: border-box;
     font-size: 20px;
@@ -19,16 +20,6 @@ body {
     background-color: #181818;
     color: rgb(255, 255, 255);
     overflow-x: hidden;
-}
-
-.main {
-    padding: 2.5rem;
-}
-
-.header {
-    font-family: 'Roboto', sans-serif;
-    padding: 2.5rem 2.5rem 5rem;
-    background-image: linear-gradient(to bottom, rgb(92, 92, 92), #181818 100%);
 }
 
 h1 {
@@ -63,7 +54,14 @@ a:hover {
     color: #81dbcf;
 }
 
+.header {
+    font-family: 'Roboto', sans-serif;
+    padding: 2.5rem 2.5rem 5rem;
+    background-image: linear-gradient(to bottom, rgb(92, 92, 92), #181818 100%);
+}
+
 .main {
+    padding: 2.5rem;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -104,10 +102,6 @@ a:hover {
     justify-content: space-between;
 }
 
-.input-title p {
-    align-self: center;
-}
-
 .input-ico {
     height: 1.5rem;
 }
@@ -116,14 +110,14 @@ label {
     padding: 1.5rem 0 0.5rem;
 }
 
-.note {
-    font-size: 0.8rem;
-    color: #cacaca;
-}
-
 .bold_text {
     color: #ffffff;
     font-weight: 600;
+}
+
+.note {
+    font-size: 0.8rem;
+    color: #cacaca;
 }
 
 .note_help {
@@ -166,6 +160,51 @@ button {
     transition: all 0.5s ease;
 }
 
+select,
+option {
+    cursor: pointer;
+}
+
+input[type='date'],
+input[type='time'] {
+    flex-grow: 1;
+}
+
+input[type='text']:focus,
+input[type='url']:focus,
+input[type='date']:focus,
+input[type='time']:focus,
+input[type='datetime-local']:focus,
+input[type='number']:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 1rem #72aaa4;
+    background-color: #b6fff6;
+}
+
+input[type='text']:invalid,
+input[type='url']:invalid,
+input[type='date']:invalid,
+input[type='time']:invalid,
+input[type='datetime-local']:invalid,
+input[type='number']:invalid {
+    background-color: #ffcd21;
+    box-shadow: 0 0 1rem #e0c254;
+}
+
+input[type='text']::placeholder,
+input[type='url']::placeholder,
+input[type='number']::placeholder,
+option {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #3b4e45;
+}
+
+#inp-book-released-date {
+    flex-grow: 0;
+}
+
 .date-and-time,
 .sizes,
 .localization {
@@ -193,19 +232,15 @@ button {
     width: 50%;
 }
 
-input[type='date'],
-input[type='time'] {
-    flex-grow: 1;
-}
-
-#inp-book-released-date {
-    flex-grow: 0;
-}
-
 textarea {
     align-self: stretch;
     height: 24.7rem;
     resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 4px #72aaa4;
 }
 
 textarea::-webkit-scrollbar {
@@ -226,9 +261,6 @@ textarea::-webkit-scrollbar-thumb:hover {
 }
 
 button {
-    /* align-self: center; */
-    /* width: 12rem; */
-
     position: relative;
     display: flex;
     height: 1.8rem;
@@ -259,47 +291,6 @@ button .button-content p {
 .img-clipboard {
     height: 1rem;
     filter: invert(100%);
-}
-
-input[type='text']:focus,
-input[type='url']:focus,
-input[type='date']:focus,
-input[type='time']:focus,
-input[type='datetime-local']:focus,
-input[type='number']:focus,
-select:focus {
-    outline: none;
-    box-shadow: 0 0 1rem #72aaa4;
-    background-color: #b6fff6;
-}
-
-textarea:focus {
-    outline: none;
-    box-shadow: 0 0 4px #72aaa4;
-}
-
-input[type='text']:invalid,
-input[type='url']:invalid,
-input[type='date']:invalid,
-input[type='time']:invalid,
-input[type='datetime-local']:invalid,
-input[type='number']:invalid {
-    background-color: #ffcd21;
-    box-shadow: 0 0 1rem #e0c254;
-}
-
-input[type='text']::placeholder,
-input[type='url']::placeholder,
-input[type='number']::placeholder,
-option {
-    font-size: 0.9rem;
-    font-weight: 300;
-    color: #3b4e45;
-}
-
-select,
-option {
-    cursor: pointer;
 }
 
 @media screen and (max-width: calc(500px + 5rem)) {
