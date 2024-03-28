@@ -55,7 +55,7 @@
     --greenTapesFontColor: rgb(255, 230, 0);
     --tapesFontColor: rgb(22, 22, 22);
 
-    --projectWindowOuterPanelColor: rgb(89 133 120);
+    --projectWindowOuterPanelColor: rgb(45 55 51);
 
     --projectWindowInnerPanelColor: #1d1d1d;
     --projectDescriberBGColor: #242424;
@@ -1067,6 +1067,7 @@ main {
     z-index: 103;
     transform: scale(0.99);
     transition: transform 0.8s ease, opacity 0.8s ease 1.5s;
+    filter: invert(100%);
     cursor: pointer;
 }
 
