@@ -1169,6 +1169,10 @@ main {
         transform: translate(-11%, 0%) !important;
     }
 
+    #barometr {
+        transform: translate(-10%, -30%);
+    }
+
     #missing {
         transform: scale(1.2) translate(10%, 20%);
         grid-area: 7 / 7 / 10 / 9 !important;
