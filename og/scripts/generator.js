@@ -24,8 +24,8 @@ const generator = (() => {
     const transformedInfo = {
         // html
         htmlComment: '<!-- HTML meta tags -->',
-        htmlCharset: '<meta charset="UTF-8">',
-        htmlViewport: '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+        htmlCharset: '<meta charset="UTF-8" />',
+        htmlViewport: '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
         htmlTitle: undefined,
         htmlDescription: undefined,
 
@@ -188,8 +188,8 @@ const generator = (() => {
         //twitter image
         transformedInfo.twImageUrl = generateTwTag('name', 'image', 17, collectedInfo[3]);
         transformedInfo.twImageAlt = generateTwTag('name', 'image:alt', 18);
-        transformedInfo.twImageWidth = generateTwTag('property', 'image:width', 19);
-        transformedInfo.twImageHeight = generateTwTag('property', 'image:height', 20);
+        transformedInfo.twImageWidth = generateTwTag('property', 'image:width', 19, collectedInfo[4]);
+        transformedInfo.twImageHeight = generateTwTag('property', 'image:height', 20, collectedInfo[5]);
 
         //twitter player
         transformedInfo.twMediaPlayer = generateTwTag('property', 'player', 21);

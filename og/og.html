@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="en">
     <!-- HTML meta tags -->
     <title>Open Graph generator</title>
     <meta name="description"
@@ -35,6 +36,8 @@
     <!-- Open graph generator: https://romanovskiiarsenii.github.io/cv/og/og.html -->
 
     <link rel="stylesheet" href="styles/og.css">
+    <link rel="icon" href="images/ogg_favicon.png" type="image/png">
+
 </head>
 
 <body>
@@ -75,7 +78,7 @@
             <div class="input-block">
                 <div class="input-title">
                     <p>Required</p>
-                    <img class="input-ico" src="images/lock.png" alt="required">
+                    <img class="input-ico" src="images/lock.png" alt="lock">
                 </div>
 
                 <label for="inp-url">Page URL</label>
@@ -111,14 +114,6 @@
                 <p class="note"><span class="bold_text">Minimum: </span>600x315px</p>
                 <p class="note"><span class="bold_text">Max file size: </span>8 MB</p>
                 <p class="note"><span class="bold_text">Ratio: </span>1.91 : 1</p>
-            </div>
-
-            <div class="input-block space-between">
-
-                <div class="input-title">
-                    <p>Additional</p>
-                    <img class="input-ico" src="images/unlock.png" alt="additional">
-                </div>
 
                 <div class="sizes">
                     <div class="sizes-label">
@@ -153,6 +148,14 @@
                             Country Codes</a>
                     </div>
                 </div>
+            </div>
+
+            <div class="input-block">
+
+                <div class="input-title">
+                    <p>Business and product</p>
+                    <img class="input-ico" src="images/case.png" alt="case">
+                </div>
 
                 <label for="inp-adress">Street address</label>
                 <input type="text" id="inp-adress" name="inp-adress">
@@ -173,11 +176,11 @@
                 <input type="number" id="inp-price" name="inp-price">
 
                 <label for="inp-currency">Currency</label>
-                <input type="text" id="inp-currency" name="inp-currency">
+                <input type="text" id="inp-currency" name="inp-currency" placeholder="USD">
             </div>
 
 
-            <div class="input-block space-between">
+            <div class="input-block">
 
                 <div class="input-title">
                     <p>X (Twitter)</p>
@@ -250,7 +253,7 @@
             <div class="input-block">
                 <div class="input-title">
                     <p>Book</p>
-                    <img class="input-ico" src="images/article.png" alt="article">
+                    <img class="input-ico" src="images/book.png" alt="book">
                 </div>
 
                 <label for="inp-book-author">Author</label>
