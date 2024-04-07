@@ -35,6 +35,15 @@ closeProjectsWindowBtn.addEventListener('click', projectsWindowControl.hideProje
 certificatesLink.addEventListener('click', loadingAnimation.onLeaveMain, false);
 closeProjectsWindowBtn.addEventListener('click', tapesShelf, false);
 
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft' || e.keyCode === 65) {
+        projectsWindowControl.previousSlide();
+    }
+    if (e.key === 'ArrowRight' || e.keyCode === 68) {
+        projectsWindowControl.nextSlide();
+    }
+});
+
 document.addEventListener('visibilitychange', function () {
     if (document.visibilityState === 'hidden') {
         switchingAnimation.stopSwitching();
