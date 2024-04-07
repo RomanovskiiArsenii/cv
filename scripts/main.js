@@ -13,6 +13,7 @@ const nextBtnSlide = document.getElementById('next_btn');
 const previousBtnSlide = document.getElementById('previous_btn');
 const closeProjectsWindowBtn = document.getElementById('cross_btn');
 const certificatesLink = document.getElementById('certificates_link');
+const projects = document.getElementById('projects');
 
 rowsTextFiller.RowTextInit_1();
 rowsTextFiller.RowTextInit_2();
@@ -36,11 +37,13 @@ certificatesLink.addEventListener('click', loadingAnimation.onLeaveMain, false);
 closeProjectsWindowBtn.addEventListener('click', tapesShelf, false);
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft' || e.keyCode === 65) {
-        projectsWindowControl.previousSlide();
-    }
-    if (e.key === 'ArrowRight' || e.keyCode === 68) {
-        projectsWindowControl.nextSlide();
+    if (window.getComputedStyle(projects).display !== 'none') {
+        if (e.key === 'ArrowLeft' || e.keyCode === 65) {
+            projectsWindowControl.previousSlide();
+        }
+        if (e.key === 'ArrowRight' || e.keyCode === 68) {
+            projectsWindowControl.nextSlide();
+        }
     }
 });
 
