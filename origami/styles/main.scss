@@ -84,6 +84,7 @@ h3 {
 
 .loader {
     @extend %absolute-central;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: white;

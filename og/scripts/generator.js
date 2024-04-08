@@ -24,8 +24,8 @@ const generator = (() => {
     const transformedInfo = {
         // html
         htmlComment: '<!-- HTML meta tags -->',
-        htmlCharset: '<meta charset="UTF-8" />',
-        htmlViewport: '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
+        htmlCharset: '<meta charset="UTF-8">',
+        htmlViewport: '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
         htmlTitle: undefined,
         htmlDescription: undefined,
 
