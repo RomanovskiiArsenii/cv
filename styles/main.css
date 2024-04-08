@@ -745,12 +745,23 @@ main {
     text-align: justify;
 }
 
+.top_med_1 h1,
+.top_med_1 h2 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
 .top_sm_1 {
     padding: 4em 2em 0 9em;
     grid-area: 3/ 5 / 5 / 9;
     font-size: calc(var(--part) * 0.25);
     text-align: justify;
     transform: translate(0, -10%);
+}
+
+.top_sm_1 h3 {
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 /* MIDDLE TEXT */

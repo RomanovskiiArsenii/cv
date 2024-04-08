@@ -67,6 +67,7 @@ const projectsWindowControl = (() => {
     };
 
     const showProjectsWindow = (index) => {
+        console.log('show');
         galleryIndex = index;
 
         changeSlideContent(galleryIndex);
