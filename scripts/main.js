@@ -21,6 +21,7 @@ rowsTextFiller.RowTextInit_3();
 rowsTextFiller.RowTextInit_4();
 rowsTextFiller.RowTextInit_5();
 
+window.addEventListener('load', loadingAnimation.onLoadMain, false);
 window.addEventListener('load', setPartsSizes, false);
 window.addEventListener('load', animateLinkButtons, false);
 window.addEventListener('load', dateDecompose, false);
@@ -36,7 +37,7 @@ closeProjectsWindowBtn.addEventListener('click', projectsWindowControl.hideProje
 certificatesLink.addEventListener('click', loadingAnimation.onLeaveMain, false);
 closeProjectsWindowBtn.addEventListener('click', tapesShelf, false);
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keyup', (e) => {
     if (window.getComputedStyle(projects).display !== 'none') {
         if (e.key === 'ArrowLeft' || e.keyCode === 65) {
             projectsWindowControl.previousSlide();
@@ -44,6 +45,12 @@ document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight' || e.keyCode === 68) {
             projectsWindowControl.nextSlide();
         }
+    }
+    if (e.key === 'w' || e.keyCode === 87) {
+        projectsWindowControl.showProjectsWindow(7);
+    }
+    if (e.key === 's' || e.keyCode === 83) {
+        projectsWindowControl.hideProjectsWindow();
     }
 });
 
@@ -54,5 +61,3 @@ document.addEventListener('visibilitychange', function () {
         switchingAnimation.startSwitching();
     }
 });
-
-window.addEventListener('load', loadingAnimation.onLoadMain, false);
