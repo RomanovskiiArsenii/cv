@@ -38,6 +38,13 @@ body {
     font-family: 'Abel', Arial, sans-serif;
     background: var(--customBlack) url(../images/content_images/paper_2.png);
     background-size: cover;
+    overflow-x: hidden;
+}
+
+h1,
+h2 {
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 #hidden_untill_loaded {
@@ -62,6 +69,7 @@ body {
     background-size: cover;
     transition: transform 0.8s ease;
     transform: rotate(0deg) scale(0.9);
+    z-index: 100;
 }
 
 #back_link:hover {
@@ -69,7 +77,7 @@ body {
 }
 
 main {
-    /* transform: rotate(5deg); */
+    transform: rotate(2deg);
     overflow-x: hidden;
 }
 
