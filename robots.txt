@@ -17,7 +17,6 @@ Disallow: /scripts/
 Disallow: /styles/
 Disallow: /videos/
 Disallow: /ya/
-Disallow: /ya/
 Disallow: /archivecertificates.html
 Disallow: /archivecv.html
 Disallow: /attribution.html
