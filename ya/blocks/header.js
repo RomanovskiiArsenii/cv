@@ -15,8 +15,8 @@ const headerControl = (() => {
         modifyWhite: 'white-orange',
 
         //image sources
-        srcForWideScreen: 'images/header/background.png',
-        srcForNarrScreen: 'images/header/background_sm.png',
+        srcForWideScreen: 'ya/images/header/background.png',
+        srcForNarrScreen: 'ya/images/header/background_sm.png',
     };
 
     /**
