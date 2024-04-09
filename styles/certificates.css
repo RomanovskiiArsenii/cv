@@ -36,7 +36,7 @@
 
 body {
     font-family: 'Abel', Arial, sans-serif;
-    background: var(--customBlack) url(../images/content_images/paper_2.png);
+    background: var(--customBlack) url(../images/content_images/paper_2.avif);
     background-size: cover;
     overflow-x: hidden;
 }

@@ -492,7 +492,7 @@ main {
     align-content: start;
 
     background-color: var(--mainBGColor);
-    background-image: url(../images/content_images/paper_1.png);
+    background-image: url(../images/content_images/paper_1.avif);
     background-size: cover;
     overflow: hidden;
 }
