@@ -8,21 +8,46 @@ const galleryControl = (() => {
         '<h3>Вышка-туры</h3><p>Вышка-тура - это сборно-разборная мобильная конструкция, используемая для выполнения работ на высоте. Она состоит из рамы, стоек, перекладин и платформы. Преимущества вышек-туров включают простоту сборки и разборки, высокую мобильность, возможность установки на неровных поверхностях и высокую надежность и безопасность работы на высоте.</p>',
     ];
 
+    // bg image container
     const imageContainer = document.querySelector('.section-gallery');
+    // content container
     const contentContainer = document.querySelector('.gallery-content-wrapper');
+    // control buttons
     const galleryButtons = document.querySelectorAll('.gallery-btn');
+    // pause when gallery is controlled manually
     let pauseBeforeSwitch = null;
+    // switching slides interval (content + image = slide)
     let switchingInterval = null;
+    // slide index
     let counter = 0;
 
+    //does browser supports avif?
+    let supportsAvif;
+    let format = 'avif';
+    const img = new Image();
+    img.src = `images/products/pr-0.avif`;
+    // it is decoding the first image and set format
+    img.decode()
+        .then(() => {
+            supportsAvif = true;
+        })
+        .catch(() => {
+            supportsAvif = false;
+        })
+        .finally(() => {
+            format = supportsAvif ? 'avif' : 'jpg';
+        });
+
+    // set current slide
     const setSlide = () => {
         clearTimeout(pauseBeforeSwitch);
         pauseBeforeSwitch = setTimeout(() => {
-            imageContainer.style.backgroundImage = `url(origami/images/products/pr-${counter}.jpg)`;
+            imageContainer.style.backgroundImage = `url(images/products/pr-${counter}.${format})`;
             contentContainer.innerHTML = content[counter];
         }, 300);
     };
 
+    // manual control
     const switchLeft = () => {
         clearInterval(switchingInterval);
         if (counter > 0) {
@@ -44,6 +69,7 @@ const galleryControl = (() => {
         }
     };
 
+    // auto switching
     const startSwitching = () => {
         switchingInterval = setInterval(() => {
             if (counter == content.length - 1) {
@@ -55,6 +81,7 @@ const galleryControl = (() => {
         }, 4000);
     };
 
+    // autoswitching + btns listeners
     const gallerySwitchingInit = () => {
         startSwitching();
         galleryButtons[0].addEventListener('click', switchLeft);

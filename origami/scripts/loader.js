@@ -1,3 +1,4 @@
+// loader animation
 const loaderControl = () => {
     const loader = document.querySelector('.loader');
     const wrapper = document.querySelector('.body-wrapper');
