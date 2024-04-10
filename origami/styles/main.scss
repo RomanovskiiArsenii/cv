@@ -181,7 +181,8 @@ h3 {
     height: 100vh;
     overflow: hidden;
     z-index: 1;
-    border-bottom: 10px solid black;
+    background-color: #000;
+    border-bottom: 10px solid #000;
 
     &-inner {
         @extend %absolute-central;
@@ -315,8 +316,7 @@ h3 {
 
 .partners {
     &-inner {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0 4vw;
         display: flex;
         justify-content: space-between;
         img {
