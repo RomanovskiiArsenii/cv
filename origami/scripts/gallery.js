@@ -25,7 +25,7 @@ const galleryControl = (() => {
     let supportsAvif;
     let format = 'avif';
     const img = new Image();
-    img.src = `images/products/pr-0.avif`;
+    img.src = `origami/images/products/pr-0.avif`;
     // it is decoding the first image and set format
     img.decode()
         .then(() => {
