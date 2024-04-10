@@ -42,7 +42,7 @@ const galleryControl = (() => {
     const setSlide = () => {
         clearTimeout(pauseBeforeSwitch);
         pauseBeforeSwitch = setTimeout(() => {
-            imageContainer.style.backgroundImage = `url(images/products/pr-${counter}.${format})`;
+            imageContainer.style.backgroundImage = `url(origami/images/products/pr-${counter}.${format})`;
             contentContainer.innerHTML = content[counter];
         }, 300);
     };
