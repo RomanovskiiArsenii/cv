@@ -507,6 +507,10 @@ h3 {
   .price-inner h2 {
     max-width: 530px; } }
 @media screen and (max-width: 850px) {
+  .partners-inner img {
+    height: 6vw;
+    filter: blur(0.7px); }
+
   .price-inner {
     text-align: center;
     flex-direction: column;
