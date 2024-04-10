@@ -80,7 +80,7 @@ const generator = (() => {
         articleDateOfPublication: undefined,
         articleDateOfModification: undefined,
         articleTags: undefined,
-        linkComment: '<!-- Open graph generator: https://romanovskiiarsenii.github.io/cv/og/og.html -->',
+        linkComment: '<!-- Open graph generator: https://romanovskiiarsenii.github.io/cv/oggenerator.html -->',
     };
 
     const generateFbTag = (value, index, alternate = undefined) => {
