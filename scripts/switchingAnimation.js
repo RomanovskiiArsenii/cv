@@ -46,7 +46,6 @@ const SwitchingAnimation = ((intervalValue, durationValue) => {
             switchingInterval = setInterval(() => {
                 switcherInit();
             }, intervalValue);
-            console.log(`Switching started with id №${switchingInterval}; interval = ${intervalValue} ms`); //debug
             switchingIntervalStatus = true;
             pauseBtn.src = 'images/buttons_images/pause_ico.png';
         }
@@ -57,7 +56,6 @@ const SwitchingAnimation = ((intervalValue, durationValue) => {
             clearInterval(switchingInterval);
             switchingIntervalStatus = false;
             pauseBtn.src = 'images/buttons_images/play_ico.png';
-            console.log(`Switching stopped with id №${switchingInterval}; interval = ${intervalValue} ms`); //debug
         }
     };
 

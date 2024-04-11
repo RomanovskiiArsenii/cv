@@ -57,6 +57,7 @@ h3 {
   height: fit-content;
   padding: 0.5rem 1rem;
   background-color: #ffbc00;
+  color: #000;
   border: none;
   border-radius: 4px;
   transition: background-color 0.3s ease; }
@@ -206,7 +207,8 @@ h3 {
   .section-partners {
     position: relative;
     background-color: #000000;
-    z-index: 3; }
+    z-index: 3;
+    overflow: hidden; }
   .section-product {
     position: relative;
     padding-top: 1rem;
@@ -509,7 +511,7 @@ h3 {
 @media screen and (max-width: 850px) {
   .partners-inner img {
     height: 6vw;
-    filter: blur(0.7px); }
+    filter: none; }
 
   .price-inner {
     text-align: center;
