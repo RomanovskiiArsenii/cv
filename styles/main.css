@@ -1355,6 +1355,12 @@ main {
     }
 }
 
+@media screen and (max-width: 768px) {
+    main {
+        background-image: url(../images/content_images/paper_1_sm.png);
+    }
+}
+
 @media screen and (max-width: 650px) {
     #cross_btn {
         height: 10vw;
