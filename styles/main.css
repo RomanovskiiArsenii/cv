@@ -4,7 +4,8 @@
 
 @font-face {
     font-family: 'Vintage_font';
-    src: url(../fonts/Vintage_font.otf) format('opentype');
+    src: url(../fonts/Vintage_font.otf) format('opentype'), url(../fonts/Vintage_font.woff) format('woff'),
+        url(../fonts/Vintage_font.woff2) format('woff2');
 }
 
 :root {
