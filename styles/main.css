@@ -845,7 +845,7 @@ main {
     grid-area: 11 / 4 / 12 / 8;
     text-align: justify;
     font-family: 'Vintage_font', sans-serif;
-    font-size: calc(var(--part) * 0.48);
+    font-size: calc(var(--part) * 0.42);
     transform: rotate(-10deg) translate(5%, -8%);
     z-index: 0;
 }
