@@ -153,6 +153,7 @@ button:hover {
 }
 
 .license {
+    text-align: end;
     position: fixed;
     font-size: 1em;
     right: 2em;
